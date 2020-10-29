@@ -1,8 +1,11 @@
 # Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
 
-import requests, json
+import json
+
+import requests
 from bs4 import BeautifulSoup
 from tabulate import tabulate
+
 
 class NobetciEczane(object):
     """NobetciEczane : eczaneler.gen.tr adresinden nöbetçi eczane verilerini hazır formatlarda elinize verir.
@@ -49,9 +52,20 @@ class NobetciEczane(object):
         try:
             for bak in bugun.findAll('tr')[1:]:
                 ad    = bak.find('span', class_='isim').text
-                mah   = None if bak.find('div', class_='my-2') == None else bak.find('div', class_='my-2').text
+                mah = (
+                    None
+                    if bak.find('div', class_='my-2') is None
+                    else bak.find('div', class_='my-2').text
+                )
+
                 adres = bak.find('span', class_='text-capitalize').text
-                tarif = None if bak.find('span', class_='text-secondary font-italic') == None else bak.find('span', class_='text-secondary font-italic').text
+                tarif = (
+                    None
+                    if bak.find('span', class_='text-secondary font-italic')
+                    is None
+                    else bak.find('span', class_='text-secondary font-italic').text
+                )
+
                 telf  = bak.find('div', class_='col-lg-3 py-lg-2').text
 
                 json['veri'].append({
