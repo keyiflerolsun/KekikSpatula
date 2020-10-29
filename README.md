@@ -399,6 +399,106 @@ print(deprem.anahtarlar())
     """
 ```
 
+### 🛒 BimAktuel
+
+```python
+from KekikSpatula import BimAktuel
+
+bim = BimAktuel()
+
+print(bim.veri())
+    """
+    JSON(dict) Veri Döndürür
+
+    {'kaynak': 'bim.com.tr', 'tarih': '30 Ekim Cuma', 'veri': [{'urun_baslik': 'Dijitsu 65 Inç TV Smart LED Uydu Alıcılı', 'urun_link': 'https://www.bim.com.tr/aktuel-urunler/dijitsu-65-inc-tv-smart-led-uydu-alicili/kral.aspx', 'urun_gorsel': 'https://www.bim.com.tr/Uploads/aktuel-urunler/643_buyuk_543X467_tv.jpg', 'urun_fiyat': '4.399,00₺'}, {'urun_baslik': '51 Parça Altın Fileli Rölyefli Yemek Takımı', 'urun_link': 'https://www.bim.com.tr/aktuel-urunler/51-parca-altin-fileli-rolyefli-yemek-takimi/aktuel.aspx', 'urun_gorsel': 'https://www.bim.com.tr/Uploads/aktuel-urunler/643_kucuk_543X467_51%20parca%20altin%20fileli.jpg', 'urun_fiyat': '369,00₺'}, {'urun_baslik': 'Sahan Seti', 'urun_link': 'https://www.bim.com.tr/aktuel-urunler/sahan-seti/aktuel.aspx', 'urun_gorsel': 'https://www.bim.com.tr/Uploads/aktuel-urunler/643_kucuk_543X467_sahan%20seti%204%20parca.jpg', 'urun_fiyat': '119,00₺'}, {'urun_baslik': 'Granit Karnıyarık  Tenceresi', 'urun_link': 'https://www.bim.com.tr/aktuel-urunler/granit-karniyarik-tenceresi/aktuel.aspx', 'urun_gorsel': 'https://www.bim.com.tr/Uploads/aktuel-urunler/643_kucuk_543X467_granit%20karniyarik.jpg', 'urun_fiyat': '79,90₺'}, {'urun_baslik': 'Granit Tava Seti 2’li', 'urun_link': 'https://www.bim.com.tr/aktuel-urunler/granit-tava-seti-2-li/aktuel.aspx', 'urun_gorsel': 'https://www.bim.com.tr/Uploads/aktuel-urunler/643_kucuk_543X467_granit%20tava%20seti.jpg', 'urun_fiyat': '79,90₺'}, {'urun_baslik': 'Taşıma Kapaklı Kek Kalıbı', 'urun_link': 'https://www.bim.com.tr/aktuel-urunler/tasima-kapakli-kek-kalibi/aktuel.aspx', 'urun_gorsel': 'https://www.bim.com.tr/Uploads/aktuel-urunler/643_kucuk_543X467_tasima%20kapakli%20kek%20kalibi.jpg', 'urun_fiyat': '39,90₺'}, {'urun_baslik': 'Baton ve Dilimli Kek Kalıbı Çeşitleri', 'urun_link': 'https://www.bim.com.tr/aktuel-urunler/baton-ve-dilimli-kek-kalibi-cesitleri/aktuel.aspx', 'urun_gorsel': 'https://www.bim.com.tr/Uploads/aktuel-urunler/643_kucuk_543X467_baton%20ve%20dilimli%20kek.jpg', 'urun_fiyat': '19,90₺'}, {'urun_baslik': '6’lı Ayaklı Kahve Yanı Su Bardağı', 'urun_link': 'https://www.bim.com.tr/aktuel-urunler/6-li-ayakli-kahve-yani-su-bardagi/aktuel.aspx', 'urun_gorsel': 'https://www.bim.com.tr/Uploads/aktuel-urunler/643_kucuk_543X467_6li%20ayakli%20kahv.jpg', 'urun_fiyat': '25,00₺'}]}
+    """
+
+print(bim.gorsel())
+    """
+    Okunabilir JSON(str) Döndürür
+
+    {
+    "kaynak": "bim.com.tr",
+    "tarih": "30 Ekim Cuma",
+    "veri": [
+        {
+        "urun_baslik": "Dijitsu 65 Inç TV Smart LED Uydu Alıcılı",
+        "urun_link": "https://www.bim.com.tr/aktuel-urunler/dijitsu-65-inc-tv-smart-led-uydu-alicili/kral.aspx",
+        "urun_gorsel": "https://www.bim.com.tr/Uploads/aktuel-urunler/643_buyuk_543X467_tv.jpg",
+        "urun_fiyat": "4.399,00₺"
+        },
+        {
+        "urun_baslik": "51 Parça Altın Fileli Rölyefli Yemek Takımı",
+        "urun_link": "https://www.bim.com.tr/aktuel-urunler/51-parca-altin-fileli-rolyefli-yemek-takimi/aktuel.aspx",
+        "urun_gorsel": "https://www.bim.com.tr/Uploads/aktuel-urunler/643_kucuk_543X467_51%20parca%20altin%20fileli.jpg",
+        "urun_fiyat": "369,00₺"
+        },
+        {
+        "urun_baslik": "Sahan Seti",
+        "urun_link": "https://www.bim.com.tr/aktuel-urunler/sahan-seti/aktuel.aspx",
+        "urun_gorsel": "https://www.bim.com.tr/Uploads/aktuel-urunler/643_kucuk_543X467_sahan%20seti%204%20parca.jpg",
+        "urun_fiyat": "119,00₺"
+        },
+        {
+        "urun_baslik": "Granit Karnıyarık  Tenceresi",
+        "urun_link": "https://www.bim.com.tr/aktuel-urunler/granit-karniyarik-tenceresi/aktuel.aspx",
+        "urun_gorsel": "https://www.bim.com.tr/Uploads/aktuel-urunler/643_kucuk_543X467_granit%20karniyarik.jpg",
+        "urun_fiyat": "79,90₺"
+        },
+        {
+        "urun_baslik": "Granit Tava Seti 2’li",
+        "urun_link": "https://www.bim.com.tr/aktuel-urunler/granit-tava-seti-2-li/aktuel.aspx",
+        "urun_gorsel": "https://www.bim.com.tr/Uploads/aktuel-urunler/643_kucuk_543X467_granit%20tava%20seti.jpg",
+        "urun_fiyat": "79,90₺"
+        },
+        {
+        "urun_baslik": "Taşıma Kapaklı Kek Kalıbı",
+        "urun_link": "https://www.bim.com.tr/aktuel-urunler/tasima-kapakli-kek-kalibi/aktuel.aspx",
+        "urun_gorsel": "https://www.bim.com.tr/Uploads/aktuel-urunler/643_kucuk_543X467_tasima%20kapakli%20kek%20kalibi.jpg",
+        "urun_fiyat": "39,90₺"
+        },
+        {
+        "urun_baslik": "Baton ve Dilimli Kek Kalıbı Çeşitleri",
+        "urun_link": "https://www.bim.com.tr/aktuel-urunler/baton-ve-dilimli-kek-kalibi-cesitleri/aktuel.aspx",
+        "urun_gorsel": "https://www.bim.com.tr/Uploads/aktuel-urunler/643_kucuk_543X467_baton%20ve%20dilimli%20kek.jpg",
+        "urun_fiyat": "19,90₺"
+        },
+        {
+        "urun_baslik": "6’lı Ayaklı Kahve Yanı Su Bardağı",
+        "urun_link": "https://www.bim.com.tr/aktuel-urunler/6-li-ayakli-kahve-yani-su-bardagi/aktuel.aspx",
+        "urun_gorsel": "https://www.bim.com.tr/Uploads/aktuel-urunler/643_kucuk_543X467_6li%20ayakli%20kahv.jpg",
+        "urun_fiyat": "25,00₺"
+        }
+    ]
+    }
+    """
+
+print(bim.tablo())
+    """
+    Tabulate(str) Döndürür
+
+    +---------------------------------------------+-----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+--------------+
+    | urun_baslik                                 | urun_link                                                                                     | urun_gorsel                                                                                         | urun_fiyat   |
+    |---------------------------------------------+-----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+--------------|
+    | Dijitsu 65 Inç TV Smart LED Uydu Alıcılı    | https://www.bim.com.tr/aktuel-urunler/dijitsu-65-inc-tv-smart-led-uydu-alicili/kral.aspx      | https://www.bim.com.tr/Uploads/aktuel-urunler/643_buyuk_543X467_tv.jpg                              | 4.399,00₺    |
+    | 51 Parça Altın Fileli Rölyefli Yemek Takımı | https://www.bim.com.tr/aktuel-urunler/51-parca-altin-fileli-rolyefli-yemek-takimi/aktuel.aspx | https://www.bim.com.tr/Uploads/aktuel-urunler/643_kucuk_543X467_51%20parca%20altin%20fileli.jpg     | 369,00₺      |
+    | Sahan Seti                                  | https://www.bim.com.tr/aktuel-urunler/sahan-seti/aktuel.aspx                                  | https://www.bim.com.tr/Uploads/aktuel-urunler/643_kucuk_543X467_sahan%20seti%204%20parca.jpg        | 119,00₺      |
+    | Granit Karnıyarık  Tenceresi                | https://www.bim.com.tr/aktuel-urunler/granit-karniyarik-tenceresi/aktuel.aspx                 | https://www.bim.com.tr/Uploads/aktuel-urunler/643_kucuk_543X467_granit%20karniyarik.jpg             | 79,90₺       |
+    | Granit Tava Seti 2’li                       | https://www.bim.com.tr/aktuel-urunler/granit-tava-seti-2-li/aktuel.aspx                       | https://www.bim.com.tr/Uploads/aktuel-urunler/643_kucuk_543X467_granit%20tava%20seti.jpg            | 79,90₺       |
+    | Taşıma Kapaklı Kek Kalıbı                   | https://www.bim.com.tr/aktuel-urunler/tasima-kapakli-kek-kalibi/aktuel.aspx                   | https://www.bim.com.tr/Uploads/aktuel-urunler/643_kucuk_543X467_tasima%20kapakli%20kek%20kalibi.jpg | 39,90₺       |
+    | Baton ve Dilimli Kek Kalıbı Çeşitleri       | https://www.bim.com.tr/aktuel-urunler/baton-ve-dilimli-kek-kalibi-cesitleri/aktuel.aspx       | https://www.bim.com.tr/Uploads/aktuel-urunler/643_kucuk_543X467_baton%20ve%20dilimli%20kek.jpg      | 19,90₺       |
+    | 6’lı Ayaklı Kahve Yanı Su Bardağı           | https://www.bim.com.tr/aktuel-urunler/6-li-ayakli-kahve-yani-su-bardagi/aktuel.aspx           | https://www.bim.com.tr/Uploads/aktuel-urunler/643_kucuk_543X467_6li%20ayakli%20kahv.jpg             | 25,00₺       |
+    +---------------------------------------------+-----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+--------------+
+    """
+
+print(bim.anahtarlar())
+    """
+    Anahtarları(list) Döndürür
+
+    ['urun_baslik', 'urun_link', 'urun_gorsel', 'urun_fiyat']
+    """
+```
+
 ## 🌐 Telif Hakkı ve Lisans
 
 * *Copyright (C) 2020 by* [keyiflerolsun](https://github.com/keyiflerolsun) ❤️️
