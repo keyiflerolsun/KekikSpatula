@@ -4,9 +4,14 @@ import requests, json
 from bs4 import BeautifulSoup
 from tabulate import tabulate
 
-class Akaryakit(object):
+import pandas as pd
+import warnings
+from pandas.core.common import SettingWithCopyWarning
+warnings.simplefilter(action="ignore", category=SettingWithCopyWarning)
+
+class Doviz(object):
     """
-    Akaryakit : finans.haberler.com adresinden akaryakıt verilerini hazır formatlarda elinize verir.
+    Doviz : altinkaynak.com adresinden döviz verilerini hazır formatlarda elinize verir.
 
     Methodlar
     ----------
@@ -23,31 +28,31 @@ class Akaryakit(object):
             kullanılan anahtar listesini döndürür.
     """
     def __init__(self):
-        """akaryakıt verilerini finans.haberler.com'dan alarak bs4'ile ayrıştırır."""
+        """döviz verilerini altinkaynak.com'dan alarak bs4'ile ayrıştırır."""
         super().__init__()
 
-        kaynak  = "finans.haberler.com"
-        url     = "https://finans.haberler.com/akaryakit/"
-        kimlik  = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36'}
-        istek   = requests.get(url, headers=kimlik)
+        kaynak  = "altinkaynak.com"
+        istek = requests.get("http://www.altinkaynak.com/Doviz/Kur/Guncel")
+        corba = BeautifulSoup(istek.content, 'lxml')
+        tablo = corba.find('table', class_='table')
 
-        corba   = BeautifulSoup(istek.content, "lxml")
+        panda_veri = pd.read_html(str(tablo))[0].rename(
+            columns={
+                'Unnamed: 0'    : 'Birim',
+                'Unnamed: 1'    : 'sil',
+                'Unnamed: 5'    : 'sil',
+                '₺ ₺'           : 'sil',
+            }
+        ).drop(columns = 'sil').dropna().reset_index(drop = True)
 
-        son_guncellenme = corba.select('body > div > div.hbMain.stickyNo > div:nth-child(3) > div > div.col696 > div > div > table > tbody > tr:nth-child(1) > td:nth-child(2)')[0].text
-        cerceve         = corba.find('div', class_='hbTableContent piyasa')
+        for say in range(len(panda_veri['Birim'])):
+            panda_veri['Birim'][say] = panda_veri['Birim'][say][-3:]
 
-        json = {"kaynak": kaynak, 'son_guncellenme': son_guncellenme, 'veri' : []}
+        json_veri = json.loads(panda_veri.to_json(orient='records'))
 
-        for tablo in cerceve.findAll('tr')[1:]:
-            cinsi  = tablo.find('td', {'width' : '50%'}).text.replace(' TL',' -- ₺')
-            fiyati = tablo.find('td', {'width' : '16%'}).text
+        json_ = {"kaynak": kaynak, 'veri' : json_veri}
 
-            json['veri'].append({
-                'cinsi'     : cinsi,
-                'fiyati'    : fiyati
-            })
-
-        self.json  = json if json['veri'] != [] else None
+        self.json  = json_ if json_['veri'] != [] else None
 
     def veri(self):
         """json verisi döndürür."""

@@ -4,9 +4,9 @@ import requests, json
 from bs4 import BeautifulSoup
 from tabulate import tabulate
 
-
 class NobetciEczane(object):
-    """NobetciEczane : eczaneler.gen.tr adresinden nöbetçi eczane verilerini hazır formatlarda elinize verir.
+    """
+    NobetciEczane : eczaneler.gen.tr adresinden nöbetçi eczane verilerini hazır formatlarda elinize verir.
 
     Öz Nitelikler
     -------------

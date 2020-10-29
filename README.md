@@ -165,6 +165,157 @@ print(akaryakit.anahtarlar())
     """
 ```
 
+### 💱 Doviz
+
+```python
+from KekikSpatula import Doviz
+
+doviz = Doviz()
+
+print(doviz.veri())
+    """
+    JSON(dict) Veri Döndürür
+
+    {'kaynak': 'altinkaynak.com', 'veri': [{'Birim': 'USD', 'Alış': 8.245, 'Satış': 8.275}, {'Birim': 'EUR', 'Alış': 9.67, 'Satış': 9.71}, {'Birim': 'CHF', 'Alış': 8.991, 'Satış': 9.064}, {'Birim': 'GBP', 'Alış': 10.649, 'Satış': 10.747}, {'Birim': 'DKK', 'Alış': 1.2831, 'Satış': 1.3014}, {'Birim': 'SEK', 'Alış': 0.9217, 'Satış': 0.933}, {'Birim': 'NOK', 'Alış': 0.8677, 'Satış': 0.8845}, {'Birim': 'JPY', 'Alış': 0.0779, 'Satış': 0.0793}, {'Birim': 'SAR', 'Alış': 2.168, 'Satış': 2.205}, {'Birim': 'AUD', 'Alış': 5.74, 'Satış': 5.833}, {'Birim': 'CAD', 'Alış': 6.152, 'Satış': 6.227}, {'Birim': 'RUB', 'Alış': 0.0975, 'Satış': 0.1084}, {'Birim': 'AZN', 'Alış': 3.8943, 'Satış': 5.0085}, {'Birim': 'CNY', 'Alış': 1.068, 'Satış': 1.2521}, {'Birim': 'RON', 'Alış': 1.5229, 'Satış': 2.0487}, {'Birim': 'AED', 'Alış': 1.9617, 'Satış': 2.2934}, {'Birim': 'BGN', 'Alış': 4.085, 'Satış': 5.033}, {'Birim': 'KWD', 'Alış': 24.269, 'Satış': 27.1044}]}
+    """
+
+print(doviz.gorsel())
+    """
+    Okunabilir JSON(str) Döndürür
+
+    {
+    "kaynak": "altinkaynak.com",
+    "veri": [
+        {
+        "Birim": "USD",
+        "Alış": 8.245,
+        "Satış": 8.275
+        },
+        {
+        "Birim": "EUR",
+        "Alış": 9.67,
+        "Satış": 9.71
+        },
+        {
+        "Birim": "CHF",
+        "Alış": 8.991,
+        "Satış": 9.064
+        },
+        {
+        "Birim": "GBP",
+        "Alış": 10.649,
+        "Satış": 10.747
+        },
+        {
+        "Birim": "DKK",
+        "Alış": 1.2831,
+        "Satış": 1.3014
+        },
+        {
+        "Birim": "SEK",
+        "Alış": 0.9217,
+        "Satış": 0.933
+        },
+        {
+        "Birim": "NOK",
+        "Alış": 0.8677,
+        "Satış": 0.8845
+        },
+        {
+        "Birim": "JPY",
+        "Alış": 0.0779,
+        "Satış": 0.0793
+        },
+        {
+        "Birim": "SAR",
+        "Alış": 2.168,
+        "Satış": 2.205
+        },
+        {
+        "Birim": "AUD",
+        "Alış": 5.74,
+        "Satış": 5.833
+        },
+        {
+        "Birim": "CAD",
+        "Alış": 6.152,
+        "Satış": 6.227
+        },
+        {
+        "Birim": "RUB",
+        "Alış": 0.0975,
+        "Satış": 0.1084
+        },
+        {
+        "Birim": "AZN",
+        "Alış": 3.8943,
+        "Satış": 5.0085
+        },
+        {
+        "Birim": "CNY",
+        "Alış": 1.068,
+        "Satış": 1.2521
+        },
+        {
+        "Birim": "RON",
+        "Alış": 1.5229,
+        "Satış": 2.0487
+        },
+        {
+        "Birim": "AED",
+        "Alış": 1.9617,
+        "Satış": 2.2934
+        },
+        {
+        "Birim": "BGN",
+        "Alış": 4.085,
+        "Satış": 5.033
+        },
+        {
+        "Birim": "KWD",
+        "Alış": 24.269,
+        "Satış": 27.1044
+        }
+    ]
+    }
+    """
+
+print(doviz.tablo())
+    """
+    Tabulate(str) Döndürür
+
+    +---------+---------+---------+
+    | Birim   |    Alış |   Satış |
+    |---------+---------+---------|
+    | USD     |  8.245  |  8.275  |
+    | EUR     |  9.67   |  9.71   |
+    | CHF     |  8.991  |  9.064  |
+    | GBP     | 10.649  | 10.747  |
+    | DKK     |  1.2831 |  1.3014 |
+    | SEK     |  0.9217 |  0.933  |
+    | NOK     |  0.8677 |  0.8845 |
+    | JPY     |  0.0779 |  0.0793 |
+    | SAR     |  2.168  |  2.205  |
+    | AUD     |  5.74   |  5.833  |
+    | CAD     |  6.152  |  6.227  |
+    | RUB     |  0.0975 |  0.1084 |
+    | AZN     |  3.8943 |  5.0085 |
+    | CNY     |  1.068  |  1.2521 |
+    | RON     |  1.5229 |  2.0487 |
+    | AED     |  1.9617 |  2.2934 |
+    | BGN     |  4.085  |  5.033  |
+    | KWD     | 24.269  | 27.1044 |
+    +---------+---------+---------+
+    """
+
+print(doviz.anahtarlar())
+    """
+    Anahtarları(list) Döndürür
+
+    ['Birim', 'Alış', 'Satış']
+    """
+```
+
 ## 🌐 Telif Hakkı ve Lisans
 
 * *Copyright (C) 2020 by* [keyiflerolsun](https://github.com/keyiflerolsun) ❤️️
