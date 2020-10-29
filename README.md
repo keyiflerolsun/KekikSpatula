@@ -19,6 +19,8 @@
 pip install KekikSpatula
 ```
 
+### ⚕️ NobetciEczane
+
 ```python
 from KekikSpatula import NobetciEczane
 
@@ -81,6 +83,85 @@ print(eczane.anahtarlar())
     Anahtarları(list) Döndürür
 
     ['ad', 'mahalle', 'adres', 'tarif', 'telefon']
+    """
+```
+
+### ⛽️ Akaryakit
+
+```python
+from KekikSpatula import Akaryakit
+
+akaryakit = Akaryakit()
+
+print(akaryakit.veri())
+    """
+    JSON(dict) Veri Döndürür
+
+    {'kaynak': 'finans.haberler.com', 'son_guncellenme': '29.10.2020 21:56', 'veri': [{'cinsi': 'Kurşunsuz 95 -- ₺/lt', 'fiyati': '4,85 TL'}, {'cinsi': 'Kurşunsuz 95(Excellium95) -- ₺/lt', 'fiyati': '6,70 TL'}, {'cinsi': 'Gazyağı -- ₺/lt', 'fiyati': '5,05 TL'}, {'cinsi': 'Motorin(Eurodiesel) -- ₺/lt', 'fiyati': '6,11 TL'}, {'cinsi': 'Motorin(Excellium Eurodiesel) -- ₺/lt', 'fiyati': '6,15 TL'}, {'cinsi': 'Kalorifer Yakıtı -- ₺/Kg', 'fiyati': '4,29 TL'}, {'cinsi': 'Fuel Oil -- ₺/Kg', 'fiyati': '4,03 TL'}]}
+    """
+
+print(akaryakit.gorsel())
+    """
+    Okunabilir JSON(str) Döndürür
+
+    {
+    "kaynak": "finans.haberler.com",
+    "son_guncellenme": "29.10.2020 21:56",
+    "veri": [
+        {
+        "cinsi": "Kurşunsuz 95 -- ₺/lt",
+        "fiyati": "4,85 TL"
+        },
+        {
+        "cinsi": "Kurşunsuz 95(Excellium95) -- ₺/lt",
+        "fiyati": "6,70 TL"
+        },
+        {
+        "cinsi": "Gazyağı -- ₺/lt",
+        "fiyati": "5,05 TL"
+        },
+        {
+        "cinsi": "Motorin(Eurodiesel) -- ₺/lt",
+        "fiyati": "6,11 TL"
+        },
+        {
+        "cinsi": "Motorin(Excellium Eurodiesel) -- ₺/lt",
+        "fiyati": "6,15 TL"
+        },
+        {
+        "cinsi": "Kalorifer Yakıtı -- ₺/Kg",
+        "fiyati": "4,29 TL"
+        },
+        {
+        "cinsi": "Fuel Oil -- ₺/Kg",
+        "fiyati": "4,03 TL"
+        }
+    ]
+    }
+    """
+
+print(akaryakit.tablo())
+    """
+    Tabulate(str) Döndürür
+
+    +---------------------------------------+----------+
+    | cinsi                                 | fiyati   |
+    |---------------------------------------+----------|
+    | Kurşunsuz 95 -- ₺/lt                  | 4,85 TL  |
+    | Kurşunsuz 95(Excellium95) -- ₺/lt     | 6,70 TL  |
+    | Gazyağı -- ₺/lt                       | 5,05 TL  |
+    | Motorin(Eurodiesel) -- ₺/lt           | 6,11 TL  |
+    | Motorin(Excellium Eurodiesel) -- ₺/lt | 6,15 TL  |
+    | Kalorifer Yakıtı -- ₺/Kg              | 4,29 TL  |
+    | Fuel Oil -- ₺/Kg                      | 4,03 TL  |
+    +---------------------------------------+----------+
+    """
+
+print(akaryakit.anahtarlar())
+    """
+    Anahtarları(list) Döndürür
+
+    ['cinsi', 'fiyati']
     """
 ```
 
