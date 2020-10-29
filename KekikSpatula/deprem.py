@@ -3,15 +3,11 @@
 import requests, json
 from bs4 import BeautifulSoup
 from tabulate import tabulate
-
 import pandas as pd
-import warnings
-from pandas.core.common import SettingWithCopyWarning
-warnings.simplefilter(action="ignore", category=SettingWithCopyWarning)
 
-class Doviz(object):
+class SonDepremler(object):
     """
-    Doviz : altinkaynak.com adresinden döviz verilerini hazır formatlarda elinize verir.
+    SonDepremler : afet.gen.tr adresinden son deprem verilerini hazır formatlarda elinize verir.
 
     Methodlar
     ----------
@@ -28,25 +24,28 @@ class Doviz(object):
             kullanılan anahtar listesini döndürür.
     """
     def __init__(self):
-        """döviz verilerini altinkaynak.com'dan alarak pandas ile ayrıştırır."""
+        """son deprem verilerini afet.gen.tr'den alarak pandas ile ayrıştırır."""
         super().__init__()
 
-        kaynak  = "altinkaynak.com"
-        istek   = requests.get("http://www.altinkaynak.com/Doviz/Kur/Guncel")
+        kaynak  = "afet.gen.tr'"
+        kimlik  = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36'}
+        istek   = requests.get("http://www.afet.gen.tr/son-depremler.php", headers=kimlik)
         corba   = BeautifulSoup(istek.content, 'lxml')
-        tablo   = corba.find('table', class_='table')
+        tablo   = corba.find('table', width="100%")
 
         panda_veri = pd.read_html(str(tablo))[0].rename(
             columns={
-                'Unnamed: 0'    : 'Birim',
-                'Unnamed: 1'    : 'sil',
-                'Unnamed: 5'    : 'sil',
-                '₺ ₺'           : 'sil',
+                0   : 'Tarih',
+                1   : 'Saat',
+                2   : 'Enlem(N)',
+                3   : 'Boylam(E)',
+                4   : 'Derinlik(km)',
+                5   : 'MD',
+                6   : 'ML',
+                7   : 'MS',
+                8   : 'Yer'
             }
-        ).drop(columns = 'sil').dropna().reset_index(drop = True)
-
-        for say in range(len(panda_veri['Birim'])):
-            panda_veri['Birim'][say] = panda_veri['Birim'][say][-3:]
+        ).drop([0], axis=0).reset_index(drop = True)
 
         json_veri = json.loads(panda_veri.to_json(orient='records'))
 

@@ -316,6 +316,89 @@ print(doviz.anahtarlar())
     """
 ```
 
+### 🌀 SonDepremler
+
+```python
+from KekikSpatula import SonDepremler
+
+deprem = SonDepremler()
+
+print(deprem.veri())
+    """
+    JSON(dict) Veri Döndürür
+    """
+
+print(deprem.gorsel())
+    """
+    Okunabilir JSON(str) Döndürür
+
+        {
+        "Tarih": "2020.10.18",
+        "Saat": "07:10:23",
+        "Enlem(N)": "38.6587",
+        "Boylam(E)": "43.0703",
+        "Derinlik(km)": "4.3",
+        "MD": "-.-",
+        "ML": "2.8",
+        "MS": "-.-",
+        "Yer": "VAN GOLU İlksel"
+        },
+        {
+        "Tarih": "2020.10.18",
+        "Saat": "07:04:46",
+        "Enlem(N)": "35.5735",
+        "Boylam(E)": "26.3203",
+        "Derinlik(km)": "6.5",
+        "MD": "-.-",
+        "ML": "2.7",
+        "MS": "-.-",
+        "Yer": "AKDENIZ İlksel"
+        },
+        {
+        "Tarih": "2020.10.18",
+        "Saat": "06:56:20",
+        "Enlem(N)": "34.7457",
+        "Boylam(E)": "26.7503",
+        "Derinlik(km)": "10.8",
+        "MD": "-.-",
+        "ML": "2.4",
+        "MS": "-.-",
+        "Yer": "GIRIT ADASI ACIKLARI (AKDENIZ) İlksel"
+        },
+        {
+        "Tarih": "2020.10.18",
+        "Saat": "05:16:08",
+        "Enlem(N)": "40.7805",
+        "Boylam(E)": "31.7178",
+        "Derinlik(km)": "15.1",
+        "MD": "-.-",
+        "ML": "1.6",
+        "MS": "-.-",
+        "Yer": "TATLAR-(BOLU) İlksel"
+        }
+    ]
+    }
+    """
+
+print(deprem.tablo())
+    """
+    Tabulate(str) Döndürür
+
+    +------------+----------+------------+-------------+----------------+------+------+------+------------------------------------------------------------+
+    | Tarih      | Saat     |   Enlem(N) |   Boylam(E) |   Derinlik(km) | MD   |   ML | MS   | Yer                                                        |
+    |------------+----------+------------+-------------+----------------+------+------+------+------------------------------------------------------------|
+    | 2020.10.29 | 22:11:08 |    38.773  |     42.9525 |            6.4 | -.-  |  1.8 | -.-  | KARSIYAKA-ADILCEVAZ (BITLIS) İlksel                        |
+    | 2020.10.29 | 21:33:17 |    39.572  |     41.3577 |            8.2 | -.-  |  2.4 | -.-  | GOZLUCE-TEKMAN (ERZURUM) İlksel                            |
+    """
+
+print(deprem.anahtarlar())
+    """
+    Anahtarları(list) Döndürür
+
+    ['Tarih', 'Saat', 'Enlem(N)', 'Boylam(E)', 'Derinlik(km)', 'MD', 'ML', 'MS', 'Yer']
+    """
+```
+
 ## 🌐 Telif Hakkı ve Lisans
 
 * *Copyright (C) 2020 by* [keyiflerolsun](https://github.com/keyiflerolsun) ❤️️
