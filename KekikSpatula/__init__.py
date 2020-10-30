@@ -4,7 +4,7 @@ YAZAR       = 'keyiflerolsun'
 YAZAR_POSTA = 'keyiflerolsun@gmail.com'
 
 PAKET       = 'KekikSpatula'
-VERSIYON    = '0.1.5'
+VERSIYON    = '0.1.6'
 
 REPO        = 'https://github.com/keyiflerolsun/KekikSpatula'
 ACIKLAMA    = 'Siz uğraşmayın diye biz uğraştık.. ~ dızz 🐍'
@@ -24,3 +24,4 @@ from KekikSpatula.doviz import Doviz
 from KekikSpatula.deprem import SonDepremler
 from KekikSpatula.bim import BimAktuel
 from KekikSpatula.haber import SonDakika
+from KekikSpatula.havaDurumu import HavaDurumu

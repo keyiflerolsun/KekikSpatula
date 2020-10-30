@@ -16,8 +16,22 @@
 ## 🚀 Kurulum - Kullanım
 
 ```bash
+# Yüklemek
 pip install KekikSpatula
+
+# Güncellemek
+pip install -U KekikSpatula
 ```
+
+## 📝 Proje İlerlemesi
+
+- [x] `v0.1.0` *~* **[NobetciEczane](https://github.com/keyiflerolsun/KekikSpatula#%EF%B8%8F-nobetcieczane)** *Spatulası ile proje başlamıştır..*
+- [x] `v0.1.1` *ile* **[Akaryakit](https://github.com/keyiflerolsun/KekikSpatula#%EF%B8%8F-akaryakit)** *Spatulası Eklenmiştir..*
+- [x] `v0.1.2` *ile* **[Doviz Spatulası](https://github.com/keyiflerolsun/KekikSpatula#-doviz)** *Eklenmiştir..*
+- [x] `v0.1.3` *ile* **[SonDepremler](https://github.com/keyiflerolsun/KekikSpatula#-sondepremler)** *Spatulası Eklenmiştir..*
+- [x] `v0.1.4` *ile* **[BimAktuel](https://github.com/keyiflerolsun/KekikSpatula#-bimaktuel)** *Spatulası Eklenmiştir..*
+- [x] `v0.1.5` *ile* **[SonDakika](https://github.com/keyiflerolsun/KekikSpatula#-sondakika)** *Spatulası Eklenmiştir..*
+- [x] `v0.1.6` *ile* **[HavaDurumu](https://github.com/keyiflerolsun/KekikSpatula#-havadurumu)** *Spatulası Eklenmiştir..*
 
 ### ⚕️ NobetciEczane
 
@@ -499,7 +513,7 @@ print(bim.anahtarlar())
     """
 ```
 
-### SonDakika
+### 📰 SonDakika
 
 ```python
 from KekikSpatula import SonDakika
@@ -719,6 +733,55 @@ print(haber.anahtarlar())
     Anahtarları(list) Döndürür
 
     ['Haber', 'Link']
+    """
+```
+
+### ☁️ HavaDurumu
+
+```python
+from KekikSpatula import HavaDurumu
+
+hava = HavaDurumu('Çanakkale', 'Merkez')
+
+print(hava.veri())
+    """
+    JSON(dict) Veri Döndürür
+
+    {'kaynak': 'google.com', 'veri': [{'gun': 'Cuma 20:53', 'yer': 'Çanakkale Merkez', 'derece': 'Çok bulutlu 14°C'}]}
+    """
+
+print(hava.gorsel())
+    """
+    Okunabilir JSON(str) Döndürür
+
+    {
+    "kaynak": "google.com",
+    "veri": [
+        {
+        "gun": "Cuma 20:53",
+        "yer": "Çanakkale Merkez",
+        "derece": "Çok bulutlu 14°C"
+        }
+    ]
+    }
+    """
+
+print(hava.tablo())
+    """
+    Tabulate(str) Döndürür
+
+    +------------+------------------+------------------+
+    | gun        | yer              | derece           |
+    |------------+------------------+------------------|
+    | Cuma 20:53 | Çanakkale Merkez | Çok bulutlu 14°C |
+    +------------+------------------+------------------+
+    """
+
+print(hava.anahtarlar())
+    """
+    Anahtarları(list) Döndürür
+
+    ['gun', 'yer', 'derece']
     """
 ```
 
