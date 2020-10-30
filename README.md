@@ -31,7 +31,8 @@ pip install -U KekikSpatula
 - [x] `v0.1.3` *ile* **[SonDepremler](https://github.com/keyiflerolsun/KekikSpatula#-sondepremler)** *Spatulası Eklenmiştir..*
 - [x] `v0.1.4` *ile* **[BimAktuel](https://github.com/keyiflerolsun/KekikSpatula#-bimaktuel)** *Spatulası Eklenmiştir..*
 - [x] `v0.1.5` *ile* **[SonDakika](https://github.com/keyiflerolsun/KekikSpatula#-sondakika)** *Spatulası Eklenmiştir..*
-- [x] `v0.1.6` *ile* **[HavaDurumu](https://github.com/keyiflerolsun/KekikSpatula#-havadurumu)** *Spatulası Eklenmiştir..*
+- [x] `v0.1.6` *ile* **[HavaDurumu](https://github.com/keyiflerolsun/KekikSpatula#%EF%B8%8F-havadurumu)** *Spatulası Eklenmiştir..*
+- [x] `v0.1.7` *ile* **[Ezan](https://github.com/keyiflerolsun/KekikSpatula#%EF%B8%8F-ezan)** *Spatulası Eklenmiştir..*
 
 ### ⚕️ NobetciEczane
 
@@ -782,6 +783,59 @@ print(hava.anahtarlar())
     Anahtarları(list) Döndürür
 
     ['gun', 'yer', 'derece']
+    """
+```
+
+### 🕌 Ezan
+
+```python
+from KekikSpatula import Ezan
+
+ezan = Ezan('İstanbul')
+
+print(ezan.veri())
+    """
+    JSON(dict) Veri Döndürür
+
+    {'kaynak': 'sabah.com.tr', 'veri': [{'il': 'Istanbul', 'imsak': '06:00', 'gunes': '07:26', 'ogle': '12:53', 'ikindi': '15:42', 'aksam': '18:10', 'yatsi': '19:30'}]}
+    """
+
+print(ezan.gorsel())
+    """
+    Okunabilir JSON(str) Döndürür
+
+    {
+    "kaynak": "sabah.com.tr",
+    "veri": [
+        {
+        "il": "Istanbul",
+        "imsak": "06:00",
+        "gunes": "07:26",
+        "ogle": "12:53",
+        "ikindi": "15:42",
+        "aksam": "18:10",
+        "yatsi": "19:30"
+        }
+    ]
+    }
+    """
+
+print(ezan.tablo())
+    """
+    Tabulate(str) Döndürür
+
+    +----------+---------+---------+--------+----------+---------+---------+
+    | il       | imsak   | gunes   | ogle   | ikindi   | aksam   | yatsi   |
+    |----------+---------+---------+--------+----------+---------+---------|
+    | Istanbul | 06:00   | 07:26   | 12:53  | 15:42    | 18:10   | 19:30   |
+    +----------+---------+---------+--------+----------+---------+---------+
+    """
+
+print(ezan.anahtarlar())
+    """
+    Anahtarları(list) Döndürür
+
+    ['il', 'imsak', 'gunes', 'ogle', 'ikindi', 'aksam', 'yatsi']
     """
 ```
 
