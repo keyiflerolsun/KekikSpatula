@@ -499,6 +499,229 @@ print(bim.anahtarlar())
     """
 ```
 
+### SonDakika
+
+```python
+from KekikSpatula import SonDakika
+
+haber = SonDakika()
+
+print(haber.veri())
+    """
+    JSON(dict) Veri Döndürür
+
+    {'kaynak': 'ntv.com.tr', 'veri': [{'Haber': 'Mesut Yılmaz hayatını kaybetti', 'Link': 'https://www.ntv.com.tr/turkiye/son-dakika-haberi-mesut-yilmaz-hayatini-kaybetti,uUhAL55lZ0Wer3SRXwaXyw'}, {'Haber': "Merkez Bankası'ndan yeni adım", 'Link': 'https://www.ntv.com.tr/ekonomi/son-dakika-haberi-merkez-bankasindan-yeni-adim,i5ytNXpMWkikhyVTMsPkAw'}, {'Haber': 'Çeyrek ve gram altın fiyatları bugün ne kadar oldu? 30 Ekim 2020 anlık ve güncel çeyrek altın kuru fiyatları', 'Link': 'https://www.ntv.com.tr/ekonomi/ceyrek-ve-gram-altin-fiyatlari-bugun-ne-kadar-oldu-30-ekim-2020-anlik-ve-guncel-ceyrek-altin-kuru-fiyatlari,MAlt1qPmdkSAWayZS9WECA'}, {'Haber': 'Dolar\xa0kaç TL? (30 Ekim 2020 dolar - euro fiyatları)', 'Link': 'https://www.ntv.com.tr/ekonomi/dolarkac-tl-30-ekim-2020-dolar-euro-fiyatlari,7cUHGwdKzE2mh8IKkdmnMw'}, {'Haber': "2020 Yılı Cumhurbaşkanlığı Kültür ve Sanat Büyük Ödülleri'ne layık görülen isimler açıklandı", 'Link': 'https://www.ntv.com.tr/sanat/son-dakika-haberi2020-yili-cumhurbaskanligi-kultur-ve-sanat-buyuk-odullerine-layik-gorulen-isimler-aciklandi,phuDiX_3qUC-8VLjwsOamA'}, {'Haber': '29 Ekim 2020 corona virüs tablosu:\xa072 can kaybı,\xa02 bin 319 yeni hasta', 'Link': 'https://www.ntv.com.tr/turkiye/29-ekim-2020-corona-virus-tablosu72-can-kaybi-2-319-yeni-hasta-sayisi,TReNnv_5VkawG5b_29RHIA'}, {'Haber': 'Cumhurbaşkanı Erdoğan: En büyük gücümüz tarihi mirasımızdır', 'Link': 'https://www.ntv.com.tr/turkiye/son-dakika-haberi-cumhurbaskani-erdogan-konusuyor,CjkQF1OJK0-pNLSnrd4M8Q'}, {'Haber': 'İYİ Parti İstanbul Milletvekili Ümit Özdağ disipline sevk edildi', 'Link': 'https://www.ntv.com.tr/turkiye/son-dakika-haberiiyi-parti-istanbul-milletvekili-umit-ozdag-disipline-sevk-edildi,_RY4y88SdE2hzvd-GgJeZw'}, {'Haber': "MSB: 5 PKK/YPG'li terörist etkisiz hale getirildi", 'Link': 'https://www.ntv.com.tr/turkiye/son-dakika-haberi-msb-5-pkk-ypgli-terorist-etkisiz-hale-getirildi,kY1HOFFo5Ei-hbbLkiTfPA'}, {'Haber': "Türkiye'den Fransa'daki saldırıya kınama", 'Link': 'https://www.ntv.com.tr/turkiye/turkiyeden-fransadaki-saldiriya-kinama,ZcW7zg-wBka2phDu0lb0aw'}, {'Haber': "Putin'den Dağlık Karabağ açıklaması", 'Link': 'https://www.ntv.com.tr/turkiye/son-dakika-haberi-putinden-karabag-aciklamasi,4b5IoVqi-EapWsaKe5es2g'}, {'Haber': 'Cumhurbaşkanı Erdoğan,\xa0Azerbaycan Cumhurbaşkanı Aliyev ile görüştü', 'Link': 'https://www.ntv.com.tr/turkiye/son-dakika-haberi-cumhurbaskani-erdogan-azerbaycan-cumhurbaskani-aliyev-ile-gorustu,sXM2k0rFQUyeCqjV5BbGTQ'}, {'Haber': "Azerbaycan: Ermenistan'a ait iki SU-25 düşürüldü", 'Link': 'https://www.ntv.com.tr/dunya/son-dakika-haberi-azerbaycan-ermenistana-ait-iki-su-25-dusuruldu,mA05FnI0BEmncP3tXl8RdA'}, {'Haber': 'KYK burs başvurusu işlemleri başladı (KYK başvuruları ne zaman sona erecek?)', 'Link': 'https://www.ntv.com.tr/egitim/kyk-burs-basvurusu-islemleri-basladi-kyk-basvurulari-ne-zaman-sona-erecek,HLt8bu9DbEOnaSdn0dSZmw'}, {'Haber': "Medipol Başakşehir, Şampiyonlar Ligi'ndeki ikinci maçında da puanla tanışamadı", 'Link': 'https://www.ntv.com.tr/spor/son-dakika-basaksehir-evinde-psgye-boyun-egdi,Fa-afm0a7kKR6y5hyskRFg'}, {'Haber': "Fransa'da 30 Ekim itibarıyla sokağa çıkma kısıtlaması uygulanacak", 'Link': 'https://www.ntv.com.tr/dunya/son-dakika-haberi-fransada-30-ekim-itibariyla-sokaga-cikma-kisitlamasi-uygulanacak,z-K9bTbM_UyrdRED5Ef9Bw'}, {'Haber': "Sağlık Bakanı Koca'dan İstanbul'a uyarılar (Seyahat kısıtlaması olacak mı?)", 'Link': 'https://www.ntv.com.tr/turkiye/son-dakika-haberi-saglik-bakani-koca-konusuyor,b-LHq7Lbkkmp7gEjnklNHw'}, {'Haber': "Hatay'daki terör saldırısı girişimiyle ilgili 4 ilde 5 zanlı\xa0gözaltında", 'Link': 'https://www.ntv.com.tr/turkiye/son-dakika-haberi-hatayda-terorist-saldiri-girisimiyle-ilgili-4-ilde-5-zanli-gozaltina-alindi,g_BM_4KGMkSMp_ItO2nwUA'}, {'Haber': "Fransa’nın Ankara Büyükelçiliği Maslahatgüzarı Dışişleri Bakanlığı'na çağrıldı", 'Link': 'https://www.ntv.com.tr/turkiye/son-dakika-haberifransanin-ankara-buyukelciligi-maslahatguzari-disisleri-bakanligina-cagrildi,j6K-TsTpBkWUmADKfczyAQ'}, {'Haber': '28 Ekim 2020 corona virüs tablosu: 77 can kaybı, 2 bin 305 yeni hasta', 'Link': 'https://www.ntv.com.tr/turkiye/28-ekim-2020-corona-virus-tablosu-77-can-kaybi-2-bin-305-yeni-hasta,wHhHaSWSF0OSUNQwJ43b-g'}, {'Haber': 'Dolar kaç TL? / Dolar kuru bugün ne kadar? (28 Ekim 2020 dolar - euro fiyatları)', 'Link': 'https://www.ntv.com.tr/ekonomi/dolar-kac-tl-dolar-kuru-bugun-ne-kadar-28-ekim-2020-dolar-euro-fiyatlari,36JmpscvHEWnebHpvc6Vcg'}, {'Haber': 'Azerbaycan ordusu 13 köyü daha işgalden kurtardı', 'Link': 'https://www.ntv.com.tr/dunya/azerbaycan-ordusu-13-koyu-daha-isgalden-kurtardi,aXIaFg0kvE-7qZaAWMdEcQ'}, {'Haber': "Ermenistan Berde'yi vurdu", 'Link': 'https://www.ntv.com.tr/dunya/son-dakika-haberi-ermenistan-berdeyi-vurdu,qs9Xx4NOUUWMLgiy0bN7dQ'}, {'Haber': "Çavuşoğlu'ndan 'Paris elçisi geri çağrılacak mı' sorusuna\xa0yanıt", 'Link': 'https://www.ntv.com.tr/turkiye/cavusoglunda-paris-elcisi-geri-cagrilacak-mi-sorusunayanit,DZ-H2HCGM0-V3OXPD2PwAw'}, {'Haber': "Cumhurbaşkanı Erdoğan'dan saygısız karikatüre tepki", 'Link': 'https://www.ntv.com.tr/turkiye/cumhurbaskani-erdogandan-saygisiz-karikature-tepki,3hB8BugSgEmhI-MUv2YsTg'}, {'Haber': 'Başsavcılıktan saygısız karikatür için soruşturma', 'Link': 'https://www.ntv.com.tr/turkiye/son-dakika-haberi-saygisiz-karikatur-hakkinda-sorusturma,kgRiUgSloEuhhxP2OBy31g'}, {'Haber': "Erzincan'da 4,3'lük deprem", 'Link': 'https://www.ntv.com.tr/turkiye/erzincanda-4-3luk-deprem,aQjHPqWDa0qk52yIAGLaBg'}, {'Haber': "Hava durumu: Meteoroloji'den kuvvetli yağış uyarısı (Bugün hava nasıl olacak?)", 'Link': 'https://www.ntv.com.tr/turkiye/hava-durumu-meteorolojiden-kuvvetli-yagis-uyarisi-bugun-hava-nasil-olacak,U7HaLGbIJEKyv0zNdw1bBQ'}, {'Haber': 'Batman ve Diyarbakır\'da "Yıldırım-14 Zori" operasyonu', 'Link': 'https://www.ntv.com.tr/turkiye/son-dakika-haberi-batman-ve-diyarbakirda-yildirim-14-zori-operasyonu,6TINK0VaB0OlWZakwj4Hmw'}, {'Haber': 'Çeyrek altın fiyatları bugün ne kadar?\xa028 Ekim\xa02020 anlık ve güncel altın kuru fiyatları', 'Link': 'https://www.ntv.com.tr/ekonomi/ceyrek-altin-fiyatlari-bugun-ne-kadar28-ekim2020-anlik-ve-guncel-altin-kuru-fiyatlari,xxleRErroka8n-BIY-rxzA'}, {'Haber': "Cumhurbaşkanı Erdoğan'dan 29 Ekim mesajı", 'Link': 'https://www.ntv.com.tr/turkiye/cumhurbaskani-erdogandan-29-ekim-mesaji,UzuD3djE3UKXrBKTyVG-kQ'}, {'Haber': 'Bakan Albayrak: Fransız dergisini şiddetle kınıyorum', 'Link': 'https://www.ntv.com.tr/turkiye/son-dakika-haberi-bakan-albayrak-ahlaksizca-cumhurbaskanimiza-saldiran-fransiz-dergisini-siddetle-kiniyorum,hL12oeC3vUKgt-w2SxsaSg'}, {'Haber': 'Sahte içkiden 3 ölüm daha', 'Link': 'https://www.ntv.com.tr/turkiye/son-dakika-haberi-sahte-ickiden-3-olum-daha,mcXyVyrweUaYFkJohuFq3g'}, {'Haber': "FETÖ'nün Deniz Kuvvetleri ve Sahil Güvenlik yapılanmasına operasyon", 'Link': 'https://www.ntv.com.tr/turkiye/fetonun-deniz-kuvvetleri-ve-sahil-guvenlik-yapilanmasina-operasyon,JLMm-c0wN06xttjasr9p4A'}, {'Haber': "Ankara'da doğalgaz patlaması", 'Link': 'https://www.ntv.com.tr/turkiye/son-dakika-haberi-ankarada-dogalgaz-patlamasi,BW66VpM-IkicNzPZBPSmXw'}, {'Haber': "SON DAKİKA:\xa0Ankara'da 3,8 büyüklüğünde deprem", 'Link': 'https://www.ntv.com.tr/turkiye/son-dakikaankarada-3-8-buyuklugunde-deprem-son-depremler,vLdaIMHEz0uU3JDjUJkM5w'}]}
+    """
+
+print(haber.gorsel())
+    """
+    Okunabilir JSON(str) Döndürür
+
+    {
+    "kaynak": "ntv.com.tr",
+    "veri": [
+        {
+        "Haber": "Mesut Yılmaz hayatını kaybetti",
+        "Link": "https://www.ntv.com.tr/turkiye/son-dakika-haberi-mesut-yilmaz-hayatini-kaybetti,uUhAL55lZ0Wer3SRXwaXyw"
+        },
+        {
+        "Haber": "Merkez Bankası'ndan yeni adım",
+        "Link": "https://www.ntv.com.tr/ekonomi/son-dakika-haberi-merkez-bankasindan-yeni-adim,i5ytNXpMWkikhyVTMsPkAw"
+        },
+        {
+        "Haber": "Çeyrek ve gram altın fiyatları bugün ne kadar oldu? 30 Ekim 2020 anlık ve güncel çeyrek altın kuru fiyatları",
+        "Link": "https://www.ntv.com.tr/ekonomi/ceyrek-ve-gram-altin-fiyatlari-bugun-ne-kadar-oldu-30-ekim-2020-anlik-ve-guncel-ceyrek-altin-kuru-fiyatlari,MAlt1qPmdkSAWayZS9WECA"
+        },
+        {
+        "Haber": "Dolar kaç TL? (30 Ekim 2020 dolar - euro fiyatları)",
+        "Link": "https://www.ntv.com.tr/ekonomi/dolarkac-tl-30-ekim-2020-dolar-euro-fiyatlari,7cUHGwdKzE2mh8IKkdmnMw"
+        },
+        {
+        "Haber": "2020 Yılı Cumhurbaşkanlığı Kültür ve Sanat Büyük Ödülleri'ne layık görülen isimler açıklandı",
+        "Link": "https://www.ntv.com.tr/sanat/son-dakika-haberi2020-yili-cumhurbaskanligi-kultur-ve-sanat-buyuk-odullerine-layik-gorulen-isimler-aciklandi,phuDiX_3qUC-8VLjwsOamA"
+        },
+        {
+        "Haber": "29 Ekim 2020 corona virüs tablosu: 72 can kaybı, 2 bin 319 yeni hasta",
+        "Link": "https://www.ntv.com.tr/turkiye/29-ekim-2020-corona-virus-tablosu72-can-kaybi-2-319-yeni-hasta-sayisi,TReNnv_5VkawG5b_29RHIA"
+        },
+        {
+        "Haber": "Cumhurbaşkanı Erdoğan: En büyük gücümüz tarihi mirasımızdır",
+        "Link": "https://www.ntv.com.tr/turkiye/son-dakika-haberi-cumhurbaskani-erdogan-konusuyor,CjkQF1OJK0-pNLSnrd4M8Q"
+        },
+        {
+        "Haber": "İYİ Parti İstanbul Milletvekili Ümit Özdağ disipline sevk edildi",
+        "Link": "https://www.ntv.com.tr/turkiye/son-dakika-haberiiyi-parti-istanbul-milletvekili-umit-ozdag-disipline-sevk-edildi,_RY4y88SdE2hzvd-GgJeZw"
+        },
+        {
+        "Haber": "MSB: 5 PKK/YPG'li terörist etkisiz hale getirildi",
+        "Link": "https://www.ntv.com.tr/turkiye/son-dakika-haberi-msb-5-pkk-ypgli-terorist-etkisiz-hale-getirildi,kY1HOFFo5Ei-hbbLkiTfPA"
+        },
+        {
+        "Haber": "Türkiye'den Fransa'daki saldırıya kınama",
+        "Link": "https://www.ntv.com.tr/turkiye/turkiyeden-fransadaki-saldiriya-kinama,ZcW7zg-wBka2phDu0lb0aw"
+        },
+        {
+        "Haber": "Putin'den Dağlık Karabağ açıklaması",
+        "Link": "https://www.ntv.com.tr/turkiye/son-dakika-haberi-putinden-karabag-aciklamasi,4b5IoVqi-EapWsaKe5es2g"
+        },
+        {
+        "Haber": "Cumhurbaşkanı Erdoğan, Azerbaycan Cumhurbaşkanı Aliyev ile görüştü",
+        "Link": "https://www.ntv.com.tr/turkiye/son-dakika-haberi-cumhurbaskani-erdogan-azerbaycan-cumhurbaskani-aliyev-ile-gorustu,sXM2k0rFQUyeCqjV5BbGTQ"
+        },
+        {
+        "Haber": "Azerbaycan: Ermenistan'a ait iki SU-25 düşürüldü",
+        "Link": "https://www.ntv.com.tr/dunya/son-dakika-haberi-azerbaycan-ermenistana-ait-iki-su-25-dusuruldu,mA05FnI0BEmncP3tXl8RdA"
+        },
+        {
+        "Haber": "KYK burs başvurusu işlemleri başladı (KYK başvuruları ne zaman sona erecek?)",
+        "Link": "https://www.ntv.com.tr/egitim/kyk-burs-basvurusu-islemleri-basladi-kyk-basvurulari-ne-zaman-sona-erecek,HLt8bu9DbEOnaSdn0dSZmw"
+        },
+        {
+        "Haber": "Medipol Başakşehir, Şampiyonlar Ligi'ndeki ikinci maçında da puanla tanışamadı",
+        "Link": "https://www.ntv.com.tr/spor/son-dakika-basaksehir-evinde-psgye-boyun-egdi,Fa-afm0a7kKR6y5hyskRFg"
+        },
+        {
+        "Haber": "Fransa'da 30 Ekim itibarıyla sokağa çıkma kısıtlaması uygulanacak",
+        "Link": "https://www.ntv.com.tr/dunya/son-dakika-haberi-fransada-30-ekim-itibariyla-sokaga-cikma-kisitlamasi-uygulanacak,z-K9bTbM_UyrdRED5Ef9Bw"
+        },
+        {
+        "Haber": "Sağlık Bakanı Koca'dan İstanbul'a uyarılar (Seyahat kısıtlaması olacak mı?)",
+        "Link": "https://www.ntv.com.tr/turkiye/son-dakika-haberi-saglik-bakani-koca-konusuyor,b-LHq7Lbkkmp7gEjnklNHw"
+        },
+        {
+        "Haber": "Hatay'daki terör saldırısı girişimiyle ilgili 4 ilde 5 zanlı gözaltında",
+        "Link": "https://www.ntv.com.tr/turkiye/son-dakika-haberi-hatayda-terorist-saldiri-girisimiyle-ilgili-4-ilde-5-zanli-gozaltina-alindi,g_BM_4KGMkSMp_ItO2nwUA"
+        },
+        {
+        "Haber": "Fransa’nın Ankara Büyükelçiliği Maslahatgüzarı Dışişleri Bakanlığı'na çağrıldı",
+        "Link": "https://www.ntv.com.tr/turkiye/son-dakika-haberifransanin-ankara-buyukelciligi-maslahatguzari-disisleri-bakanligina-cagrildi,j6K-TsTpBkWUmADKfczyAQ"
+        },
+        {
+        "Haber": "28 Ekim 2020 corona virüs tablosu: 77 can kaybı, 2 bin 305 yeni hasta",
+        "Link": "https://www.ntv.com.tr/turkiye/28-ekim-2020-corona-virus-tablosu-77-can-kaybi-2-bin-305-yeni-hasta,wHhHaSWSF0OSUNQwJ43b-g"
+        },
+        {
+        "Haber": "Dolar kaç TL? / Dolar kuru bugün ne kadar? (28 Ekim 2020 dolar - euro fiyatları)",
+        "Link": "https://www.ntv.com.tr/ekonomi/dolar-kac-tl-dolar-kuru-bugun-ne-kadar-28-ekim-2020-dolar-euro-fiyatlari,36JmpscvHEWnebHpvc6Vcg"
+        },
+        {
+        "Haber": "Azerbaycan ordusu 13 köyü daha işgalden kurtardı",
+        "Link": "https://www.ntv.com.tr/dunya/azerbaycan-ordusu-13-koyu-daha-isgalden-kurtardi,aXIaFg0kvE-7qZaAWMdEcQ"
+        },
+        {
+        "Haber": "Ermenistan Berde'yi vurdu",
+        "Link": "https://www.ntv.com.tr/dunya/son-dakika-haberi-ermenistan-berdeyi-vurdu,qs9Xx4NOUUWMLgiy0bN7dQ"
+        },
+        {
+        "Haber": "Çavuşoğlu'ndan 'Paris elçisi geri çağrılacak mı' sorusuna yanıt",
+        "Link": "https://www.ntv.com.tr/turkiye/cavusoglunda-paris-elcisi-geri-cagrilacak-mi-sorusunayanit,DZ-H2HCGM0-V3OXPD2PwAw"
+        },
+        {
+        "Haber": "Cumhurbaşkanı Erdoğan'dan saygısız karikatüre tepki",
+        "Link": "https://www.ntv.com.tr/turkiye/cumhurbaskani-erdogandan-saygisiz-karikature-tepki,3hB8BugSgEmhI-MUv2YsTg"
+        },
+        {
+        "Haber": "Başsavcılıktan saygısız karikatür için soruşturma",
+        "Link": "https://www.ntv.com.tr/turkiye/son-dakika-haberi-saygisiz-karikatur-hakkinda-sorusturma,kgRiUgSloEuhhxP2OBy31g"
+        },
+        {
+        "Haber": "Erzincan'da 4,3'lük deprem",
+        "Link": "https://www.ntv.com.tr/turkiye/erzincanda-4-3luk-deprem,aQjHPqWDa0qk52yIAGLaBg"
+        },
+        {
+        "Haber": "Hava durumu: Meteoroloji'den kuvvetli yağış uyarısı (Bugün hava nasıl olacak?)",
+        "Link": "https://www.ntv.com.tr/turkiye/hava-durumu-meteorolojiden-kuvvetli-yagis-uyarisi-bugun-hava-nasil-olacak,U7HaLGbIJEKyv0zNdw1bBQ"
+        },
+        {
+        "Haber": "Batman ve Diyarbakır'da \"Yıldırım-14 Zori\" operasyonu",
+        "Link": "https://www.ntv.com.tr/turkiye/son-dakika-haberi-batman-ve-diyarbakirda-yildirim-14-zori-operasyonu,6TINK0VaB0OlWZakwj4Hmw"
+        },
+        {
+        "Haber": "Çeyrek altın fiyatları bugün ne kadar? 28 Ekim 2020 anlık ve güncel altın kuru fiyatları",
+        "Link": "https://www.ntv.com.tr/ekonomi/ceyrek-altin-fiyatlari-bugun-ne-kadar28-ekim2020-anlik-ve-guncel-altin-kuru-fiyatlari,xxleRErroka8n-BIY-rxzA"
+        },
+        {
+        "Haber": "Cumhurbaşkanı Erdoğan'dan 29 Ekim mesajı",
+        "Link": "https://www.ntv.com.tr/turkiye/cumhurbaskani-erdogandan-29-ekim-mesaji,UzuD3djE3UKXrBKTyVG-kQ"
+        },
+        {
+        "Haber": "Bakan Albayrak: Fransız dergisini şiddetle kınıyorum",
+        "Link": "https://www.ntv.com.tr/turkiye/son-dakika-haberi-bakan-albayrak-ahlaksizca-cumhurbaskanimiza-saldiran-fransiz-dergisini-siddetle-kiniyorum,hL12oeC3vUKgt-w2SxsaSg"
+        },
+        {
+        "Haber": "Sahte içkiden 3 ölüm daha",
+        "Link": "https://www.ntv.com.tr/turkiye/son-dakika-haberi-sahte-ickiden-3-olum-daha,mcXyVyrweUaYFkJohuFq3g"
+        },
+        {
+        "Haber": "FETÖ'nün Deniz Kuvvetleri ve Sahil Güvenlik yapılanmasına operasyon",
+        "Link": "https://www.ntv.com.tr/turkiye/fetonun-deniz-kuvvetleri-ve-sahil-guvenlik-yapilanmasina-operasyon,JLMm-c0wN06xttjasr9p4A"
+        },
+        {
+        "Haber": "Ankara'da doğalgaz patlaması",
+        "Link": "https://www.ntv.com.tr/turkiye/son-dakika-haberi-ankarada-dogalgaz-patlamasi,BW66VpM-IkicNzPZBPSmXw"
+        },
+        {
+        "Haber": "SON DAKİKA: Ankara'da 3,8 büyüklüğünde deprem",
+        "Link": "https://www.ntv.com.tr/turkiye/son-dakikaankarada-3-8-buyuklugunde-deprem-son-depremler,vLdaIMHEz0uU3JDjUJkM5w"
+        }
+    ]
+    }
+    """
+
+print(haber.tablo())
+    """
+    Tabulate(str) Döndürür
+
+    +--------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    | Haber                                                                                                        | Link                                                                                                                                                              |
+    |--------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+    | Mesut Yılmaz hayatını kaybetti                                                                               | https://www.ntv.com.tr/turkiye/son-dakika-haberi-mesut-yilmaz-hayatini-kaybetti,uUhAL55lZ0Wer3SRXwaXyw                                                            |
+    | Merkez Bankası'ndan yeni adım                                                                                | https://www.ntv.com.tr/ekonomi/son-dakika-haberi-merkez-bankasindan-yeni-adim,i5ytNXpMWkikhyVTMsPkAw                                                              |
+    | Çeyrek ve gram altın fiyatları bugün ne kadar oldu? 30 Ekim 2020 anlık ve güncel çeyrek altın kuru fiyatları | https://www.ntv.com.tr/ekonomi/ceyrek-ve-gram-altin-fiyatlari-bugun-ne-kadar-oldu-30-ekim-2020-anlik-ve-guncel-ceyrek-altin-kuru-fiyatlari,MAlt1qPmdkSAWayZS9WECA |
+    | Dolar kaç TL? (30 Ekim 2020 dolar - euro fiyatları)                                                          | https://www.ntv.com.tr/ekonomi/dolarkac-tl-30-ekim-2020-dolar-euro-fiyatlari,7cUHGwdKzE2mh8IKkdmnMw                                                               |
+    | 2020 Yılı Cumhurbaşkanlığı Kültür ve Sanat Büyük Ödülleri'ne layık görülen isimler açıklandı                 | https://www.ntv.com.tr/sanat/son-dakika-haberi2020-yili-cumhurbaskanligi-kultur-ve-sanat-buyuk-odullerine-layik-gorulen-isimler-aciklandi,phuDiX_3qUC-8VLjwsOamA  |
+    | 29 Ekim 2020 corona virüs tablosu: 72 can kaybı, 2 bin 319 yeni hasta                                        | https://www.ntv.com.tr/turkiye/29-ekim-2020-corona-virus-tablosu72-can-kaybi-2-319-yeni-hasta-sayisi,TReNnv_5VkawG5b_29RHIA                                       |
+    | Cumhurbaşkanı Erdoğan: En büyük gücümüz tarihi mirasımızdır                                                  | https://www.ntv.com.tr/turkiye/son-dakika-haberi-cumhurbaskani-erdogan-konusuyor,CjkQF1OJK0-pNLSnrd4M8Q                                                           |
+    | İYİ Parti İstanbul Milletvekili Ümit Özdağ disipline sevk edildi                                             | https://www.ntv.com.tr/turkiye/son-dakika-haberiiyi-parti-istanbul-milletvekili-umit-ozdag-disipline-sevk-edildi,_RY4y88SdE2hzvd-GgJeZw                           |
+    | MSB: 5 PKK/YPG'li terörist etkisiz hale getirildi                                                            | https://www.ntv.com.tr/turkiye/son-dakika-haberi-msb-5-pkk-ypgli-terorist-etkisiz-hale-getirildi,kY1HOFFo5Ei-hbbLkiTfPA                                           |
+    | Türkiye'den Fransa'daki saldırıya kınama                                                                     | https://www.ntv.com.tr/turkiye/turkiyeden-fransadaki-saldiriya-kinama,ZcW7zg-wBka2phDu0lb0aw                                                                      |
+    | Putin'den Dağlık Karabağ açıklaması                                                                          | https://www.ntv.com.tr/turkiye/son-dakika-haberi-putinden-karabag-aciklamasi,4b5IoVqi-EapWsaKe5es2g                                                               |
+    | Cumhurbaşkanı Erdoğan, Azerbaycan Cumhurbaşkanı Aliyev ile görüştü                                           | https://www.ntv.com.tr/turkiye/son-dakika-haberi-cumhurbaskani-erdogan-azerbaycan-cumhurbaskani-aliyev-ile-gorustu,sXM2k0rFQUyeCqjV5BbGTQ                         |
+    | Azerbaycan: Ermenistan'a ait iki SU-25 düşürüldü                                                             | https://www.ntv.com.tr/dunya/son-dakika-haberi-azerbaycan-ermenistana-ait-iki-su-25-dusuruldu,mA05FnI0BEmncP3tXl8RdA                                              |
+    | KYK burs başvurusu işlemleri başladı (KYK başvuruları ne zaman sona erecek?)                                 | https://www.ntv.com.tr/egitim/kyk-burs-basvurusu-islemleri-basladi-kyk-basvurulari-ne-zaman-sona-erecek,HLt8bu9DbEOnaSdn0dSZmw                                    |
+    | Medipol Başakşehir, Şampiyonlar Ligi'ndeki ikinci maçında da puanla tanışamadı                               | https://www.ntv.com.tr/spor/son-dakika-basaksehir-evinde-psgye-boyun-egdi,Fa-afm0a7kKR6y5hyskRFg                                                                  |
+    | Fransa'da 30 Ekim itibarıyla sokağa çıkma kısıtlaması uygulanacak                                            | https://www.ntv.com.tr/dunya/son-dakika-haberi-fransada-30-ekim-itibariyla-sokaga-cikma-kisitlamasi-uygulanacak,z-K9bTbM_UyrdRED5Ef9Bw                            |
+    | Sağlık Bakanı Koca'dan İstanbul'a uyarılar (Seyahat kısıtlaması olacak mı?)                                  | https://www.ntv.com.tr/turkiye/son-dakika-haberi-saglik-bakani-koca-konusuyor,b-LHq7Lbkkmp7gEjnklNHw                                                              |
+    | Hatay'daki terör saldırısı girişimiyle ilgili 4 ilde 5 zanlı gözaltında                                      | https://www.ntv.com.tr/turkiye/son-dakika-haberi-hatayda-terorist-saldiri-girisimiyle-ilgili-4-ilde-5-zanli-gozaltina-alindi,g_BM_4KGMkSMp_ItO2nwUA               |
+    | Fransa’nın Ankara Büyükelçiliği Maslahatgüzarı Dışişleri Bakanlığı'na çağrıldı                               | https://www.ntv.com.tr/turkiye/son-dakika-haberifransanin-ankara-buyukelciligi-maslahatguzari-disisleri-bakanligina-cagrildi,j6K-TsTpBkWUmADKfczyAQ               |
+    | 28 Ekim 2020 corona virüs tablosu: 77 can kaybı, 2 bin 305 yeni hasta                                        | https://www.ntv.com.tr/turkiye/28-ekim-2020-corona-virus-tablosu-77-can-kaybi-2-bin-305-yeni-hasta,wHhHaSWSF0OSUNQwJ43b-g                                         |
+    | Dolar kaç TL? / Dolar kuru bugün ne kadar? (28 Ekim 2020 dolar - euro fiyatları)                             | https://www.ntv.com.tr/ekonomi/dolar-kac-tl-dolar-kuru-bugun-ne-kadar-28-ekim-2020-dolar-euro-fiyatlari,36JmpscvHEWnebHpvc6Vcg                                    |
+    | Azerbaycan ordusu 13 köyü daha işgalden kurtardı                                                             | https://www.ntv.com.tr/dunya/azerbaycan-ordusu-13-koyu-daha-isgalden-kurtardi,aXIaFg0kvE-7qZaAWMdEcQ                                                              |
+    | Ermenistan Berde'yi vurdu                                                                                    | https://www.ntv.com.tr/dunya/son-dakika-haberi-ermenistan-berdeyi-vurdu,qs9Xx4NOUUWMLgiy0bN7dQ                                                                    |
+    | Çavuşoğlu'ndan 'Paris elçisi geri çağrılacak mı' sorusuna yanıt                                              | https://www.ntv.com.tr/turkiye/cavusoglunda-paris-elcisi-geri-cagrilacak-mi-sorusunayanit,DZ-H2HCGM0-V3OXPD2PwAw                                                  |
+    | Cumhurbaşkanı Erdoğan'dan saygısız karikatüre tepki                                                          | https://www.ntv.com.tr/turkiye/cumhurbaskani-erdogandan-saygisiz-karikature-tepki,3hB8BugSgEmhI-MUv2YsTg                                                          |
+    | Başsavcılıktan saygısız karikatür için soruşturma                                                            | https://www.ntv.com.tr/turkiye/son-dakika-haberi-saygisiz-karikatur-hakkinda-sorusturma,kgRiUgSloEuhhxP2OBy31g                                                    |
+    | Erzincan'da 4,3'lük deprem                                                                                   | https://www.ntv.com.tr/turkiye/erzincanda-4-3luk-deprem,aQjHPqWDa0qk52yIAGLaBg                                                                                    |
+    | Hava durumu: Meteoroloji'den kuvvetli yağış uyarısı (Bugün hava nasıl olacak?)                               | https://www.ntv.com.tr/turkiye/hava-durumu-meteorolojiden-kuvvetli-yagis-uyarisi-bugun-hava-nasil-olacak,U7HaLGbIJEKyv0zNdw1bBQ                                   |
+    | Batman ve Diyarbakır'da "Yıldırım-14 Zori" operasyonu                                                        | https://www.ntv.com.tr/turkiye/son-dakika-haberi-batman-ve-diyarbakirda-yildirim-14-zori-operasyonu,6TINK0VaB0OlWZakwj4Hmw                                        |
+    | Çeyrek altın fiyatları bugün ne kadar? 28 Ekim 2020 anlık ve güncel altın kuru fiyatları                     | https://www.ntv.com.tr/ekonomi/ceyrek-altin-fiyatlari-bugun-ne-kadar28-ekim2020-anlik-ve-guncel-altin-kuru-fiyatlari,xxleRErroka8n-BIY-rxzA                       |
+    | Cumhurbaşkanı Erdoğan'dan 29 Ekim mesajı                                                                     | https://www.ntv.com.tr/turkiye/cumhurbaskani-erdogandan-29-ekim-mesaji,UzuD3djE3UKXrBKTyVG-kQ                                                                     |
+    | Bakan Albayrak: Fransız dergisini şiddetle kınıyorum                                                         | https://www.ntv.com.tr/turkiye/son-dakika-haberi-bakan-albayrak-ahlaksizca-cumhurbaskanimiza-saldiran-fransiz-dergisini-siddetle-kiniyorum,hL12oeC3vUKgt-w2SxsaSg |
+    | Sahte içkiden 3 ölüm daha                                                                                    | https://www.ntv.com.tr/turkiye/son-dakika-haberi-sahte-ickiden-3-olum-daha,mcXyVyrweUaYFkJohuFq3g                                                                 |
+    | FETÖ'nün Deniz Kuvvetleri ve Sahil Güvenlik yapılanmasına operasyon                                          | https://www.ntv.com.tr/turkiye/fetonun-deniz-kuvvetleri-ve-sahil-guvenlik-yapilanmasina-operasyon,JLMm-c0wN06xttjasr9p4A                                          |
+    | Ankara'da doğalgaz patlaması                                                                                 | https://www.ntv.com.tr/turkiye/son-dakika-haberi-ankarada-dogalgaz-patlamasi,BW66VpM-IkicNzPZBPSmXw                                                               |
+    | SON DAKİKA: Ankara'da 3,8 büyüklüğünde deprem                                                                | https://www.ntv.com.tr/turkiye/son-dakikaankarada-3-8-buyuklugunde-deprem-son-depremler,vLdaIMHEz0uU3JDjUJkM5w                                                    |
+    +--------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    """
+
+print(haber.anahtarlar())
+    """
+    Anahtarları(list) Döndürür
+
+    ['Haber', 'Link']
+    """
+```
+
 ## 🌐 Telif Hakkı ve Lisans
 
 * *Copyright (C) 2020 by* [keyiflerolsun](https://github.com/keyiflerolsun) ❤️️
