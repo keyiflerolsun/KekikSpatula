@@ -27,12 +27,13 @@ pip install -U KekikSpatula
 
 - [x] `v0.1.0` *~* **[NobetciEczane](https://github.com/keyiflerolsun/KekikSpatula#%EF%B8%8F-nobetcieczane)** *Spatulası ile proje başlamıştır..*
 - [x] `v0.1.1` *ile* **[Akaryakit](https://github.com/keyiflerolsun/KekikSpatula#%EF%B8%8F-akaryakit)** *Spatulası Eklenmiştir..*
-- [x] `v0.1.2` *ile* **[Doviz Spatulası](https://github.com/keyiflerolsun/KekikSpatula#-doviz)** *Eklenmiştir..*
+- [x] `v0.1.2` *ile* **[Doviz](https://github.com/keyiflerolsun/KekikSpatula#-doviz)** *Spatulası Eklenmiştir..*
 - [x] `v0.1.3` *ile* **[SonDepremler](https://github.com/keyiflerolsun/KekikSpatula#-sondepremler)** *Spatulası Eklenmiştir..*
 - [x] `v0.1.4` *ile* **[BimAktuel](https://github.com/keyiflerolsun/KekikSpatula#-bimaktuel)** *Spatulası Eklenmiştir..*
 - [x] `v0.1.5` *ile* **[SonDakika](https://github.com/keyiflerolsun/KekikSpatula#-sondakika)** *Spatulası Eklenmiştir..*
 - [x] `v0.1.6` *ile* **[HavaDurumu](https://github.com/keyiflerolsun/KekikSpatula#%EF%B8%8F-havadurumu)** *Spatulası Eklenmiştir..*
-- [x] `v0.1.7` *ile* **[Ezan](https://github.com/keyiflerolsun/KekikSpatula#%EF%B8%8F-ezan)** *Spatulası Eklenmiştir..*
+- [x] `v0.1.7` *ile* **[Ezan](https://github.com/keyiflerolsun/KekikSpatula#-ezan)** *Spatulası Eklenmiştir..*
+- [x] `v0.1.8` *ile* **HavaDurumu** *Karakter Sorunu Çözülmüştür..*
 
 ### ⚕️ NobetciEczane
 

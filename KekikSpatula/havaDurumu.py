@@ -30,7 +30,7 @@ class HavaDurumu(object):
         url     = f"https://www.google.com/search?&q={il}+{ilce}+hava+durumu" + "&lr=lang_tr&hl=tr"
         istek   = requests.get(url)
 
-        corba   = BeautifulSoup(istek.content, "lxml")
+        corba   = BeautifulSoup(istek.text, "lxml")
 
         gun_durum   = corba.findAll('div', class_='BNeawe')
         gun, durum  = gun_durum[3].text.strip().split('\n')
