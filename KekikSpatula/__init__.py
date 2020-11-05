@@ -4,7 +4,7 @@ YAZAR       = 'keyiflerolsun'
 YAZAR_POSTA = 'keyiflerolsun@gmail.com'
 
 PAKET       = 'KekikSpatula'
-VERSIYON    = '0.1.8'
+VERSIYON    = '0.1.9'
 
 REPO        = 'https://github.com/keyiflerolsun/KekikSpatula'
 ACIKLAMA    = 'Siz uğraşmayın diye biz uğraştık.. ~ dızz 🐍'
@@ -15,7 +15,7 @@ GEREKSINIM  = [
     "tabulate==0.8.7",
     "beautifulsoup4==4.9.3",
     "lxml==4.6.1",
-    "pandas==1.1.3"
+    "pandas==1.1.4"
 ]
 
 from KekikSpatula.nobetciEczane import NobetciEczane
@@ -26,3 +26,4 @@ from KekikSpatula.bim import BimAktuel
 from KekikSpatula.haber import SonDakika
 from KekikSpatula.havaDurumu import HavaDurumu
 from KekikSpatula.ezan import Ezan
+from KekikSpatula.discudemy import DiscUdemy

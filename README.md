@@ -34,6 +34,7 @@ pip install -U KekikSpatula
 - [x] `v0.1.6` *ile* **[HavaDurumu](https://github.com/keyiflerolsun/KekikSpatula#%EF%B8%8F-havadurumu)** *Spatulası Eklenmiştir..*
 - [x] `v0.1.7` *ile* **[Ezan](https://github.com/keyiflerolsun/KekikSpatula#-ezan)** *Spatulası Eklenmiştir..*
 - [x] `v0.1.8` *ile* **HavaDurumu** *Karakter Sorunu Çözülmüştür..*
+- [x] `v0.1.9` *ile* **[DiscUdemy](https://github.com/keyiflerolsun/KekikSpatula#-discudemy)** *Spatulası Eklenmiştir..*
 
 ### ⚕️ NobetciEczane
 
@@ -837,6 +838,139 @@ print(ezan.anahtarlar())
     Anahtarları(list) Döndürür
 
     ['il', 'imsak', 'gunes', 'ogle', 'ikindi', 'aksam', 'yatsi']
+    """
+```
+
+### 📺 DiscUdemy
+
+```python
+from KekikSpatula import DiscUdemy
+
+udemy = DiscUdemy('Python')
+
+print(udemy.veri())
+    """
+    JSON(dict) Veri Döndürür
+
+    {'kaynak': 'discudemy.com', 'veri': [{'dil': 'English', 'baslik': 'Python-3 Boot Camp in GUI automation for absolute beginners | [LQ]', 'baglanti': 'https://www.udemy.com/course/python-3-boot-camp-in-gui-automation-for-absolute-beginners/?couponCode=17AC8721C666BB7E6710'}, {'dil': 'English', 'baslik': 'Hands on Python3 Regular Expressions for Absolute Beginners', 'baglanti': 'https://www.udemy.com/course/hands-on-python3-regular-expression-2020/?couponCode=0E676A889BA3CAEAE08C'}, {'dil': 'Portuguese', 'baslik': 'Machine Learning e Data Science com Python de A a Z', 'baglanti': 'https://www.udemy.com/course/machine-learning-e-data-science-com-python-y/?couponCode=IAEXPERTMLPFREE'}, {'dil': 'Turkish', 'baslik': 'Python Temel Eğitim Seti', 'baglanti': 'https://www.udemy.com/course/python-temel-egitim-seti/'}, {'dil': 'English', 'baslik': 'Automate the Boring Stuff with Python Programming', 'baglanti': 'https://www.udemy.com/course/automate/?couponCode=NOV2020FREE2'}, {'dil': 'English', 'baslik': 'Python for Beginners:Introduction to Python', 'baglanti': 'https://www.udemy.com/course/python-crash-course-for-beginners-l/?couponCode=6357A09370F9974153C2'}, {'dil': 'English', 'baslik': 'Python And Flask Framework Complete Course For Beginners', 'baglanti': 'https://www.udemy.com/course/python-for-beginners-course-/?couponCode=DEA08795957534B227AF'}, {'dil': 'English', 'baslik': 'Data Science for Sports - Analyze and Visualize Sports Data', 'baglanti': 'https://www.udemy.com/course/data-science-for-sports/?couponCode=TCRFREECOUPON'}, {'dil': 'English', 'baslik': 'Python Programming Tutorial For The Absolute Beginner + Code | [LQ]', 'baglanti': 'https://www.udemy.com/course/python-programming-tutorial-for-the-absolute-beginner-code-included/?couponCode=16B720317BECEFEA284E'}, {'dil': 'English', 'baslik': 'Python And Django Framework For Beginners Complete Course', 'baglanti': 'https://www.udemy.com/course/python-and-django-for-beginners/?couponCode=5680B2C7FC0FBFB690B4'}, {'dil': 'English', 'baslik': 'Building an IMDB clone with Python (Flask) and Neo4j', 'baglanti': 'https://www.udemy.com/course/building-an-imdb-clone-with-python-flask-and-neo4j/'}, {'dil': 'English', 'baslik': 'Implementation of ML Algorithm Using Python', 'baglanti': 'https://www.udemy.com/course/implementation-of-ml-algorithm-using-python/'}, {'dil': 'English', 'baslik': 'Introduction To Computer Science With Python Part 1', 'baglanti': 'https://www.udemy.com/course/introduction-to-computer-science-with-python/'}, {'dil': 'English', 'baslik': 'Python For Data Science - For Absolute Beginners', 'baglanti': 'https://www.udemy.com/course/python-for-data-science-for-absolute-beginners/'}, {'dil': 'English', 'baslik': 'Machine Learning & Data Science Foundations Masterclass', 'baglanti': 'https://www.udemy.com/course/machine-learning-data-science-foundations-masterclass/?couponCode=CLUB11'}]}
+    """
+
+print(udemy.gorsel())
+    """
+    Okunabilir JSON(str) Döndürür
+
+    {
+    "kaynak": "discudemy.com",
+    "veri": [
+        {
+        "dil": "English",
+        "baslik": "Python-3 Boot Camp in GUI automation for absolute beginners | [LQ]",
+        "baglanti": "https://www.udemy.com/course/python-3-boot-camp-in-gui-automation-for-absolute-beginners/?couponCode=17AC8721C666BB7E6710"
+        },
+        {
+        "dil": "English",
+        "baslik": "Hands on Python3 Regular Expressions for Absolute Beginners",
+        "baglanti": "https://www.udemy.com/course/hands-on-python3-regular-expression-2020/?couponCode=0E676A889BA3CAEAE08C"
+        },
+        {
+        "dil": "Portuguese",
+        "baslik": "Machine Learning e Data Science com Python de A a Z",
+        "baglanti": "https://www.udemy.com/course/machine-learning-e-data-science-com-python-y/?couponCode=IAEXPERTMLPFREE"
+        },
+        {
+        "dil": "Turkish",
+        "baslik": "Python Temel Eğitim Seti",
+        "baglanti": "https://www.udemy.com/course/python-temel-egitim-seti/"
+        },
+        {
+        "dil": "English",
+        "baslik": "Automate the Boring Stuff with Python Programming",
+        "baglanti": "https://www.udemy.com/course/automate/?couponCode=NOV2020FREE2"
+        },
+        {
+        "dil": "English",
+        "baslik": "Python for Beginners:Introduction to Python",
+        "baglanti": "https://www.udemy.com/course/python-crash-course-for-beginners-l/?couponCode=6357A09370F9974153C2"
+        },
+        {
+        "dil": "English",
+        "baslik": "Python And Flask Framework Complete Course For Beginners",
+        "baglanti": "https://www.udemy.com/course/python-for-beginners-course-/?couponCode=DEA08795957534B227AF"
+        },
+        {
+        "dil": "English",
+        "baslik": "Data Science for Sports - Analyze and Visualize Sports Data",
+        "baglanti": "https://www.udemy.com/course/data-science-for-sports/?couponCode=TCRFREECOUPON"
+        },
+        {
+        "dil": "English",
+        "baslik": "Python Programming Tutorial For The Absolute Beginner + Code | [LQ]",
+        "baglanti": "https://www.udemy.com/course/python-programming-tutorial-for-the-absolute-beginner-code-included/?couponCode=16B720317BECEFEA284E"
+        },
+        {
+        "dil": "English",
+        "baslik": "Python And Django Framework For Beginners Complete Course",
+        "baglanti": "https://www.udemy.com/course/python-and-django-for-beginners/?couponCode=5680B2C7FC0FBFB690B4"
+        },
+        {
+        "dil": "English",
+        "baslik": "Building an IMDB clone with Python (Flask) and Neo4j",
+        "baglanti": "https://www.udemy.com/course/building-an-imdb-clone-with-python-flask-and-neo4j/"
+        },
+        {
+        "dil": "English",
+        "baslik": "Implementation of ML Algorithm Using Python",
+        "baglanti": "https://www.udemy.com/course/implementation-of-ml-algorithm-using-python/"
+        },
+        {
+        "dil": "English",
+        "baslik": "Introduction To Computer Science With Python Part 1",
+        "baglanti": "https://www.udemy.com/course/introduction-to-computer-science-with-python/"
+        },
+        {
+        "dil": "English",
+        "baslik": "Python For Data Science - For Absolute Beginners",
+        "baglanti": "https://www.udemy.com/course/python-for-data-science-for-absolute-beginners/"
+        },
+        {
+        "dil": "English",
+        "baslik": "Machine Learning & Data Science Foundations Masterclass",
+        "baglanti": "https://www.udemy.com/course/machine-learning-data-science-foundations-masterclass/?couponCode=CLUB11"
+        }
+    ]
+    }
+    """
+
+print(udemy.tablo())
+    """
+    Tabulate(str) Döndürür
+
+    +------------+---------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+    | dil        | baslik                                                              | baglanti                                                                                                                          |
+    |------------+---------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------|
+    | English    | Python-3 Boot Camp in GUI automation for absolute beginners | [LQ]  | https://www.udemy.com/course/python-3-boot-camp-in-gui-automation-for-absolute-beginners/?couponCode=17AC8721C666BB7E6710         |
+    | English    | Hands on Python3 Regular Expressions for Absolute Beginners         | https://www.udemy.com/course/hands-on-python3-regular-expression-2020/?couponCode=0E676A889BA3CAEAE08C                            |
+    | Portuguese | Machine Learning e Data Science com Python de A a Z                 | https://www.udemy.com/course/machine-learning-e-data-science-com-python-y/?couponCode=IAEXPERTMLPFREE                             |
+    | Turkish    | Python Temel Eğitim Seti                                            | https://www.udemy.com/course/python-temel-egitim-seti/                                                                            |
+    | English    | Automate the Boring Stuff with Python Programming                   | https://www.udemy.com/course/automate/?couponCode=NOV2020FREE2                                                                    |
+    | English    | Python for Beginners:Introduction to Python                         | https://www.udemy.com/course/python-crash-course-for-beginners-l/?couponCode=6357A09370F9974153C2                                 |
+    | English    | Python And Flask Framework Complete Course For Beginners            | https://www.udemy.com/course/python-for-beginners-course-/?couponCode=DEA08795957534B227AF                                        |
+    | English    | Data Science for Sports - Analyze and Visualize Sports Data         | https://www.udemy.com/course/data-science-for-sports/?couponCode=TCRFREECOUPON                                                    |
+    | English    | Python Programming Tutorial For The Absolute Beginner + Code | [LQ] | https://www.udemy.com/course/python-programming-tutorial-for-the-absolute-beginner-code-included/?couponCode=16B720317BECEFEA284E |
+    | English    | Python And Django Framework For Beginners Complete Course           | https://www.udemy.com/course/python-and-django-for-beginners/?couponCode=5680B2C7FC0FBFB690B4                                     |
+    | English    | Building an IMDB clone with Python (Flask) and Neo4j                | https://www.udemy.com/course/building-an-imdb-clone-with-python-flask-and-neo4j/                                                  |
+    | English    | Implementation of ML Algorithm Using Python                         | https://www.udemy.com/course/implementation-of-ml-algorithm-using-python/                                                         |
+    | English    | Introduction To Computer Science With Python Part 1                 | https://www.udemy.com/course/introduction-to-computer-science-with-python/                                                        |
+    | English    | Python For Data Science - For Absolute Beginners                    | https://www.udemy.com/course/python-for-data-science-for-absolute-beginners/                                                      |
+    | English    | Machine Learning & Data Science Foundations Masterclass             | https://www.udemy.com/course/machine-learning-data-science-foundations-masterclass/?couponCode=CLUB11                             |
+    +------------+---------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+    """
+
+print(udemy.anahtarlar())
+    """
+    Anahtarları(list) Döndürür
+
+    ['dil', 'baslik', 'baglanti']
     """
 ```
 
