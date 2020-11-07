@@ -5,6 +5,7 @@
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/KekikSpatula)
 ![PyPI - Status](https://img.shields.io/pypi/status/KekikSpatula)
 ![PyPI](https://img.shields.io/pypi/v/KekikSpatula)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/KekikSpatula)
 ![PyPI - Wheel](https://img.shields.io/pypi/wheel/KekikSpatula)
 ![PyPI - License](https://img.shields.io/pypi/l/KekikSpatula)
 
