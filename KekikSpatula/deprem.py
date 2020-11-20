@@ -2,10 +2,11 @@
 
 import requests, json
 from bs4 import BeautifulSoup
-from tabulate import tabulate
 import pandas as pd
 
-class SonDepremler(object):
+from KekikSpatula import Statik
+
+class SonDepremler(Statik):
     """
     SonDepremler : afet.gen.tr adresinden son deprem verilerini hazır formatlarda elinize verir.
 
@@ -22,10 +23,12 @@ class SonDepremler(object):
 
         .anahtarlar()   -> list:
             kullanılan anahtar listesini döndürür.
+
+        .nesne()        -> Object:
+            json verisini python nesnesine dönüştürür.
     """
     def __init__(self):
-        """son deprem verilerini afet.gen.tr'den alarak pandas ile ayrıştırır."""
-        super().__init__()
+        "son deprem verilerini afet.gen.tr'den alarak pandas ile ayrıştırır."
 
         kaynak  = "afet.gen.tr'"
         kimlik  = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36'}
@@ -49,22 +52,6 @@ class SonDepremler(object):
 
         json_veri = json.loads(panda_veri.to_json(orient='records'))
 
-        json_ = {"kaynak": kaynak, 'veri' : json_veri}
+        kekik_json = {"kaynak": kaynak, 'veri' : json_veri}
 
-        self.json  = json_ if json_['veri'] != [] else None
-
-    def veri(self):
-        """json verisi döndürür."""
-        return self.json or None
-
-    def gorsel(self, girinti:int=2, alfabetik:bool=False):
-        """oluşan json verisini insanın okuyabileceği formatta döndürür."""
-        return json.dumps(self.json, indent=girinti, sort_keys=alfabetik, ensure_ascii=False) if self.json else None
-
-    def tablo(self, tablo_turu:str='psql'):
-        """tabulate verisi döndürür."""
-        return tabulate(self.json['veri'], headers='keys', tablefmt=tablo_turu) if self.json else None
-
-    def anahtarlar(self):
-        """kullanılan anahtar listesini döndürür."""
-        return [anahtar for anahtar in self.json['veri'][0].keys()] if self.json else None
+        self.kekik_json  = kekik_json if kekik_json['veri'] != [] else None

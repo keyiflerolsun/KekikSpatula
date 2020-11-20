@@ -1,10 +1,11 @@
 # Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
 
-import requests, json
+import requests
 from bs4 import BeautifulSoup
-from tabulate import tabulate
 
-class DiscUdemy(object):
+from KekikSpatula import Statik
+
+class DiscUdemy(Statik):
     """
     DiscUdemy : discudemy.com adresinden Udemy Kurslarını hazır formatlarda elinize verir.
 
@@ -21,10 +22,12 @@ class DiscUdemy(object):
 
         .anahtarlar()   -> list:
             kullanılan anahtar listesini döndürür.
+
+        .nesne()        -> Object:
+            json verisini python nesnesine dönüştürür.
     """
     def __init__(self, kategori:str):
-        """Kategoriye göre Udemy Kurslarını discudemy.com'dan alarak bs4'ile ayrıştırır."""
-        super().__init__()
+        "Kategoriye göre Udemy Kurslarını discudemy.com'dan alarak bs4'ile ayrıştırır."
 
         kaynak  = "discudemy.com"
         url     = f"https://www.discudemy.com/s-r/{kategori}.jsf"
@@ -52,22 +55,6 @@ class DiscUdemy(object):
                 'baglanti': baglanti
             })
 
-        json = {"kaynak": kaynak, 'veri' : udemy}
+        kekik_json = {"kaynak": kaynak, 'veri' : udemy}
 
-        self.json  = json if json['veri'] != [] else None
-
-    def veri(self):
-        """json verisi döndürür."""
-        return self.json or None
-
-    def gorsel(self, girinti:int=2, alfabetik:bool=False):
-        """oluşan json verisini insanın okuyabileceği formatta döndürür."""
-        return json.dumps(self.json, indent=girinti, sort_keys=alfabetik, ensure_ascii=False) if self.json else None
-
-    def tablo(self, tablo_turu:str='psql'):
-        """tabulate verisi döndürür."""
-        return tabulate(self.json['veri'], headers='keys', tablefmt=tablo_turu) if self.json else None
-
-    def anahtarlar(self):
-        """kullanılan anahtar listesini döndürür."""
-        return [anahtar for anahtar in self.json['veri'][0].keys()] if self.json else None
+        self.kekik_json  = kekik_json if kekik_json['veri'] != [] else None

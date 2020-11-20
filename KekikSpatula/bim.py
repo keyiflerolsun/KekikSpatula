@@ -1,10 +1,11 @@
 # Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
 
-import requests, json
+import requests
 from bs4 import BeautifulSoup
-from tabulate import tabulate
 
-class BimAktuel(object):
+from KekikSpatula import Statik
+
+class BimAktuel(Statik):
     """
     BimAktuel : bim.com.tr adresinden aktüel verilerini hazır formatlarda elinize verir.
 
@@ -21,10 +22,12 @@ class BimAktuel(object):
 
         .anahtarlar()   -> list:
             kullanılan anahtar listesini döndürür.
+
+        .nesne()        -> Object:
+            json verisini python nesnesine dönüştürür.
     """
     def __init__(self):
-        """aktüel verilerini bim.com.tr'den alarak bs4'ile ayrıştırır."""
-        super().__init__()
+        "aktüel verilerini bim.com.tr'den alarak bs4'ile ayrıştırır."
 
         kaynak  = "bim.com.tr"
         url     = "https://www.bim.com.tr/default.aspx"
@@ -54,22 +57,6 @@ class BimAktuel(object):
             except (AttributeError, KeyError):
                 continue
 
-        json = {"kaynak": kaynak, 'tarih': tarih, 'veri' : urun_rerero}
+        kekik_json = {"kaynak": kaynak, 'tarih': tarih, 'veri' : urun_rerero}
 
-        self.json  = json if json['veri'] != [] else None
-
-    def veri(self):
-        """json verisi döndürür."""
-        return self.json or None
-
-    def gorsel(self, girinti:int=2, alfabetik:bool=False):
-        """oluşan json verisini insanın okuyabileceği formatta döndürür."""
-        return json.dumps(self.json, indent=girinti, sort_keys=alfabetik, ensure_ascii=False) if self.json else None
-
-    def tablo(self, tablo_turu:str='psql'):
-        """tabulate verisi döndürür."""
-        return tabulate(self.json['veri'], headers='keys', tablefmt=tablo_turu) if self.json else None
-
-    def anahtarlar(self):
-        """kullanılan anahtar listesini döndürür."""
-        return [anahtar for anahtar in self.json['veri'][0].keys()] if self.json else None
+        self.kekik_json  = kekik_json if kekik_json['veri'] != [] else None

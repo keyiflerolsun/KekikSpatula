@@ -2,14 +2,15 @@
 
 import requests, json
 from bs4 import BeautifulSoup
-from tabulate import tabulate
+
+from KekikSpatula import Statik
 
 import pandas as pd
 import warnings
 from pandas.core.common import SettingWithCopyWarning
 warnings.simplefilter(action="ignore", category=SettingWithCopyWarning)
 
-class Doviz(object):
+class Doviz(Statik):
     """
     Doviz : altinkaynak.com adresinden döviz verilerini hazır formatlarda elinize verir.
 
@@ -26,10 +27,12 @@ class Doviz(object):
 
         .anahtarlar()   -> list:
             kullanılan anahtar listesini döndürür.
+
+        .nesne()        -> Object:
+            json verisini python nesnesine dönüştürür.
     """
     def __init__(self):
-        """döviz verilerini altinkaynak.com'dan alarak pandas ile ayrıştırır."""
-        super().__init__()
+        "döviz verilerini altinkaynak.com'dan alarak pandas ile ayrıştırır."
 
         kaynak  = "altinkaynak.com"
         istek   = requests.get("http://www.altinkaynak.com/Doviz/Kur/Guncel")
@@ -50,22 +53,6 @@ class Doviz(object):
 
         json_veri = json.loads(panda_veri.to_json(orient='records'))
 
-        json_ = {"kaynak": kaynak, 'veri' : json_veri}
+        kekik_json = {"kaynak": kaynak, 'veri' : json_veri}
 
-        self.json  = json_ if json_['veri'] != [] else None
-
-    def veri(self):
-        """json verisi döndürür."""
-        return self.json or None
-
-    def gorsel(self, girinti:int=2, alfabetik:bool=False):
-        """oluşan json verisini insanın okuyabileceği formatta döndürür."""
-        return json.dumps(self.json, indent=girinti, sort_keys=alfabetik, ensure_ascii=False) if self.json else None
-
-    def tablo(self, tablo_turu:str='psql'):
-        """tabulate verisi döndürür."""
-        return tabulate(self.json['veri'], headers='keys', tablefmt=tablo_turu) if self.json else None
-
-    def anahtarlar(self):
-        """kullanılan anahtar listesini döndürür."""
-        return [anahtar for anahtar in self.json['veri'][0].keys()] if self.json else None
+        self.kekik_json  = kekik_json if kekik_json['veri'] != [] else None
