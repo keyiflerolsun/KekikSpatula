@@ -32,10 +32,11 @@ pip install -U KekikSpatula
 - 🌀 **SonDepremler**
 - 🛒 **BimAktuel**
 - 📰 **SonDakika**
-- ☁️ [HavaDurumu](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/HavaDurumu.py)
+- ☁️ **[HavaDurumu](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/HavaDurumu.py)**
 - 🕌 **Ezan**
 - 📺 **DiscUdemy**
 - ![Trendyol](https://www.trendyol.com/frontend/web/assets/images/favicon.ico) **[TrendyolYorum](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/TrendyolYorum.py)**
+- ☢️ **[Covid](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Covid.py)**
 
 ## 🌐 Telif Hakkı ve Lisans
 
