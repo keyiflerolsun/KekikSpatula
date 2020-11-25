@@ -30,7 +30,7 @@ pip install -U KekikSpatula
 - ⛽️ **Akaryakit**
 - 💱 **Doviz**
 - 🌀 **SonDepremler**
-- 🛒 **BimAktuel**
+- 🛒 **[BimAktuel](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/BimAktuel.py)**
 - 📰 **SonDakika**
 - ☁️ **[HavaDurumu](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/HavaDurumu.py)**
 - 🕌 **Ezan**
