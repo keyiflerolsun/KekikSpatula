@@ -3,20 +3,20 @@
 import requests, json
 from bs4 import BeautifulSoup
 
-from KekikSpatula import Statik
+from KekikSpatula import KekikSpatula
 
 import pandas as pd
 import warnings
 from pandas.core.common import SettingWithCopyWarning
 warnings.simplefilter(action="ignore", category=SettingWithCopyWarning)
 
-class Doviz(Statik):
+class Doviz(KekikSpatula):
     """
     Doviz : altinkaynak.com adresinden döviz verilerini hazır formatlarda elinize verir.
 
     Methodlar
     ----------
-        .veri()         -> dict:
+        .veri         -> dict:
             json verisi döndürür.
 
         .gorsel()       -> str:
@@ -25,10 +25,10 @@ class Doviz(Statik):
         .tablo()        -> str:
             tabulate verisi döndürür.
 
-        .anahtarlar()   -> list:
+        .anahtarlar   -> list:
             kullanılan anahtar listesini döndürür.
 
-        .nesne()        -> Object:
+        .nesne        -> Object:
             json verisini python nesnesine dönüştürür.
     """
     def __init__(self):
@@ -56,3 +56,7 @@ class Doviz(Statik):
         kekik_json = {"kaynak": kaynak, 'veri' : json_veri}
 
         self.kekik_json  = kekik_json if kekik_json['veri'] != [] else None
+        self.kaynak      = kaynak
+
+    def __repr__(self):
+        return f"{__class__.__name__} Sınıfı -- {self.kaynak}'dan döviz verilerini döndürmesi için yazılmıştır.."

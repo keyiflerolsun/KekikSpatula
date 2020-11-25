@@ -3,9 +3,9 @@
 import requests
 from bs4 import BeautifulSoup
 
-from KekikSpatula import Statik
+from KekikSpatula import KekikSpatula
 
-class NobetciEczane(Statik):
+class NobetciEczane(KekikSpatula):
     """
     NobetciEczane : eczaneler.gen.tr adresinden nöbetçi eczane verilerini hazır formatlarda elinize verir.
 
@@ -16,7 +16,7 @@ class NobetciEczane(Statik):
 
     Methodlar
     ----------
-        .veri()         -> dict:
+        .veri         -> dict:
             json verisi döndürür.
 
         .gorsel()       -> str:
@@ -25,10 +25,10 @@ class NobetciEczane(Statik):
         .tablo()        -> str:
             tabulate verisi döndürür.
 
-        .anahtarlar()   -> list:
+        .anahtarlar   -> list:
             kullanılan anahtar listesini döndürür.
 
-        .nesne()        -> Object:
+        .nesne        -> Object:
             json verisini python nesnesine dönüştürür.
     """
     def __init__(self, il:str, ilce:str):
@@ -69,3 +69,7 @@ class NobetciEczane(Statik):
             pass
 
         self.kekik_json  = kekik_json if kekik_json['veri'] != [] else None
+        self.kaynak      = kaynak
+
+    def __repr__(self):
+        return f"{__class__.__name__} Sınıfı -- {self.kaynak}'dan nöbetçi eczane verilerini döndürmesi için yazılmıştır.."

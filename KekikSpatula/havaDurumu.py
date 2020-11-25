@@ -3,15 +3,15 @@
 import requests
 from bs4 import BeautifulSoup
 
-from KekikSpatula import Statik
+from KekikSpatula import KekikSpatula
 
-class HavaDurumu(Statik):
+class HavaDurumu(KekikSpatula):
     """
     HavaDurumu : google.com adresinden hava durumu ve saat verisini hazır formatlarda elinize verir.
 
     Methodlar
     ----------
-        .veri()         -> dict:
+        .veri         -> dict:
             json verisi döndürür.
 
         .gorsel()       -> str:
@@ -20,10 +20,10 @@ class HavaDurumu(Statik):
         .tablo()        -> str:
             tabulate verisi döndürür.
 
-        .anahtarlar()   -> list:
+        .anahtarlar   -> list:
             kullanılan anahtar listesini döndürür.
 
-        .nesne()        -> Object:
+        .nesne        -> Object:
             json verisini python nesnesine dönüştürür.
     """
     def __init__(self, il:str, ilce:str):
@@ -46,3 +46,7 @@ class HavaDurumu(Statik):
         }]}
 
         self.kekik_json  = kekik_json if kekik_json['veri'] != [] else None
+        self.kaynak      = kaynak
+
+    def __repr__(self):
+        return f"{__class__.__name__} Sınıfı -- {self.kaynak}'dan hava durumu ve saat verisini döndürmesi için yazılmıştır.."

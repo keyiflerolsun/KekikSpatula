@@ -4,18 +4,20 @@ import json
 from tabulate import tabulate
 from attrdict import AttrDict
 
-class Statik(object):
+class KekikSpatula(object):
     def __init__(self, kekik_json):
         super().__init__()
         self.kekik_json = kekik_json
 
+    @property
     def veri(self):
         "json verisi döndürür."
         return self.kekik_json or None
 
-    def nesne(self, index:int=0) -> AttrDict:
+    @property
+    def nesne(self) -> AttrDict:
         "json verisini python nesnesine dönüştürür"
-        return AttrDict(self.kekik_json['veri'][0]) if index == 0 else AttrDict(self.kekik_json['veri'][index])
+        return AttrDict(self.kekik_json['veri']) if len(self.kekik_json['veri']) == 1 else [veri for veri in AttrDict(self.kekik_json).veri]
 
     def gorsel(self, girinti:int=2, alfabetik:bool=False):
         "oluşan json verisini insanın okuyabileceği formatta döndürür."
@@ -25,6 +27,7 @@ class Statik(object):
         "tabulate verisi döndürür."
         return tabulate(self.kekik_json['veri'], headers='keys', tablefmt=tablo_turu) if self.kekik_json else None
 
+    @property
     def anahtarlar(self):
         "kullanılan anahtar listesini döndürür."
         return [anahtar for anahtar in self.kekik_json['veri'][0].keys()] if self.kekik_json else None

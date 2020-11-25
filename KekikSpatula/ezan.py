@@ -3,15 +3,15 @@
 import requests
 from datetime import datetime
 
-from KekikSpatula import Statik
+from KekikSpatula import KekikSpatula
 
-class Ezan(Statik):
+class Ezan(KekikSpatula):
     """
     Ezan : sabah.com.tr adresinden Ezan Saatleri verisini hazır formatlarda elinize verir.
 
     Methodlar
     ----------
-        .veri()         -> dict:
+        .veri         -> dict:
             json verisi döndürür.
 
         .gorsel()       -> str:
@@ -20,10 +20,10 @@ class Ezan(Statik):
         .tablo()        -> str:
             tabulate verisi döndürür.
 
-        .anahtarlar()   -> list:
+        .anahtarlar   -> list:
             kullanılan anahtar listesini döndürür.
 
-        .nesne()        -> Object:
+        .nesne        -> Object:
             json verisini python nesnesine dönüştürür.
     """
     def __init__(self, il:str):
@@ -55,3 +55,7 @@ class Ezan(Statik):
         }]}
 
         self.kekik_json  = kekik_json if kekik_json['veri'] != [] else None
+        self.kaynak      = kaynak
+
+    def __repr__(self):
+        return f"{__class__.__name__} Sınıfı -- {self.kaynak}'den Ezan Saatleri verisini döndürmesi için yazılmıştır.."

@@ -37,6 +37,7 @@ pip install -U KekikSpatula
 - [x] `v0.1.8` *ile* **HavaDurumu** *Karakter Sorunu Çözülmüştür..*
 - [x] `v0.1.9` *ile* **[DiscUdemy](https://github.com/keyiflerolsun/KekikSpatula#-discudemy)** *Spatulası Eklenmiştir..*
 - [x] `v0.2.1` *ile* **Tekrarlayan fonksiyonlar** `_Statik.py`*'a taşınıp; Spatula Sınıflar `statik`ten miras almıştır ve **nesne** methodu eklenmiştir..*
+- [x] `v0.2.2` *ile* `@property` *ve* `__repr__` *eklenmiştir..*
 
 ### ⚕️ NobetciEczane
 
@@ -45,7 +46,7 @@ from KekikSpatula import NobetciEczane
 
 eczane = NobetciEczane('Çanakkale', 'Merkez')
 
-print(eczane.veri())
+print(eczane.veri)
     """
     JSON(dict) Veri Döndürür
 
@@ -97,7 +98,7 @@ print(eczane.tablo())
     +----------------+-----------+-----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+-------------------+
     """
 
-print(eczane.anahtarlar())
+print(eczane.anahtarlar)
     """
     Anahtarları(list) Döndürür
 
@@ -112,7 +113,7 @@ from KekikSpatula import Akaryakit
 
 akaryakit = Akaryakit()
 
-print(akaryakit.veri())
+print(akaryakit.veri)
     """
     JSON(dict) Veri Döndürür
 
@@ -176,7 +177,7 @@ print(akaryakit.tablo())
     +---------------------------------------+----------+
     """
 
-print(akaryakit.anahtarlar())
+print(akaryakit.anahtarlar)
     """
     Anahtarları(list) Döndürür
 
@@ -191,7 +192,7 @@ from KekikSpatula import Doviz
 
 doviz = Doviz()
 
-print(doviz.veri())
+print(doviz.veri)
     """
     JSON(dict) Veri Döndürür
 
@@ -327,7 +328,7 @@ print(doviz.tablo())
     +---------+---------+---------+
     """
 
-print(doviz.anahtarlar())
+print(doviz.anahtarlar)
     """
     Anahtarları(list) Döndürür
 
@@ -342,7 +343,7 @@ from KekikSpatula import SonDepremler
 
 deprem = SonDepremler()
 
-print(deprem.veri())
+print(deprem.veri)
     """
     JSON(dict) Veri Döndürür
     """
@@ -410,7 +411,7 @@ print(deprem.tablo())
     | 2020.10.29 | 21:33:17 |    39.572  |     41.3577 |            8.2 | -.-  |  2.4 | -.-  | GOZLUCE-TEKMAN (ERZURUM) İlksel                            |
     """
 
-print(deprem.anahtarlar())
+print(deprem.anahtarlar)
     """
     Anahtarları(list) Döndürür
 
@@ -425,7 +426,7 @@ from KekikSpatula import BimAktuel
 
 bim = BimAktuel()
 
-print(bim.veri())
+print(bim.veri)
     """
     JSON(dict) Veri Döndürür
 
@@ -510,7 +511,7 @@ print(bim.tablo())
     +---------------------------------------------+-----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+--------------+
     """
 
-print(bim.anahtarlar())
+print(bim.anahtarlar)
     """
     Anahtarları(list) Döndürür
 
@@ -525,7 +526,7 @@ from KekikSpatula import SonDakika
 
 haber = SonDakika()
 
-print(haber.veri())
+print(haber.veri)
     """
     JSON(dict) Veri Döndürür
 
@@ -733,7 +734,7 @@ print(haber.tablo())
     +--------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
     """
 
-print(haber.anahtarlar())
+print(haber.anahtarlar)
     """
     Anahtarları(list) Döndürür
 
@@ -748,7 +749,7 @@ from KekikSpatula import HavaDurumu
 
 hava = HavaDurumu('Çanakkale', 'Merkez')
 
-print(hava.veri())
+print(hava.veri)
     """
     JSON(dict) Veri Döndürür
 
@@ -782,7 +783,7 @@ print(hava.tablo())
     +------------+------------------+------------------+
     """
 
-print(hava.anahtarlar())
+print(hava.anahtarlar)
     """
     Anahtarları(list) Döndürür
 
@@ -797,7 +798,7 @@ from KekikSpatula import Ezan
 
 ezan = Ezan('İstanbul')
 
-print(ezan.veri())
+print(ezan.veri)
     """
     JSON(dict) Veri Döndürür
 
@@ -835,7 +836,7 @@ print(ezan.tablo())
     +----------+---------+---------+--------+----------+---------+---------+
     """
 
-print(ezan.anahtarlar())
+print(ezan.anahtarlar)
     """
     Anahtarları(list) Döndürür
 
@@ -850,7 +851,7 @@ from KekikSpatula import DiscUdemy
 
 udemy = DiscUdemy('Python')
 
-print(udemy.veri())
+print(udemy.veri)
     """
     JSON(dict) Veri Döndürür
 
@@ -968,7 +969,7 @@ print(udemy.tablo())
     +------------+---------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
     """
 
-print(udemy.anahtarlar())
+print(udemy.anahtarlar)
     """
     Anahtarları(list) Döndürür
 
