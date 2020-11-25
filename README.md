@@ -37,7 +37,7 @@ pip install -U KekikSpatula
 - [x] `v0.1.8` *ile* **HavaDurumu** *Karakter Sorunu Çözülmüştür..*
 - [x] `v0.1.9` *ile* **[DiscUdemy](https://github.com/keyiflerolsun/KekikSpatula#-discudemy)** *Spatulası Eklenmiştir..*
 - [x] `v0.2.1` *ile* **Tekrarlayan fonksiyonlar** `_Statik.py`*'a taşınıp; Spatula Sınıflar `statik`ten miras almıştır ve **nesne** methodu eklenmiştir..*
-- [x] `v0.2.2` *ile* `@property` *ve* `__repr__` *eklenmiştir..*
+- [x] `v0.2.2` *ile* *_Statik Class* **KekikSpatula** *olarak yeniden adlandırılmıştır ve* `@property` *,* `__repr__` *eklenmiştir..*
 
 ### ⚕️ NobetciEczane
 
