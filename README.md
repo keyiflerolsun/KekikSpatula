@@ -24,17 +24,17 @@ pip install KekikSpatula
 pip install -U KekikSpatula
 ```
 
-## Aktif Spatulalar
+## 📝 Aktif Spatulalar ve Kullanımları
 
 - ⚕️ **[NobetciEczane](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/NobetciEczane.py)**
-- ⛽️ **Akaryakit**
-- 💱 **Doviz**
-- 🌀 **SonDepremler**
+- ⛽️ **[Akaryakit](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Akaryakit.py)**
+- 💱 **[Doviz](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Doviz.py)**
+- 🌀 **[SonDepremler](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/SonDepremler.py)**
 - 🛒 **[BimAktuel](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/BimAktuel.py)**
-- 📰 **SonDakika**
+- 📰 **[SonDakika](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/SonDakika.py)**
 - ☁️ **[HavaDurumu](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/HavaDurumu.py)**
-- 🕌 **Ezan**
-- 📺 **DiscUdemy**
+- 🕌 **[Ezan](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Ezan.py)**
+- 📺 **[DiscUdemy](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/DiscUdemy.py)**
 - ![Trendyol](https://www.trendyol.com/frontend/web/assets/images/favicon.ico) **[TrendyolYorum](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/TrendyolYorum.py)**
 - ☢️ **[Covid](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Covid.py)**
 

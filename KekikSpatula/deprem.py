@@ -30,7 +30,7 @@ class SonDepremler(KekikSpatula):
     def __init__(self):
         "son deprem verilerini afet.gen.tr'den alarak pandas ile ayrıştırır."
 
-        kaynak  = "afet.gen.tr'"
+        kaynak  = "afet.gen.tr"
         kimlik  = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36'}
         istek   = requests.get("http://www.afet.gen.tr/son-depremler.php", headers=kimlik)
         corba   = BeautifulSoup(istek.content, 'lxml')
@@ -38,15 +38,15 @@ class SonDepremler(KekikSpatula):
 
         panda_veri = pd.read_html(str(tablo))[0].rename(
             columns={
-                0   : 'Tarih',
-                1   : 'Saat',
-                2   : 'Enlem(N)',
-                3   : 'Boylam(E)',
-                4   : 'Derinlik(km)',
-                5   : 'MD',
-                6   : 'ML',
-                7   : 'MS',
-                8   : 'Yer'
+                0   : 'tarih',
+                1   : 'saat',
+                2   : 'enlem',
+                3   : 'boylam',
+                4   : 'derinlik',
+                5   : 'md',
+                6   : 'ml',
+                7   : 'ms',
+                8   : 'yer'
             }
         ).drop([0], axis=0).reset_index(drop = True)
 

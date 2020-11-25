@@ -41,15 +41,17 @@ class Doviz(KekikSpatula):
 
         panda_veri = pd.read_html(str(tablo))[0].rename(
             columns={
-                'Unnamed: 0'    : 'Birim',
+                'Unnamed: 0'    : 'birim',
+                'Alış'          : 'alis',
+                'Satış'         : 'satis',
                 'Unnamed: 1'    : 'sil',
                 'Unnamed: 5'    : 'sil',
                 '₺ ₺'           : 'sil',
             }
         ).drop(columns = 'sil').dropna().reset_index(drop = True)
 
-        for say in range(len(panda_veri['Birim'])):
-            panda_veri['Birim'][say] = panda_veri['Birim'][say][-3:]
+        for say in range(len(panda_veri['birim'])):
+            panda_veri['birim'][say] = panda_veri['birim'][say][-3:]
 
         json_veri = json.loads(panda_veri.to_json(orient='records'))
 

@@ -43,8 +43,8 @@ class SonDakika(KekikSpatula):
             for haber in haber_manset:
                 kekik_json['veri'].append(
                     {
-                        "Haber": haber.p.text.replace('SON DAKİKA HABERİ:', '').replace(' | Son depremler', '').replace('SON DAKİKA: ', '').strip(),
-                        "Link": "https://www.ntv.com.tr" + haber.a['href'],
+                        "haber" : haber.p.text.replace('SON DAKİKA HABERİ:', '').replace(' | Son depremler', '').replace('SON DAKİKA: ', '').strip(),
+                        "link"  : "https://www.ntv.com.tr" + haber.a['href'],
                     }
                 )
 
