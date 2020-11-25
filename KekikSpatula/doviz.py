@@ -16,19 +16,19 @@ class Doviz(KekikSpatula):
 
     Methodlar
     ----------
-        .veri         -> dict:
+        .veri:
             json verisi döndürür.
 
-        .gorsel()       -> str:
+        .gorsel():
             oluşan json verisini insanın okuyabileceği formatta döndürür.
 
-        .tablo()        -> str:
+        .tablo():
             tabulate verisi döndürür.
 
-        .anahtarlar   -> list:
+        .anahtarlar:
             kullanılan anahtar listesini döndürür.
 
-        .nesne        -> Object:
+        .nesne:
             json verisini python nesnesine dönüştürür.
     """
     def __init__(self):

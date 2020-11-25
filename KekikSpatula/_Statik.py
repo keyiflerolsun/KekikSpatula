@@ -17,7 +17,7 @@ class KekikSpatula(object):
     @property
     def nesne(self) -> AttrDict:
         "json verisini python nesnesine dönüştürür"
-        return AttrDict(self.kekik_json['veri']) if len(self.kekik_json['veri']) == 1 else [veri for veri in AttrDict(self.kekik_json).veri]
+        return AttrDict(self.kekik_json['veri'][0]) if len(self.kekik_json['veri']) == 1 else [obje for obje in AttrDict(self.kekik_json).veri]
 
     def gorsel(self, girinti:int=2, alfabetik:bool=False):
         "oluşan json verisini insanın okuyabileceği formatta döndürür."

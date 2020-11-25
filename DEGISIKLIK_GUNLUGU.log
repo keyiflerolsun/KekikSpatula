@@ -1,0 +1,15 @@
+v0.1.0 - NobetciEczane  - Spatulası ile proje başlamıştır..
+v0.1.1 - Akaryakit      - Spatulası Eklenmiştir..
+v0.1.2 - Doviz          - Spatulası Eklenmiştir..
+v0.1.3 - SonDepremler   - Spatulası Eklenmiştir..
+v0.1.4 - BimAktuel      - Spatulası Eklenmiştir..
+v0.1.5 - SonDakika      - Spatulası Eklenmiştir..
+v0.1.6 - HavaDurumu     - Spatulası Eklenmiştir..
+v0.1.7 - Ezan           - Spatulası Eklenmiştir..
+v0.1.8 - HavaDurumu     - Karakter Sorunu Çözülmüştür..
+v0.1.9 - DiscUdemy      - Spatulası Eklenmiştir..
+
+v0.2.1 - Tekrarlayan fonksiyonlar Statik.py'a taşınıp; Spatula Sınıflar statikten miras almıştır ve nesne methodu eklenmiştir..
+v0.2.2 - Statik Class KekikSpatula olarak yeniden adlandırılmıştır ve @property , __repr__ eklenmiştir..
+
+v0.2.3 - TrendyolYorum  - Spatulası Eklenmiştir..
