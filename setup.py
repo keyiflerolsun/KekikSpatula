@@ -3,7 +3,10 @@
 from setuptools import setup
 from io import open
 
-from KekikSpatula import YAZAR, YAZAR_POSTA, PAKET, VERSIYON, REPO, ACIKLAMA, ANAHTAR_KLM, GEREKSINIM
+from KekikSpatula import YAZAR, YAZAR_POSTA, PAKET, VERSIYON, REPO, ACIKLAMA, ANAHTAR_KLM
+
+with open(f'{PAKET}/requirements.txt') as dosya:
+    GEREKSINIM = dosya.read().splitlines()
 
 setup(
     author       = YAZAR,
