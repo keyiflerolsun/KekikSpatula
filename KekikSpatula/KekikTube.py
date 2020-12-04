@@ -54,20 +54,7 @@ class KekikTube(KekikSpatula):
         self.kaynak      = kaynak
 
 def okunabilir_byte(boyut: int) -> str:
-    """baytları okunabilir biçime dönüştürür.
-    Arg:
-        boyut (int):
-            12345645123456
-    Return:
-        (str):
-            "135 MB"
-    """
-    if not boyut:
-        return ""
-
-    # https://stackoverflow.com/a/49361727/4723940
-    # 2**10 = 1024
-    binyirmidort = 2 ** 10
+    binyirmidort = 2 ** 10  # Bkz : 2**10 = 1024
 
     say = 0
     cikti_sozluk = {0: " ", 1: "K", 2: "M", 3: "G", 4: "T"}
