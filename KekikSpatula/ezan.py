@@ -26,6 +26,9 @@ class Ezan(KekikSpatula):
         .nesne:
             json verisini python nesnesine dönüştürür.
     """
+    def __repr__(self):
+        return f"{__class__.__name__} Sınıfı -- {self.kaynak}'den Ezan Saatleri verisini döndürmesi için yazılmıştır.."
+
     def __init__(self, il:str):
         "Ezan Saatleri verisini sabah.com.tr'den dızlar."
 
@@ -56,6 +59,3 @@ class Ezan(KekikSpatula):
 
         self.kekik_json  = kekik_json if kekik_json['veri'] != [] else None
         self.kaynak      = kaynak
-
-    def __repr__(self):
-        return f"{__class__.__name__} Sınıfı -- {self.kaynak}'den Ezan Saatleri verisini döndürmesi için yazılmıştır.."

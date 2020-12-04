@@ -27,6 +27,9 @@ class SonDepremler(KekikSpatula):
         .nesne:
             json verisini python nesnesine dönüştürür.
     """
+    def __repr__(self):
+        return f"{__class__.__name__} Sınıfı -- {self.kaynak}'den son deprem verilerini döndürmesi için yazılmıştır.."
+
     def __init__(self):
         "son deprem verilerini afet.gen.tr'den alarak pandas ile ayrıştırır."
 
@@ -56,6 +59,3 @@ class SonDepremler(KekikSpatula):
 
         self.kekik_json  = kekik_json if kekik_json['veri'] != [] else None
         self.kaynak      = kaynak
-
-    def __repr__(self):
-        return f"{__class__.__name__} Sınıfı -- {self.kaynak}'den son deprem verilerini döndürmesi için yazılmıştır.."

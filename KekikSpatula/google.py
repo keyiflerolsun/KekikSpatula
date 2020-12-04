@@ -26,6 +26,9 @@ class Google(KekikSpatula):
         .nesne:
             json verisini python nesnesine dönüştürür.
     """
+    def __repr__(self):
+        return f"{__class__.__name__} Sınıfı -- {self.kaynak}'den başlık, link ve açıklama verisini döndürmesi için yazılmıştır.."
+
     def __init__(self, aranacak_sey:str):
         "Google araması yaparak; başlık, link ve açıklama'yı parse eder.."
 
@@ -40,7 +43,7 @@ class Google(KekikSpatula):
         json_fetist = []
         for sonuc in sonuclar:
             baslik   = sonuc.find('div', class_='BNeawe').text if sonuc.find('div', class_='BNeawe') else None
-            link     = sonuc.find('a')['href'].lstrip('/url?q=').split('&sa')[0] if sonuc.find('a') else None
+            link     = sonuc.find('a')['href'].lstrip('/url?q=').split('&sa')[0].split('?fit%')[0] if sonuc.find('a') else None
             aciklama = [aciklamalar.find('div', class_='AP7Wnd').text for aciklamalar in sonuc.findAll('div', class_='kCrYT')]
             aciklama = '\n'.join(aciklama[1:])
 
@@ -55,6 +58,3 @@ class Google(KekikSpatula):
 
         self.kekik_json  = kekik_json if kekik_json['veri'] != [] else None
         self.kaynak      = kaynak
-
-    def __repr__(self):
-        return f"{__class__.__name__} Sınıfı -- {self.kaynak}'den başlık, link ve açıklama verisini döndürmesi için yazılmıştır.."

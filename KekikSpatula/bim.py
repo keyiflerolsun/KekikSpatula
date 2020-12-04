@@ -26,6 +26,9 @@ class BimAktuel(KekikSpatula):
         .nesne:
             json verisini python nesnesine dönüştürür.
     """
+    def __repr__(self):
+        return f"{__class__.__name__} Sınıfı -- {self.kaynak}'den aktüel verilerini döndürmesi için yazılmıştır.."
+
     def __init__(self):
         "aktüel verilerini bim.com.tr'den alarak bs4'ile ayrıştırır."
 
@@ -61,6 +64,3 @@ class BimAktuel(KekikSpatula):
 
         self.kekik_json  = kekik_json if kekik_json['veri'] != [] else None
         self.kaynak      = kaynak
-
-    def __repr__(self):
-        return f"{__class__.__name__} Sınıfı -- {self.kaynak}'den aktüel verilerini döndürmesi için yazılmıştır.."

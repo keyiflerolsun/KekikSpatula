@@ -37,7 +37,8 @@ pip install -U KekikSpatula
 - 📺 **[DiscUdemy](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/DiscUdemy.py)**
 - ![Trendyol](https://www.trendyol.com/frontend/web/assets/images/favicon.ico) **[TrendyolYorum](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/TrendyolYorum.py)**
 - ☢️ **[Covid](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Covid.py)**
-- ![Google](https://www.google.com/images/branding/googleg/1x/googleg_standard_color_12dp.png) **[Google](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Google.py)**
+- ![Google](https://www.google.com/images/branding/googleg/1x/googleg_standard_color_16dp.png) **[Google](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Google.py)**
+- ![KekikTube](https://www.youtube.com/s/desktop/19da7d5c/img/favicon.ico) **[KekikTube](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/KekikTube.py)**
 
 ## 🌐 Telif Hakkı ve Lisans
 

@@ -26,6 +26,9 @@ class TrendyolYorum(KekikSpatula):
         .nesne:
             json verisini python nesnesine dönüştürür.
     """
+    def __repr__(self):
+        return f"{__class__.__name__} Sınıfı -- {self.kaynak}'dan ürün yorumlarını döndürmesi için yazılmıştır.."
+
     def __init__(self, link:str):
         "ürün yorumlarını trendyol'den dızlar."
 
@@ -49,9 +52,7 @@ class TrendyolYorum(KekikSpatula):
 
             yildiz_sayisi    = []
             for i_yildiz in yorumlar.findAll("div", attrs={'class':'ratings readonly'}):
-                yildiz = []
-                for tek_yildiz in i_yildiz.findAll("div", attrs={'class' : 'full', 'style':'width:100%;max-width:100%'}):
-                    yildiz.append(tek_yildiz)
+                yildiz = [tek_yildiz for tek_yildiz in i_yildiz.findAll("div", attrs={'class': 'full', 'style': 'width:100%;max-width:100%'})]
                 yildiz_sayisi.append(len(yildiz))
 
             trendyol_veri = [
@@ -69,6 +70,3 @@ class TrendyolYorum(KekikSpatula):
 
         self.kekik_json  = kekik_json if kekik_json['veri'] != [] else None
         self.kaynak      = kaynak
-
-    def __repr__(self):
-        return f"{__class__.__name__} Sınıfı -- {self.kaynak}'dan ürün yorumlarını döndürmesi için yazılmıştır.."

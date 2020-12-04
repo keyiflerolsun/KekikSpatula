@@ -26,6 +26,9 @@ class DiscUdemy(KekikSpatula):
         .nesne:
             json verisini python nesnesine dönüştürür.
     """
+    def __repr__(self):
+        return f"{__class__.__name__} Sınıfı -- {self.kaynak}'dan Udemy Kurslarını döndürmesi için yazılmıştır.."
+
     def __init__(self, kategori:str):
         "Kategoriye göre Udemy Kurslarını discudemy.com'dan alarak bs4'ile ayrıştırır."
 
@@ -59,6 +62,3 @@ class DiscUdemy(KekikSpatula):
 
         self.kekik_json  = kekik_json if kekik_json['veri'] != [] else None
         self.kaynak      = kaynak
-
-    def __repr__(self):
-        return f"{__class__.__name__} Sınıfı -- {self.kaynak}'dan Udemy Kurslarını döndürmesi için yazılmıştır.."
