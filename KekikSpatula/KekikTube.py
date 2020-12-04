@@ -43,9 +43,9 @@ class KekikTube(KekikSpatula):
             "izlenme"   : yt.views,
             "resim"     : yt.thumbnail_url,
             "aciklama"  : yt.description,
-            "kalite"    : video.resolution,
-            "boyut"     : okunabilir_byte(video.filesize),
-            "url"       : video.url
+            "kalite"    : video.resolution if video else None,
+            "boyut"     : okunabilir_byte(video.filesize) if video else None,
+            "url"       : video.url if video else None
         }
 
         kekik_json = {"kaynak": kaynak, 'veri' : [veri]}
