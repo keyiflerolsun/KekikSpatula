@@ -24,5 +24,5 @@ from KekikSpatula.discudemy import DiscUdemy
 from KekikSpatula.trendyol import TrendyolYorum
 from KekikSpatula.covid import Covid
 from KekikSpatula.google import Google
-from KekikSpatula.kekikTube import KekikTube
+from KekikSpatula.KekikTube import KekikTube
 ####
