@@ -47,7 +47,7 @@ class KekikTube(KekikSpatula):
             "boyut"     : okunabilir_byte(video.filesize),
             "url"       : video.url
         }
-    
+
         kekik_json = {"kaynak": kaynak, 'veri' : [veri]}
 
         self.kekik_json  = kekik_json if kekik_json['veri'] != [] else None
