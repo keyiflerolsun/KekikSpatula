@@ -2,6 +2,7 @@
 
 import requests
 from datetime import datetime
+import pytz
 
 from KekikSpatula import KekikSpatula
 
@@ -40,21 +41,21 @@ class Ezan(KekikSpatula):
         ezan_api  = f'https://www.sabah.com.tr/json/getpraytimes/{il}'
         json_veri = requests.get(ezan_api).json()['List'][0]
 
-        imsak   = datetime.fromtimestamp(int(json_veri['Imsak'].split('(')[1][:-5]))
-        gunes   = datetime.fromtimestamp(int(json_veri['Gunes'].split('(')[1][:-5]))
-        ogle    = datetime.fromtimestamp(int(json_veri['Ogle'].split('(')[1][:-5]))
-        ikindi  = datetime.fromtimestamp(int(json_veri['Ikindi'].split('(')[1][:-5]))
-        aksam   = datetime.fromtimestamp(int(json_veri['Aksam'].split('(')[1][:-5]))
-        yatsi   = datetime.fromtimestamp(int(json_veri['Yatsi'].split('(')[1][:-5]))
+        imsak   = datetime.fromtimestamp(int(json_veri['Imsak'].split('(')[1][:-5]),  pytz.timezone("Turkey")).strftime("%H:%M")
+        gunes   = datetime.fromtimestamp(int(json_veri['Gunes'].split('(')[1][:-5]),  pytz.timezone("Turkey")).strftime("%H:%M")
+        ogle    = datetime.fromtimestamp(int(json_veri['Ogle'].split('(')[1][:-5]),   pytz.timezone("Turkey")).strftime("%H:%M")
+        ikindi  = datetime.fromtimestamp(int(json_veri['Ikindi'].split('(')[1][:-5]), pytz.timezone("Turkey")).strftime("%H:%M")
+        aksam   = datetime.fromtimestamp(int(json_veri['Aksam'].split('(')[1][:-5]),  pytz.timezone("Turkey")).strftime("%H:%M")
+        yatsi   = datetime.fromtimestamp(int(json_veri['Yatsi'].split('(')[1][:-5]),  pytz.timezone("Turkey")).strftime("%H:%M")
 
         kekik_json = {"kaynak": kaynak, 'veri' : [{
             'il'        : il.capitalize(),
-            'imsak'     : str(imsak).split()[1][:-3],
-            'gunes'     : str(gunes).split()[1][:-3],
-            'ogle'      : str(ogle).split()[1][:-3],
-            'ikindi'    : str(ikindi).split()[1][:-3],
-            'aksam'     : str(aksam).split()[1][:-3],
-            'yatsi'     : str(yatsi).split()[1][:-3]
+            'imsak'     : str(imsak),
+            'gunes'     : str(gunes),
+            'ogle'      : str(ogle),
+            'ikindi'    : str(ikindi),
+            'aksam'     : str(aksam),
+            'yatsi'     : str(yatsi)
         }]}
 
         self.kekik_json  = kekik_json if kekik_json['veri'] != [] else None

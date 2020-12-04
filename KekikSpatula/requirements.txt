@@ -5,3 +5,4 @@ lxml==4.6.2
 pandas==1.1.4
 attrdict==2.0.1
 pytube==10.0.0
+pytz==2020.4
