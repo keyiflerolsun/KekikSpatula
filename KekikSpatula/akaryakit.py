@@ -26,10 +26,10 @@ class Akaryakit(KekikSpatula):
         .nesne:
             json verisini python nesnesine dönüştürür.
     """
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"{__class__.__name__} Sınıfı -- {self.kaynak}'dan akaryakıt verileri döndürmesi için yazılmıştır.."
 
-    def __init__(self):
+    def __init__(self) -> None:
         "akaryakıt verilerini finans.haberler.com'dan alarak bs4'ile ayrıştırır."
 
         kaynak  = "finans.haberler.com"

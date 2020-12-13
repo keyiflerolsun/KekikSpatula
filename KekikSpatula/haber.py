@@ -26,10 +26,10 @@ class SonDakika(KekikSpatula):
         .nesne:
             json verisini python nesnesine dönüştürür.
     """
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"{__class__.__name__} Sınıfı -- {self.kaynak}'den son dakika verilerini döndürmesi için yazılmıştır.."
 
-    def __init__(self):
+    def __init__(self) -> None:
         "son dakika verilerini ntv.com.tr'den alarak bs4'ile ayrıştırır."
 
         kaynak  = "ntv.com.tr"

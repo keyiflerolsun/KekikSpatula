@@ -25,10 +25,10 @@ class Covid(KekikSpatula):
         .nesne:
             json verisini python nesnesine dönüştürür.
     """
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"{__class__.__name__} Sınıfı -- {self.kaynak}'dan covid verileri döndürmesi için yazılmıştır.."
 
-    def __init__(self):
+    def __init__(self) -> None:
         "covid verilerini saglik.gov.tr'den alır."
 
         kaynak  = "saglik.gov.tr"

@@ -27,10 +27,10 @@ class SonDepremler(KekikSpatula):
         .nesne:
             json verisini python nesnesine dönüştürür.
     """
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"{__class__.__name__} Sınıfı -- {self.kaynak}'den son deprem verilerini döndürmesi için yazılmıştır.."
 
-    def __init__(self):
+    def __init__(self) -> None:
         "son deprem verilerini afet.gen.tr'den alarak pandas ile ayrıştırır."
 
         kaynak  = "afet.gen.tr"

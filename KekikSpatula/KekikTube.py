@@ -25,7 +25,7 @@ class KekikTube(KekikSpatula):
         .nesne:
             json verisini python nesnesine dönüştürür.
     """
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"{__class__.__name__} Sınıfı -- {self.kaynak}'dan Video Bilgilerini döndürmesi için yazılmıştır.."
 
     def __init__(self, yt_url:str):

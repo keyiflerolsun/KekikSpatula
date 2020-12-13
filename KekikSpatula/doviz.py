@@ -31,10 +31,10 @@ class Doviz(KekikSpatula):
         .nesne:
             json verisini python nesnesine dönüştürür.
     """
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"{__class__.__name__} Sınıfı -- {self.kaynak}'dan döviz verilerini döndürmesi için yazılmıştır.."
 
-    def __init__(self):
+    def __init__(self) -> None:
         "döviz verilerini altinkaynak.com'dan alarak pandas ile ayrıştırır."
 
         kaynak  = "altinkaynak.com"

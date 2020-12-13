@@ -27,7 +27,7 @@ class Ezan(KekikSpatula):
         .nesne:
             json verisini python nesnesine dönüştürür.
     """
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"{__class__.__name__} Sınıfı -- {self.kaynak}'den Ezan Saatleri verisini döndürmesi için yazılmıştır.."
 
     def __init__(self, il:str):

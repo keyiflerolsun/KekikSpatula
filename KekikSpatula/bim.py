@@ -26,10 +26,10 @@ class BimAktuel(KekikSpatula):
         .nesne:
             json verisini python nesnesine dönüştürür.
     """
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"{__class__.__name__} Sınıfı -- {self.kaynak}'den aktüel verilerini döndürmesi için yazılmıştır.."
 
-    def __init__(self):
+    def __init__(self) -> None:
         "aktüel verilerini bim.com.tr'den alarak bs4'ile ayrıştırır."
 
         kaynak  = "bim.com.tr"
