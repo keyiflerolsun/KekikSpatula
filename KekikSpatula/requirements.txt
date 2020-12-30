@@ -6,4 +6,4 @@ html5lib==1.1
 pandas==1.2.0
 attrdict==2.0.1
 pytube==10.4.1
-pytz==2020.4
+pytz==2020.5
