@@ -39,6 +39,7 @@ pip install -U KekikSpatula
 - ☢️ **[Covid](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Covid.py)**
 - ![Google](https://www.google.com/images/branding/googleg/1x/googleg_standard_color_16dp.png) **[Google](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Google.py)**
 - ![KekikTube](https://www.youtube.com/s/desktop/19da7d5c/img/favicon.ico) **[KekikTube](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/KekikTube.py)**
+- ![UcuzUcak](https://ucuzaucak.net/wp-content/uploads/2020/05/cropped-site-kimlik-32x32.png) **[UcuzUcak](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/UcuzUcak.py)**
 
 ## 🌐 Telif Hakkı ve Lisans
 
