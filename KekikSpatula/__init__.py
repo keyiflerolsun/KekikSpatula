@@ -4,7 +4,7 @@ YAZAR       = 'keyiflerolsun'
 YAZAR_POSTA = 'keyiflerolsun@gmail.com'
 
 PAKET       = 'KekikSpatula'
-VERSIYON    = '0.3.9'
+VERSIYON    = '0.4.0'
 
 REPO        = 'https://github.com/keyiflerolsun/KekikSpatula'
 ACIKLAMA    = 'Siz uğraşmayın diye biz uğraştık.. ~ dızz 🐍'
