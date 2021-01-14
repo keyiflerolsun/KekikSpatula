@@ -40,6 +40,7 @@ pip install -U KekikSpatula
 - ![Google](https://www.google.com/images/branding/googleg/1x/googleg_standard_color_16dp.png) **[Google](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Google.py)**
 - ![KekikTube](https://www.youtube.com/s/desktop/19da7d5c/img/favicon.ico) **[KekikTube](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/KekikTube.py)**
 - ![UcuzUcak](https://i.imgur.com/YCcagvA.png) **[UcuzUcak](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/UcuzUcak.py)**
+- ![CocukMasallari](https://www.masaloku.net/wp-content/uploads/2018/07/favicon.png) **[CocukMasallari](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/CocukMasallari.py)**
 
 ## 🌐 Telif Hakkı ve Lisans
 

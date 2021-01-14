@@ -46,9 +46,9 @@ class CocukMasallari(KekikSpatula):
 
             kekik_json['veri'].append(
                 {
-                    'adi'    : adi,
-                    'linki'  : linki,
-                    'iceril' : '\n'.join(Selector(requests.get(linki, headers=kimlik, allow_redirects=True).text).xpath("//div[@class='thecontent']/p/text()").getall()[1:])
+                    'ad'     : adi,
+                    'link'   : linki,
+                    'icerik' : '\n'.join(Selector(requests.get(linki, headers=kimlik, allow_redirects=True).text).xpath("//div[@class='thecontent']/p/text()").getall()[1:])
                 }
             )
 
