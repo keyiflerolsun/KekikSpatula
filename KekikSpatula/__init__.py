@@ -26,4 +26,5 @@ from KekikSpatula.covid import Covid
 from KekikSpatula.google import Google
 from KekikSpatula.KekikTube import KekikTube
 from KekikSpatula.ucak import UcuzUcak
+from KekikSpatula.masal import CocukMasallari
 ####

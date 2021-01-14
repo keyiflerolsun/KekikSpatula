@@ -1,13 +1,13 @@
 # Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
 
-import requests, json
+import requests
 from bs4 import BeautifulSoup
 
 from KekikSpatula import KekikSpatula
 
 class UcuzUcak(KekikSpatula):
     """
-    UcuzUcak : bilet.ucuzaucak.net adresinden ucuz uçak bileti hazır formatlarda elinize verir.
+    UcuzUcak : bilet.ucuzaucak.net adresinden ucuz uçak biletlerini hazır formatlarda elinize verir.
 
     Methodlar
     ----------
@@ -27,10 +27,10 @@ class UcuzUcak(KekikSpatula):
             json verisini python nesnesine dönüştürür.
     """
     def __repr__(self) -> str:
-        return f"{__class__.__name__} Sınıfı -- {self.kaynak}'dan ucuz uçak bileti döndürmesi için yazılmıştır.."
+        return f"{__class__.__name__} Sınıfı -- {self.kaynak}'dan ucuz uçak biletlerini döndürmesi için yazılmıştır.."
 
     def __init__(self) -> None:
-        "ucuz uçak bileti bilet.ucuzaucak.net'dan alarak bs4'ile ayrıştırır."
+        "ucuz uçak biletlerini bilet.ucuzaucak.net'dan alarak bs4'ile ayrıştırır."
 
         kaynak  = "bilet.ucuzaucak.net"
         url     = "https://bilet.ucuzaucak.net"
