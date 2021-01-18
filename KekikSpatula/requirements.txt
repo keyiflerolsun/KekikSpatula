@@ -8,6 +8,5 @@ attrdict
 pytube
 pytz
 parsel
-re
 pyshorteners
 fake_useragent
