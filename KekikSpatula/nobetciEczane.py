@@ -46,7 +46,7 @@ class NobetciEczane(KekikSpatula):
 
         kaynak  = "eczaneler.gen.tr"
         url     = f"https://www.eczaneler.gen.tr/nobetci-{il}-{ilce}"
-        kimlik  = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36'}
+        kimlik  = self.kimlik
         istek   = requests.get(url, headers=kimlik)
 
         corba = BeautifulSoup(istek.content, "lxml")

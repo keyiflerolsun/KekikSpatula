@@ -34,7 +34,7 @@ class BimAktuel(KekikSpatula):
 
         kaynak  = "bim.com.tr"
         url     = "https://www.bim.com.tr/default.aspx"
-        kimlik  = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36'}
+        kimlik  = self.kimlik
         istek   = requests.get(url, headers=kimlik, allow_redirects=True)
 
         corba   = BeautifulSoup(istek.content, "lxml")

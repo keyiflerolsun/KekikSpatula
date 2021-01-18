@@ -35,12 +35,13 @@ pip install -U KekikSpatula
 - ☁️ **[HavaDurumu](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/HavaDurumu.py)**
 - 🕌 **[Ezan](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Ezan.py)**
 - 📺 **[DiscUdemy](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/DiscUdemy.py)**
-- ![Trendyol](https://www.trendyol.com/frontend/web/assets/images/favicon.ico) **[TrendyolYorum](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/TrendyolYorum.py)**
 - ☢️ **[Covid](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Covid.py)**
 - ![Google](https://www.google.com/images/branding/googleg/1x/googleg_standard_color_16dp.png) **[Google](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Google.py)**
 - ![KekikTube](https://www.youtube.com/s/desktop/19da7d5c/img/favicon.ico) **[KekikTube](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/KekikTube.py)**
 - ![UcuzUcak](https://i.imgur.com/YCcagvA.png) **[UcuzUcak](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/UcuzUcak.py)**
 - ![CocukMasallari](https://i.imgur.com/cmIfRdM.png) **[CocukMasallari](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/CocukMasallari.py)**
+- ![Trendyol](https://www.trendyol.com/frontend/web/assets/images/favicon.ico) **[Trendyol](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Trendyol.py)**
+- ![Sahibinden](https://i.imgur.com/XNI9phn.png) **[Sahibinden](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Sahibinden.py)**
 
 ## 🌐 Telif Hakkı ve Lisans
 

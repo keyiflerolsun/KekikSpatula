@@ -34,7 +34,7 @@ class SonDepremler(KekikSpatula):
         "son deprem verilerini afet.gen.tr'den alarak pandas ile ayrıştırır."
 
         kaynak  = "afet.gen.tr"
-        kimlik  = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36'}
+        kimlik  = self.kimlik
         istek   = requests.get("http://www.afet.gen.tr/son-depremler.php", headers=kimlik)
         corba   = BeautifulSoup(istek.content, 'lxml')
         tablo   = corba.find('table', width="100%")
