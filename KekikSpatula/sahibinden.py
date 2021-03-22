@@ -34,7 +34,8 @@ class Sahibinden(KekikSpatula):
 
         kaynak  = "sahibinden.com"
         url     = link
-        kimlik  = self.kimlik
+        kimlik  = self.kimlik.copy()
+        kimlik.update({'Referer': 'https://www.sahibinden.com/?JLBreadCrumbEnable=false'})
         istek   = requests.get(url, headers=kimlik, allow_redirects=True)
 
         secici  = Selector(istek.text)
