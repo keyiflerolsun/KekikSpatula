@@ -7,9 +7,9 @@ from urllib.parse import unquote
 
 from KekikSpatula import KekikSpatula
 
-class Trendyol(KekikSpatula):
+class TrendyolUrun(KekikSpatula):
     """
-    Ezan : trendyol.com adresinden ürün detayını hazır formatlarda elinize verir.
+    TrendyolUrun : trendyol.com adresinden ürün detayını hazır formatlarda elinize verir.
 
     Methodlar
     ----------
@@ -32,7 +32,7 @@ class Trendyol(KekikSpatula):
         return f"{__class__.__name__} Sınıfı -- {self.kaynak}'dan ürün detayını döndürmesi için yazılmıştır.."
 
     def __init__(self, link:str):
-        "ürün detayını trendyol'den dızlar."
+        "ürün detayını trendyol'dan dızlar."
 
         kaynak = "trendyol.com"
 

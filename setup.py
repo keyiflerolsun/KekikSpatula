@@ -3,22 +3,17 @@
 from setuptools import setup
 from io import open
 
-from KekikSpatula import YAZAR, YAZAR_POSTA, PAKET, VERSIYON, REPO, ACIKLAMA, ANAHTAR_KLM
-
-with open(f'{PAKET}/requirements.txt') as dosya:
-    GEREKSINIM = dosya.read().splitlines()
-
 setup(
-    author       = YAZAR,
-    author_email = YAZAR_POSTA,
+    author       = "keyiflerolsun",
+    author_email = "keyiflerolsun@gmail.com",
 
-    packages     = [PAKET],
+    packages     = ["KekikSpatula"],
 
-    name         = PAKET,
-    version      = VERSIYON,
-    url          = REPO,
-    description  = ACIKLAMA,
-    keywords     = ANAHTAR_KLM,
+    name         = "KekikSpatula",
+    version      = "0.4.4",
+    url          = "https://github.com/keyiflerolsun/KekikSpatula",
+    description  = "Siz uğraşmayın diye biz uğraştık.. ~ dızz 🐍",
+    keywords     = ["KekikSpatula", "KekikAkademi", "keyiflerolsun"],
 
     long_description_content_type   = "text/markdown",
     long_description                = "".join(open("README.md", encoding="utf-8").readlines()),
@@ -32,5 +27,19 @@ setup(
     ],
 
     python_requires     = '>=3.6',
-    install_requires    = GEREKSINIM
+    install_requires    = [
+        "requests",
+        "cloudscraper",
+        "tabulate",
+        "beautifulsoup4",
+        "lxml",
+        "html5lib",
+        "pandas",
+        "attrdict",
+        "pytube",
+        "pytz",
+        "parsel",
+        "pyshorteners",
+        "fake_useragent",
+    ]
 )

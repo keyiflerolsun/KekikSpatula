@@ -1,16 +1,5 @@
 # Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
 
-YAZAR       = 'keyiflerolsun'
-YAZAR_POSTA = 'keyiflerolsun@gmail.com'
-
-PAKET       = 'KekikSpatula'
-VERSIYON    = '0.4.3'
-
-REPO        = 'https://github.com/keyiflerolsun/KekikSpatula'
-ACIKLAMA    = 'Siz uğraşmayın diye biz uğraştık.. ~ dızz 🐍'
-ANAHTAR_KLM = [PAKET, 'KekikAkademi', 'keyiflerolsun']
-
-####
 from KekikSpatula._Statik import KekikSpatula
 from KekikSpatula.nobetciEczane import NobetciEczane
 from KekikSpatula.akaryakit import Akaryakit
@@ -26,6 +15,6 @@ from KekikSpatula.google import Google
 from KekikSpatula.KekikTube import KekikTube
 from KekikSpatula.ucak import UcuzUcak
 from KekikSpatula.masal import CocukMasallari
-from KekikSpatula.trendyol import Trendyol
+from KekikSpatula.trendyol_urun import TrendyolUrun
 from KekikSpatula.sahibinden import Sahibinden
-####
+from KekikSpatula.trendyol_kategori import TrendyolKategori
