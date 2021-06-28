@@ -40,9 +40,9 @@ pip install -U KekikSpatula
 - ![KekikTube](https://www.youtube.com/s/desktop/19da7d5c/img/favicon.ico) **[KekikTube](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/KekikTube.py)**
 - ![UcuzUcak](https://i.imgur.com/YCcagvA.png) **[UcuzUcak](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/UcuzUcak.py)**
 - ![CocukMasallari](https://i.imgur.com/cmIfRdM.png) **[CocukMasallari](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/CocukMasallari.py)**
-- ![TrendyolUrun](https://www.trendyol.com/frontend/web/assets/images/favicon.ico) **[Trendyol](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/TrendyolUrun.py)**
+- ![TrendyolUrun](https://www.trendyol.com/frontend/web/assets/images/favicon.ico) **[TrendyolUrun](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/TrendyolUrun.py)**
 - ![Sahibinden](https://i.imgur.com/XNI9phn.png) **[Sahibinden](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Sahibinden.py)**
-- ![TrendyolKategori](https://www.trendyol.com/frontend/web/assets/images/favicon.ico) **[Trendyol](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/TrendyolKategori.py)**
+- ![TrendyolKategori](https://www.trendyol.com/frontend/web/assets/images/favicon.ico) **[TrendyolKategori](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/TrendyolKategori.py)**
 
 ## 🌐 Telif Hakkı ve Lisans
 
