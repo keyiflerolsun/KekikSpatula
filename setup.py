@@ -10,7 +10,7 @@ setup(
     packages     = ["KekikSpatula"],
 
     name         = "KekikSpatula",
-    version      = "0.4.5",
+    version      = "0.4.6",
     url          = "https://github.com/keyiflerolsun/KekikSpatula",
     description  = "Siz uğraşmayın diye biz uğraştık.. ~ dızz 🐍",
     keywords     = ["KekikSpatula", "KekikAkademi", "keyiflerolsun"],
@@ -26,7 +26,7 @@ setup(
         'Programming Language :: Python :: 3'
     ],
 
-    python_requires     = '>=3.6',
+    python_requires     = '>=3.9',
     install_requires    = [
         "requests",
         "cloudscraper",
@@ -41,5 +41,6 @@ setup(
         "parsel",
         "pyshorteners",
         "fake_useragent",
+        "requests-html"
     ]
 )

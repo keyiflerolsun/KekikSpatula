@@ -33,7 +33,7 @@ class BimAktuel(KekikSpatula):
         "aktüel verilerini bim.com.tr'den alarak bs4'ile ayrıştırır."
 
         kaynak  = "bim.com.tr"
-        url     = "https://www.bim.com.tr/default.aspx"
+        url     = "https://www.bim.com.tr/"
         kimlik  = self.kimlik
         istek   = requests.get(url, headers=kimlik, allow_redirects=True)
 
