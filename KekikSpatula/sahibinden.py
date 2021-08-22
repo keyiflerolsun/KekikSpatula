@@ -44,20 +44,29 @@ class Sahibinden(KekikSpatula):
         detay_baslik   = secici.xpath("//ul[@class='classifiedInfoList']/li/strong/text()").getall()
         detay_aciklama = secici.xpath("//ul[@class='classifiedInfoList']/li/span/text()").getall()
 
-        kekik_json     = {
-            "kaynak": kaynak,
-            "veri" : {
-                "link"   : url,
-                "baslik" : ilan.xpath("//h1/text()").get().strip(),
-                "resim"  : ilan.xpath("//img[@class='stdImg']/@src").get(),
-                "fiyat"  : ilan.xpath("//div[@class='classifiedInfo ']/h3/text()").get().strip(),
-                "yer"    : ''.join(ilan.xpath("//div[@class='classifiedInfo ']/h2/a/text()").getall()).replace(' ', '').lstrip('\n').replace('\n', ' | ').replace('Mh.', ''),
-                "detay"  : [
-                    f'{detay_baslik[bak].strip()} : {detay_aciklama[bak].strip()}'
-                    for bak in range(len(detay_baslik))
-                ]
+        try:
+            kekik_json     = {
+                "kaynak": kaynak,
+                "veri" : {
+                    "link"   : url,
+                    "baslik" : ilan.xpath("//h1/text()").get().strip(),
+                    "resim"  : ilan.xpath("//img[@class='stdImg']/@src").get(),
+                    "fiyat"  : ilan.xpath("//div[@class='classifiedInfo ']/h3/text()").get().strip(),
+                    "yer"    : ''.join(ilan.xpath("//div[@class='classifiedInfo ']/h2/a/text()").getall()).replace(' ', '').lstrip('\n').replace('\n', ' | ').replace('Mh.', ''),
+                    "detay"  : [
+                        f'{detay_baslik[bak].strip()} : {detay_aciklama[bak].strip()}'
+                        for bak in range(len(detay_baslik))
+                    ]
+                }
             }
-        }
+        except AttributeError:
+            kekik_json     = {
+                "kaynak": kaynak,
+                "veri" : {
+                    "link"   : url,
+                    "hata"   : "İlan Yayında Değil.."
+                }
+            }
 
         self.kekik_json  = kekik_json if kekik_json['veri'] != [] else None
         self.kaynak      = kaynak
