@@ -43,15 +43,20 @@ pip install -U KekikSpatula
 - ![TrendyolUrun](https://www.trendyol.com/frontend/web/assets/images/favicon.ico) **[TrendyolUrun](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/TrendyolUrun.py)**
 - ![Sahibinden](https://i.imgur.com/XNI9phn.png) **[Sahibinden](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Sahibinden.py)**
 - ![TrendyolKategori](https://www.trendyol.com/frontend/web/assets/images/favicon.ico) **[TrendyolKategori](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/TrendyolKategori.py)**
+- ![ArasKargo](https://www.araskargo.com.tr/tr/images/favicon.ico) **[ArasKargo](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/ArasKargo.py)**
 
 ## 🌐 Telif Hakkı ve Lisans
 
 * *Copyright (C) 2021 by* [keyiflerolsun](https://github.com/keyiflerolsun) ❤️️
-* [GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007](https://github.com/keyiflerolsun/keyifUserBot/blob/master/LICENSE) *Koşullarına göre lisanslanmıştır..*
+* [GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007](https://github.com/keyiflerolsun/KekikSpatula/blob/main/LICENSE) *Koşullarına göre lisanslanmıştır..*
 
 ## ♻️ İletişim
 
 *Benimle iletişime geçmek isterseniz, **Telegram**'dan mesaj göndermekten çekinmeyin;* [@keyiflerolsun](https://t.me/keyiflerolsun)
+
+## 💸 Bağış Yap
+
+**[☕️ Kahve Ismarla](https://KekikAkademi.org/Kahve)**
 
 ##
 

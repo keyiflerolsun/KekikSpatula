@@ -18,3 +18,4 @@ from KekikSpatula.masal import CocukMasallari
 from KekikSpatula.trendyol_urun import TrendyolUrun
 from KekikSpatula.sahibinden import Sahibinden
 from KekikSpatula.trendyol_kategori import TrendyolKategori
+from KekikSpatula.araskargo import ArasKargo
