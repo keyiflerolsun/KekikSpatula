@@ -57,7 +57,7 @@ class NobetciEczane(KekikSpatula):
             for bak in bugun.findAll('tr')[1:]:
                 ad    = bak.find('span', class_='isim').text
                 mah   = (None if bak.find('div', class_='my-2') is None else bak.find('div', class_='my-2').text)
-                adres = bak.find('span', class_='text-capitalize').text
+                adres = bak.find('div', class_='col-lg-6').text
                 tarif = (None if bak.find('span', class_='text-secondary font-italic') is None else bak.find('span', class_='text-secondary font-italic').text)
                 telf  = bak.find('div', class_='col-lg-3 py-lg-2').text
 
