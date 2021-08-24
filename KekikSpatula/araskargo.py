@@ -2,6 +2,8 @@
 
 from requests import get
 from json import loads
+from parsel import Selector
+import pandas as pd
 
 from KekikSpatula import KekikSpatula
 
@@ -32,33 +34,42 @@ class ArasKargo(KekikSpatula):
     def __init__(self, takip_numarasi:int) -> None:
         "kargo verilerini araskargo.com.tr'den alarak ayrıştırır."
 
-        kaynak  = "araskargo.com.tr"
-        takip   = loads(get(f"https://social.araskargo.com.tr/Facebook/KargoTakipDetay?trackingNumber={takip_numarasi}").json())
-        detay   = loads(get(f"https://social.araskargo.com.tr/Facebook/KargoTakip?trackingNumber={takip_numarasi}").json())
+        kaynak   = "araskargo.com.tr"
+        takip    = loads(get(f"https://social.araskargo.com.tr/Facebook/KargoTakip?trackingNumber={takip_numarasi}").json())
+        # detay    = loads(get(f"https://social.araskargo.com.tr/Facebook/KargoTakipDetay?trackingNumber={takip_numarasi}").json())
 
-        takip_veri = detay["cargoDetails"]["cargoDetail"][0]
+        takip_veri = takip["cargoDetails"]["cargoDetail"][0]
+        fatura_no  = takip_veri["waybillId"]
+        fatura     = Selector(get(f"https://kargotakip.araskargo.com.tr/yurticigonbil.aspx?Cargo_Code={fatura_no}").text)
 
         json_veri = {
             "takip_no"  : takip_numarasi,
+            "fatura_no" : fatura_no,
+            "seri_no"   : fatura.xpath("//span[@id='gfatno']/text()").get(),
             "durum"     : {
-                "son_durum"    : takip_veri["cargoStatus"],
-                "teslim_zaman" : takip_veri["unitArriveDate"],
-                "teslim_alan"  : takip_veri["deliveredCustomerName"]
+                "kargonun_cinsi" : fatura.xpath("//span[@id='Kargonun_Cinsi']/text()").get(),
+                "son_durum"      : fatura.xpath("//span[@id='Son_Durum']/text()").get(),
+                "teslim_tarihi"  : fatura.xpath("//span[@id='Teslim_Tarihi']/text()").get(),
+                "teslim_saati"   : fatura.xpath("//span[@id='Teslim_Saati']/text()").get(),
+                "teslim_alan"    : fatura.xpath("//span[@id='Teslim_Alan']/text()").get()
             },
             "fatura"    : {
-                "gonderici"   : takip_veri["senderAccountName"],
-                "cikis_sube"  : takip_veri["initialUnit"],
-                "varis_sube"  : takip_veri["arrivalUnit"],
-                "cikis_zaman" : takip_veri["unitLeaveDate"]
+                "ilk_cikis"     : fatura.xpath("normalize-space(//span[@id='LabelIlkCikis'])").get(),
+                "cikis_subesi"  : fatura.xpath("normalize-space(//span[@id='cikis_subesi'])").get(),
+                "varis_subesi"  : fatura.xpath("normalize-space(//span[@id='varis_subesi'])").get(),
+                "gonderi_tipi"  : fatura.xpath("normalize-space(//span[@id='LabelGonTipi'])").get(),
+                "fatura_turu"   : fatura.xpath("normalize-space(//span[@id='fatura_turu'])").get(),
+                "cikis_tarihi"  : fatura.xpath("normalize-space(//span[@id='cikis_tarihi'])").get(),
+                "gonderici"     : fatura.xpath("normalize-space(//span[@id='gonderici_adi_soyadi'])").get(),
+                "alici"         : fatura.xpath("normalize-space(//span[@id='alici_adi_soyadi'])").get()
             },
-            "hareketler" : [
-                {
-                   "islem_zaman"    : asama["transactionDate"],
-                   "islem_birim"    : asama["destinationUnit"],
-                   "islem_aciklama" : asama["transactionDescription"]
+            "hareketler" : loads(pd.read_html(str(fatura.xpath("//table[@id='DataGrid1']").get()))[0].rename(
+                columns={
+                    0 : 'zaman',
+                    1 : 'birim',
+                    2 : 'islem',
                 }
-                  for asama in takip["cargoMoveDetails"]["cargoMoveDetail"]
-            ],
+            ).reset_index(drop = True).to_json(orient='records'))[1:]
         }
 
         kekik_json = {"kaynak": kaynak, 'veri' : json_veri}
