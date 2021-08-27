@@ -31,19 +31,29 @@ class ArasKargo(KekikSpatula):
     def __repr__(self) -> str:
         return f"{__class__.__name__} Sınıfı -- {self.kaynak}'dan kargo verilerini döndürmesi için yazılmıştır.."
 
-    def __init__(self, takip_numarasi:int) -> None:
+    def __init__(self, gelen_no) -> None:
         "kargo verilerini araskargo.com.tr'den alarak ayrıştırır."
 
+        takip_numarasi = str(gelen_no).replace(' ', '').strip()
         kaynak   = "araskargo.com.tr"
         takip    = loads(get(f"https://social.araskargo.com.tr/Facebook/KargoTakip?trackingNumber={takip_numarasi}").json())
         # detay    = loads(get(f"https://social.araskargo.com.tr/Facebook/KargoTakipDetay?trackingNumber={takip_numarasi}").json())
 
-        takip_veri = takip["cargoDetails"]["cargoDetail"][0]
-        fatura_no  = takip_veri["waybillId"]
-        fatura     = Selector(get(f"https://kargotakip.araskargo.com.tr/yurticigonbil.aspx?Cargo_Code={fatura_no}").text)
+        if takip_numarasi[0].isdigit():
+            takip_veri = takip["cargoDetails"]["cargoDetail"][0]
+            fatura_no  = takip_veri["waybillId"]
+            fatura = Selector(get(f"https://kargotakip.araskargo.com.tr/yurticigonbil.aspx?Cargo_Code={fatura_no}").text)
+        else:
+            seri      = takip_numarasi[0:2]
+            fat_no    = takip_numarasi[2:]
+            fatura_no = f"{seri} {fat_no}"
+            fatura = Selector(get(f"https://kargotakip.araskargo.com.tr/yurticigonbil.aspx?seri={seri}&fat_no={fat_no}&ref_no=&Cargo_Code=").text)
+            print(get(f"https://kargotakip.araskargo.com.tr/yurticigonbil.aspx?seri={seri}&fat_no={fat_no}&ref_no=&Cargo_Code=").text)
+            print(fatura_no)
+            print(takip_numarasi)
 
         json_veri = {
-            "takip_no"  : takip_numarasi,
+            "takip_no"  : takip_numarasi if takip_numarasi[0].isdigit() else None,
             "fatura_no" : fatura_no,
             "seri_no"   : fatura.xpath("//span[@id='gfatno']/text()").get(),
             "durum"     : {
