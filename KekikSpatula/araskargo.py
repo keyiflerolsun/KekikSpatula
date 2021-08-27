@@ -48,9 +48,6 @@ class ArasKargo(KekikSpatula):
             fat_no    = takip_numarasi[2:]
             fatura_no = f"{seri} {fat_no}"
             fatura = Selector(get(f"https://kargotakip.araskargo.com.tr/yurticigonbil.aspx?seri={seri}&fat_no={fat_no}&ref_no=&Cargo_Code=").text)
-            print(get(f"https://kargotakip.araskargo.com.tr/yurticigonbil.aspx?seri={seri}&fat_no={fat_no}&ref_no=&Cargo_Code=").text)
-            print(fatura_no)
-            print(takip_numarasi)
 
         json_veri = {
             "takip_no"  : takip_numarasi if takip_numarasi[0].isdigit() else None,
