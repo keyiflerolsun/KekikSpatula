@@ -44,14 +44,14 @@ class ArasKargo(KekikSpatula):
             fatura_no  = takip_veri["waybillId"]
             fatura = Selector(get(f"https://kargotakip.araskargo.com.tr/yurticigonbil.aspx?Cargo_Code={fatura_no}").text)
         else:
-            seri      = takip_numarasi[0:2]
+            seri      = takip_numarasi[:2]
             fat_no    = takip_numarasi[2:]
             fatura_no = f"{seri} {fat_no}"
             fatura = Selector(get(f"https://kargotakip.araskargo.com.tr/yurticigonbil.aspx?seri={seri}&fat_no={fat_no}&ref_no=&Cargo_Code=").text)
 
         json_veri = {
             "takip_no"  : takip_numarasi if takip_numarasi[0].isdigit() else None,
-            "fatura_no" : fatura_no,
+            "fatura_no" : fatura_no if len(fatura_no) > 15 else None,
             "seri_no"   : fatura.xpath("//span[@id='gfatno']/text()").get(),
             "durum"     : {
                 "kargonun_cinsi" : fatura.xpath("//span[@id='Kargonun_Cinsi']/text()").get(),

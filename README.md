@@ -35,7 +35,6 @@ pip install -U KekikSpatula
 - ☁️ **[HavaDurumu](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/HavaDurumu.py)**
 - 🕌 **[Ezan](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Ezan.py)**
 - 📺 **[DiscUdemy](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/DiscUdemy.py)**
-- ☢️ **[Covid](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Covid.py)**
 - ![Google](https://www.google.com/images/branding/googleg/1x/googleg_standard_color_16dp.png) **[Google](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Google.py)**
 - ![KekikTube](https://www.youtube.com/s/desktop/19da7d5c/img/favicon.ico) **[KekikTube](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/KekikTube.py)**
 - ![UcuzUcak](https://i.imgur.com/YCcagvA.png) **[UcuzUcak](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/UcuzUcak.py)**
@@ -56,7 +55,7 @@ pip install -U KekikSpatula
 
 ## 💸 Bağış Yap
 
-**[☕️ Kahve Ismarla](https://KekikAkademi.org/Kahve)**
+**[☕️ Kahve Ismarla](https://keyiflerolsun.me/Kahve)**
 
 ##
 

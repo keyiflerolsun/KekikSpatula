@@ -50,7 +50,10 @@ class DiscUdemy(KekikSpatula):
 
             disc_link   = requests.get('https://www.discudemy.com/go/' + baslik.a['href'].split('/')[-1])
             disc_corba  = BeautifulSoup(disc_link.content, 'lxml')
-            baglanti    = disc_corba.select('body > div.ui.container.mt10 > div:nth-child(3) > div > a')[0]['href']
+            try:
+                baglanti    = disc_corba.select('body > div.ui.container.mt10 > div:nth-child(3) > div > a')[0]['href']
+            except IndexError:
+                continue
 
             udemy.append({
                 'dil': dil.text,

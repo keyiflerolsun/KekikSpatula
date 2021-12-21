@@ -2,8 +2,8 @@
 
 import requests
 from parsel import Selector
-from bs4 import BeautifulSoup
 from urllib.parse import unquote
+from json import loads
 
 from KekikSpatula import KekikSpatula
 
@@ -61,11 +61,11 @@ class TrendyolUrun(KekikSpatula):
                 "link"       : url.split('?')[0],
                 "marka"      : secici.xpath("//h1[@class='pr-new-br']/a/text()").get().strip() if secici.xpath("//h1[@class='pr-new-br']/a/text()").get() else secici.xpath("//h1[@class='pr-new-br']/text()").get().strip(),
                 "baslik"     : secici.xpath("//h1[@class='pr-new-br']/span/text()").get().strip(),
-                "resim"      : secici.xpath("//img[@class='ph-gl-img']/@src").get(),
-                "gercek"     : secici.xpath("//span[@class='prc-org']/text()").get(),
-                "indirimli"  : secici.xpath("//span[@class='prc-slg prc-slg-w-dsc']/text()").get() or secici.xpath("//span[@class='prc-slg']/text()").get(),
-                "kampanya"   : secici.xpath("//div[@class='pr-bx-pr-dsc']/text()").get(),
-                "son_fiyat"  : secici.xpath("//span[@class='prc-dsc']/text()").get(),
+                "resim"      : secici.xpath("//div[@class='product-container']//img/@src").get(),
+                "indirimsiz" : secici.xpath("//span[@class='prc-org']/text()").get(),
+                "indirimli"  : secici.xpath("//span[@class='prc-slg prc-slg-w-dsc']/text()").get(),
+                "kampanya"   : secici.xpath("//div[@class='pr-bx-pr-dsc']/text()").get() or secici.xpath("//span[@class='discounted-stamp-text']/text()").get(),
+                "son_fiyat"  : secici.xpath("//span[@class='prc-dsc']/text()").get() or secici.xpath("//span[@class='prc-slg']/text()").get(),
                 "yorumlar"   : self.trendyol_yorum(url),
                 # "link"       : self.link_kisalt.tinyurl.short(url.split('?')[0])
             }
@@ -82,32 +82,22 @@ class TrendyolUrun(KekikSpatula):
             urun, _ = link.split("?")
         except ValueError:
             urun = link
+        urun    = urun.split('com/')[1]
 
-        url     = urun + "/yorumlar"
-        kimlik  = {'User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'}
-        istek   = requests.get(url, headers=kimlik)
-        corba   = BeautifulSoup(istek.text, "html5lib")
+        url    = "https://public-mdc.trendyol.com/discovery-web-socialgw-service/reviews/" + urun + "/yorumlar"
+        kimlik = {'User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'}
+        istek  = requests.get(url, headers=kimlik)
+        veri   = loads(KekikSpatula.ayristir("STATE__ = ", ";", istek.json()['result']['hydrateScript']))
 
-        yorumlar  = corba.find('div', class_='pr-rnr-com')
+        yorum_verisi = veri['ratingAndReviewResponse']['ratingAndReview']['productReviews']['content']
 
-        try:
-            yorum_sahibi     = [yorum_sahibi.text.split(' | ')[0] for yorum_sahibi in yorumlar.findAll('span', class_='rnr-com-usr')]
-            kullanici_yorumu = [yorum_.text for yorum_ in yorumlar.findAll('div', class_='rnr-com-tx')]
-
-            yildiz_sayisi    = []
-            for i_yildiz in yorumlar.findAll("div", attrs={'class':'ratings readonly'}):
-                yildiz = [tek_yildiz for tek_yildiz in i_yildiz.findAll("div", attrs={'class': 'full', 'style': 'width:100%;max-width:100%'})]
-                yildiz_sayisi.append(len(yildiz))
-
-            yorumlar = [
-                {
-                    'kullanici' : yorum_sahibi[adet],
-                    'yildiz'    : yildiz_sayisi[adet],
-                    'yorum'     : kullanici_yorumu[adet]
-                }
-                for adet in range(len(yorum_sahibi))
-            ]
-        except AttributeError:
-            yorumlar = None
-
-        return yorumlar
+        return [
+            {
+                'tarih'     : yorum['lastModifiedDate'],
+                'satici'    : yorum['sellerName'],
+                'kullanici' : yorum['userFullName'],
+                'yildiz'    : yorum['rate'],
+                'yorum'     : yorum['comment']
+            }
+            for yorum in yorum_verisi
+        ]

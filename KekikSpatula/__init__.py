@@ -10,7 +10,6 @@ from KekikSpatula.haber import SonDakika
 from KekikSpatula.havaDurumu import HavaDurumu
 from KekikSpatula.ezan import Ezan
 from KekikSpatula.discudemy import DiscUdemy
-from KekikSpatula.covid import Covid
 from KekikSpatula.google import Google
 from KekikSpatula.KekikTube import KekikTube
 from KekikSpatula.ucak import UcuzUcak

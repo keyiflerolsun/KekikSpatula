@@ -40,7 +40,7 @@ class CocukMasallari(KekikSpatula):
         secici  = Selector(istek.text)
 
         kekik_json = {"kaynak": kaynak, 'veri' : []}
-        for masal in secici.xpath("//div[@id='content_box']/article"):
+        for masal in secici.xpath("//ul[@id='posts-container']/li[contains(@class, 'post-item')]"):
             adi   = masal.xpath(".//h2/a/text()").get()
             linki = masal.xpath(".//h2/a/@href").get()
 
@@ -48,7 +48,7 @@ class CocukMasallari(KekikSpatula):
                 {
                     'ad'     : adi,
                     'link'   : linki,
-                    'icerik' : '\n'.join(Selector(requests.get(linki, headers=kimlik, allow_redirects=True).text).xpath("//div[@class='thecontent']/p/text()").getall()[1:])
+                    'icerik' : '\n'.join(Selector(requests.get(linki, headers=kimlik, allow_redirects=True).text).xpath("//div[contains(@class, 'entry-content')]/p/text()").getall()[1:])
                 }
             )
 

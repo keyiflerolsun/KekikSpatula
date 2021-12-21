@@ -7,7 +7,7 @@ from KekikSpatula import KekikSpatula
 
 class Akaryakit(KekikSpatula):
     """
-    Akaryakit : finans.haberler.com adresinden akaryakıt verilerini hazır formatlarda elinize verir.
+    Akaryakit : haberler.com adresinden akaryakıt verilerini hazır formatlarda elinize verir.
 
     Methodlar
     ----------
@@ -30,16 +30,16 @@ class Akaryakit(KekikSpatula):
         return f"{__class__.__name__} Sınıfı -- {self.kaynak}'dan akaryakıt verileri döndürmesi için yazılmıştır.."
 
     def __init__(self) -> None:
-        "akaryakıt verilerini finans.haberler.com'dan alarak bs4'ile ayrıştırır."
+        "akaryakıt verilerini haberler.com'dan alarak bs4'ile ayrıştırır."
 
-        kaynak  = "finans.haberler.com"
-        url     = "https://finans.haberler.com/akaryakit/"
+        kaynak  = "haberler.com"
+        url     = "https://haberler.com/finans/akaryakit/"
         kimlik  = self.kimlik
         istek   = requests.get(url, headers=kimlik)
 
         corba   = BeautifulSoup(istek.content, "lxml")
 
-        son_guncellenme = corba.select('body > div > div.hbMain.stickyNo > div:nth-child(3) > div > div.col696 > div > div > table > tbody > tr:nth-child(1) > td:nth-child(2)')[0].text
+        son_guncellenme = corba.select('div.hbTableContent.piyasa > table > tbody > tr:nth-child(1) > td:nth-child(2)')[0].text
         cerceve         = corba.find('div', class_='hbTableContent piyasa')
 
         kekik_json = {"kaynak": kaynak, 'son_guncellenme': son_guncellenme, 'veri' : []}
