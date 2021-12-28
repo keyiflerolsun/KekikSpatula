@@ -4,7 +4,7 @@ from pyshorteners import Shortener
 from re import search, match
 from fake_useragent import UserAgent
 from typing import Any
-from attrdict import AttrDict
+from attrdict2 import AttrDict
 from json import dumps
 from tabulate import tabulate
 

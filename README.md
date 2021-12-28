@@ -1,6 +1,6 @@
 # ✂️ KekikSpatula
 
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/bc0a52a9b57f4c29930cbd6c796f9a8b)](https://www.codacy.com/gh/keyiflerolsun/KekikSpatula/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=keyiflerolsun/KekikSpatula&amp;utm_campaign=Badge_Grade) ![Repo Boyutu](https://img.shields.io/github/repo-size/keyiflerolsun/KekikSpatula) ![Views](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/keyiflerolsun/KekikSpatula&title=Profile%20Views) [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/keyiflerolsun/KekikSpatula)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/bc0a52a9b57f4c29930cbd6c796f9a8b)](https://www.codacy.com/gh/keyiflerolsun/KekikSpatula/dashboard?utm_source=github.com&utm_medium=referral&utm_content=keyiflerolsun/KekikSpatula&utm_campaign=Badge_Grade) ![Repo Boyutu](https://img.shields.io/github/repo-size/keyiflerolsun/KekikSpatula) ![Views](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/keyiflerolsun/KekikSpatula&title=Profile%20Views) [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/keyiflerolsun/KekikSpatula)
 
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/KekikSpatula)
 ![PyPI - Status](https://img.shields.io/pypi/status/KekikSpatula)
@@ -9,7 +9,7 @@
 ![PyPI - Wheel](https://img.shields.io/pypi/wheel/KekikSpatula)
 ![PyPI - License](https://img.shields.io/pypi/l/KekikSpatula)
 
-**Siz uğraşmayın diye** *biz uğraştık..* **~** `dızz 🐍`
+**Siz uğraşmayın diye** _biz uğraştık.._ **~** `dızz 🐍`
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 [![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/keyiflerolsun/)
@@ -43,15 +43,16 @@ pip install -U KekikSpatula
 - ![Sahibinden](https://i.imgur.com/XNI9phn.png) **[Sahibinden](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Sahibinden.py)**
 - ![TrendyolKategori](https://www.trendyol.com/frontend/web/assets/images/favicon.ico) **[TrendyolKategori](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/TrendyolKategori.py)**
 - ![ArasKargo](https://www.araskargo.com.tr/tr/images/favicon.ico) **[ArasKargo](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/ArasKargo.py)**
+- 🦠 **[Covid](https://github.com/KolektifAPI/KekikSpatula/blob/main/Testler/Covid.py)**
 
 ## 🌐 Telif Hakkı ve Lisans
 
-* *Copyright (C) 2021 by* [keyiflerolsun](https://github.com/keyiflerolsun) ❤️️
-* [GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007](https://github.com/keyiflerolsun/KekikSpatula/blob/main/LICENSE) *Koşullarına göre lisanslanmıştır..*
+- _Copyright (C) 2021 by_ [keyiflerolsun](https://github.com/keyiflerolsun) ❤️️
+- [GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007](https://github.com/keyiflerolsun/KekikSpatula/blob/main/LICENSE) _Koşullarına göre lisanslanmıştır.._
 
 ## ♻️ İletişim
 
-*Benimle iletişime geçmek isterseniz, **Telegram**'dan mesaj göndermekten çekinmeyin;* [@keyiflerolsun](https://t.me/keyiflerolsun)
+_Benimle iletişime geçmek isterseniz, **Telegram**'dan mesaj göndermekten çekinmeyin;_ [@keyiflerolsun](https://t.me/keyiflerolsun)
 
 ## 💸 Bağış Yap
 
@@ -59,4 +60,4 @@ pip install -U KekikSpatula
 
 ##
 
-> **[@KekikAkademi](https://t.me/KekikAkademi)** *için yazılmıştır..*
+> **[@KekikAkademi](https://t.me/KekikAkademi)** _için yazılmıştır.._
