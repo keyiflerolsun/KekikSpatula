@@ -2,21 +2,33 @@ from KekikSpatula import Covid
 
 covid = Covid()
 
-print(covid.turkiye)
+print(covid.ulke("tr"))
 """
-json verisi döndürür
+istediğiniz ülkenin covid verisini döndürür
 
-{'vaka_sayisi': 281313597, 'olum_sayisi': 5406011, 'iyilesen_sayisi': 131473367}
+{'ulke': 'Turkey', 'ulke_bayragi': 'https://disease.sh/assets/img/flags/tr.png', 'ulke_nufusu': 85687258, 'aktif_hasta': 285742, 'vaka_sayisi': 9333223, 'bugunki_vaka_sayisi': 0, 'olum_sayisi': 81733, 'bugunki_olum_sayisi': 0, 'iyilesen_sayisi': 8965748, 'bugunki_iyilesen_sayisi': 0, 'ulke_harita_konum': '39,35'}
 """
 
-print(covid.dunya_geneli)
+print(covid.veri)
 """
 json verisi döndürür
 
 [{'ulke': 'Russia', 'ulke_bayragi': 'https://disease.sh/assets/img/flags/ru.png', 'ulke_nufusu': 146027482, 'aktif_hasta': 816589, 'vaka_sayisi': 10415230, 'bugunki_vaka_sayisi': 23210, 'olum_sayisi': 305155, 'bugunki_olum_sayisi': 937, 'iyilesen_sayisi': 9293486, 'bugunki_iyilesen_sayisi': 33715, 'ulke_harita_konum': '60,100'}, ....]
 """
 
-print(covid.dunya_tablo)
+for veri in covid.nesne:
+  print(veri.ulke)
+"""
+json verisini python nesnesine dönüştürür.
+
+Russia
+Poland
+Hungary
+Ukraine
+Georgia
+"""
+
+print(covid.tablo())
 """
 tabulate verisi döndürür.
 
