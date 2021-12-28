@@ -1,61 +1,51 @@
 # Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
 
-import requests
+from requests import get
 from KekikSpatula import KekikSpatula
-from typing import List, Dict
-from tabulate import tabulate
-
+from typing import Dict
 class Covid(KekikSpatula):
     """
-    Covid : Covid verileri döndürür
+    Covid : interaktif.trthaber.com adresinden covid verilerini hazır formatlarda elinize verir.
 
     Methodlar
     ----------
-    .turkiye:
-        Türkiye covid verilerini döndürür.
+        .veri:
+            json verisi döndürür.
 
-    .dunya_geneli:
-        Dünya geneli Covid verilerini ayrıştırarak günlük ölüm sayısına göre sıralar.
+        .ulke(str):
+            istediğiniz ülkenin covid verisini döndürür
 
-    .dunya_tablo():
-        Dünya geneli veriyi tabulate halinde döndürür.
+        .gorsel():
+            oluşan json verisini insanın okuyabileceği formatta döndürür.
+
+        .tablo():
+            tabulate verisi döndürür.
+
+        .anahtarlar:
+            kullanılan anahtar listesini döndürür.
+
+        .nesne:
+            json verisini python nesnesine dönüştürür.
     """
 
     def __repr__(self) -> str:
-        return f"{__class__.__name__} Sınıfı -- Covid verileri döndürmesi için yazılmıştır.."
+        return f"{__class__.__name__} Sınıfı -- {self.kaynak}'dan covid verilerini döndürmesi için yazılmıştır.."
 
     def __init__(self) -> None:
-        "Covid verilerini toplayarak ayrıştırır."
+        "interaktif.trthaber.com adresinden covid verilerini hazır formatlarda elinize verir."
 
-        kekik_json = {
-            "kaynak": {
-                "turkiye" : "corona.cbddo.gov.tr",
-                "dunya"   : "interaktif.trthaber.com"
-            },
-            "veri": {
-                "turkiye" : self.turkiye,
-                "dunya"   : self.dunya_geneli
-            }
-        }
-
-        self.kekik_json  = kekik_json if kekik_json['veri'] != [] else None
-        self.dunya_tablo = tabulate(self.kekik_json['veri']['dunya'], headers='keys', tablefmt="psql")
-
-    @property
-    def dunya_geneli(self) -> List[dict]:
-        "Dünya geneli Covid verilerini ayrıştırarak günlük ölüm sayısına göre sıralar."
-
+        self.kaynak = "interaktif.trthaber.com"
         kimlik  = {
-            "authority"      : "interaktif.trthaber.com",
+            "authority"      : self.kaynak,
             "sec-gpc"        : "1",
             "sec-fetch-site" : "same-origin",
             "sec-fetch-mode" : "cors",
             "sec-fetch-dest" : "empty",
-            "referer"        : "https://interaktif.trthaber.com/koronavirus/?map=1&counter=1&table=1&news=1&info=1"
+            "referer"        : f"https://{self.kaynak}/koronavirus/?map=1&counter=1&table=1&news=1&info=1"
         }
         kimlik.update(KekikSpatula.kimlik)
 
-        trt_istek = requests.get("https://interaktif.trthaber.com/koronavirus/data/coronaCountries.json", headers=kimlik, allow_redirects=True)
+        trt_istek = get(f"https://{self.kaynak}/koronavirus/data/coronaCountries.json", headers=kimlik, allow_redirects=True)
 
         veri = [
             {
@@ -74,16 +64,19 @@ class Covid(KekikSpatula):
               for ulke in trt_istek.json()
         ]
 
-        return sorted(veri, key=lambda sozluk: sozluk['bugunki_olum_sayisi'], reverse=True)
+        self.dunya_geneli = sorted(veri, key=lambda sozluk: sozluk['bugunki_olum_sayisi'], reverse=True)
 
-    @property
-    def turkiye(self) -> Dict[str, int]:
-        "Türkiye Covid verilerini toplayarak ayrıştırır."
-
-        tr_veri = requests.get("https://corona.cbddo.gov.tr/Home/GetTotalData", allow_redirects=True).json()
-
-        return {
-            "vaka_sayisi"     : tr_veri["confirmedCount"],
-            "olum_sayisi"     : tr_veri["deathCount"],
-            "iyilesen_sayisi" : tr_veri["recovryCount"]
+        kekik_json = {
+            "kaynak" : self.kaynak,
+            "veri"   : sorted(veri, key=lambda sozluk: sozluk['bugunki_olum_sayisi'], reverse=True)
         }
+
+        self.kekik_json  = kekik_json if kekik_json['veri'] != [] else None
+
+    def ulke(self, ulke:str) -> Dict[str, int]:
+        "İstediğiniz Ülkenin Covid Verisini Döndürür"
+
+        for veri in self.dunya_geneli:
+            if ulke.lower() in [veri['ulke'].lower(), veri['ulke_bayragi'].split('/')[-1].rstrip('.png')]:
+                # del veri['ulke']
+                return veri
