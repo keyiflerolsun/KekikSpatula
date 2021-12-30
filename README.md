@@ -44,6 +44,7 @@ pip install -U KekikSpatula
 - ![TrendyolKategori](https://www.trendyol.com/frontend/web/assets/images/favicon.ico) **[TrendyolKategori](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/TrendyolKategori.py)**
 - ![ArasKargo](https://www.araskargo.com.tr/tr/images/favicon.ico) **[ArasKargo](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/ArasKargo.py)**
 - 🦠 **[Covid](https://github.com/KolektifAPI/KekikSpatula/blob/main/Testler/Covid.py)**
+- <img src="https://bin.bnbstatic.com/static/images/common/favicon.ico" alt="drawing" width="16"/> **[Kripto](https://github.com/KolektifAPI/KekikSpatula/blob/main/Testler/Kripto.py)**
 
 ## 🌐 Telif Hakkı ve Lisans
 

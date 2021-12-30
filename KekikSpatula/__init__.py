@@ -19,3 +19,4 @@ from KekikSpatula.sahibinden import Sahibinden
 from KekikSpatula.trendyol_kategori import TrendyolKategori
 from KekikSpatula.araskargo import ArasKargo
 from KekikSpatula.covid import Covid
+from KekikSpatula.kripto import Kripto
