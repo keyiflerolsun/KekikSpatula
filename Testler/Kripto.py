@@ -2,7 +2,7 @@ from KekikSpatula import Kripto
 
 kline = Kripto("BTCUSDT", "1m")
 
-print(kline.gorsel())
+print(kline.veri)
 """
 json verisi döndürür
 
