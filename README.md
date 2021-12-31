@@ -45,6 +45,7 @@ pip install -U KekikSpatula
 - ![ArasKargo](https://www.araskargo.com.tr/tr/images/favicon.ico) **[ArasKargo](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/ArasKargo.py)**
 - 🦠 **[Covid](https://github.com/KolektifAPI/KekikSpatula/blob/main/Testler/Covid.py)**
 - <img src="https://bin.bnbstatic.com/static/images/common/favicon.ico" alt="drawing" width="16"/> **[Kripto](https://github.com/KolektifAPI/KekikSpatula/blob/main/Testler/Kripto.py)**
+- <img src="https://n11scdn.akamaized.net/static/favicon.ico" alt="drawing" width="16"/> **[N11 Arama](https://github.com/KolektifAPI/KekikSpatula/blob/main/Testler/N11Arama.py)**
 
 ## 🌐 Telif Hakkı ve Lisans
 
