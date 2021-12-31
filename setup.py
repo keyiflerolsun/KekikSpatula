@@ -10,7 +10,7 @@ setup(
     packages     = ["KekikSpatula"],
 
     name         = "KekikSpatula",
-    version      = "0.5.7",
+    version      = "0.5.8",
     url          = "https://github.com/keyiflerolsun/KekikSpatula",
     description  = "Siz uğraşmayın diye biz uğraştık.. ~ dızz 🐍",
     keywords     = ["KekikSpatula", "KekikAkademi", "keyiflerolsun"],
@@ -35,7 +35,7 @@ setup(
         "lxml",
         "html5lib",
         "pandas",
-        "attrdict",
+        "attrdict2",
         "pytube",
         "pytz",
         "parsel",
