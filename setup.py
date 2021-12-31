@@ -35,7 +35,7 @@ setup(
         "lxml",
         "html5lib",
         "pandas",
-        "attrdict",
+        "attrdict2",
         "pytube",
         "pytz",
         "parsel",
