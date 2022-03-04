@@ -10,4 +10,3 @@ pytube
 pytz
 parsel
 pyshorteners
-fake_useragent

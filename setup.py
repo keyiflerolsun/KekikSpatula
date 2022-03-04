@@ -10,7 +10,7 @@ setup(
     packages     = ["KekikSpatula"],
 
     name         = "KekikSpatula",
-    version      = "0.6.0",
+    version      = "0.6.1",
     url          = "https://github.com/keyiflerolsun/KekikSpatula",
     description  = "Siz uğraşmayın diye biz uğraştık.. ~ dızz 🐍",
     keywords     = ["KekikSpatula", "KekikAkademi", "keyiflerolsun"],
@@ -40,7 +40,6 @@ setup(
         "pytz",
         "parsel",
         "pyshorteners",
-        "fake_useragent",
         "requests-html"
     ]
 )

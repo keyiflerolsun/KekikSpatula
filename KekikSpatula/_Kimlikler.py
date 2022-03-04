@@ -287,3 +287,10 @@ KIMLIKLER = {
         ],
     },
 }
+
+from random import choice
+
+def kimlik_ver():
+    tarayici_veya_bot = choice(list(KIMLIKLER.keys()))
+    ozel_secici = choice(list(KIMLIKLER[tarayici_veya_bot].keys()))
+    return choice(KIMLIKLER[tarayici_veya_bot][ozel_secici])

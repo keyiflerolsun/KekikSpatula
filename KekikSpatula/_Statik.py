@@ -2,16 +2,16 @@
 
 from pyshorteners import Shortener
 from re import search, match
-from fake_useragent import UserAgent
 from typing import Any
 from attrdict2 import AttrDict
 from json import dumps
 from tabulate import tabulate
+from ._Kimlikler import kimlik_ver
 
 class KekikSpatula(object):
     link_mi     = lambda link: bool(match(r"http(?:s?):\/\/(?:www\.)?", link))
     ayristir    = lambda berisi, gerisi, yazi : search(f'{berisi}(.*){gerisi}', yazi).group(1)
-    kimlik      = {'User-Agent': UserAgent().random}
+    kimlik      = {'User-Agent': kimlik_ver()}
     link_kisalt = Shortener()
 
     def __init__(self, kekik_json) -> None:

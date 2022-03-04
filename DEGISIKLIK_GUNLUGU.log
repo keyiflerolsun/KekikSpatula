@@ -58,3 +58,5 @@ v0.5.7 - corona.cbddo.gov.tr kaynağı kaldırıldı..
 v0.5.8 - klines/candlestick Spatulası Eklendi..
 
 v0.6.0 - N11 Spatulası Eklendi..
+
+v0.6.1 - fake_useragent bağımlılığı kaldırıldı..
