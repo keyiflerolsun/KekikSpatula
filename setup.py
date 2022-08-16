@@ -1,7 +1,7 @@
 # Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
 
 from setuptools import setup
-from io import open
+from io         import open
 
 setup(
     author       = "keyiflerolsun",
@@ -10,7 +10,7 @@ setup(
     packages     = ["KekikSpatula"],
 
     name         = "KekikSpatula",
-    version      = "0.6.1",
+    version      = "0.6.2",
     url          = "https://github.com/keyiflerolsun/KekikSpatula",
     description  = "Siz uğraşmayın diye biz uğraştık.. ~ dızz 🐍",
     keywords     = ["KekikSpatula", "KekikAkademi", "keyiflerolsun"],
@@ -28,7 +28,11 @@ setup(
 
     python_requires     = '>=3.9',
     install_requires    = [
+        "setuptools",
+        "wheel",
         "requests",
+        "Kekik",
+        "pyTrendyol",
         "cloudscraper",
         "tabulate",
         "beautifulsoup4",

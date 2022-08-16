@@ -1,6 +1,6 @@
 from KekikSpatula import TrendyolUrun
 
-trendyol_urun = TrendyolUrun('https://www.trendyol.com/soly/meltblown-filtre-3-katli-tam-ultrasonik-cerrahi-maske-yesil-100-adet-p-47636885?boutiqueId=535465&merchantId=184993')
+trendyol_urun = TrendyolUrun("https://www.trendyol.com/soly/meltblown-filtre-3-katli-tam-ultrasonik-cerrahi-maske-yesil-100-adet-p-47636885?boutiqueId=535465&merchantId=184993")
 
 print(trendyol_urun.veri)
 """

@@ -1,6 +1,10 @@
 # ✂️ KekikSpatula
 
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/bc0a52a9b57f4c29930cbd6c796f9a8b)](https://www.codacy.com/gh/keyiflerolsun/KekikSpatula/dashboard?utm_source=github.com&utm_medium=referral&utm_content=keyiflerolsun/KekikSpatula&utm_campaign=Badge_Grade) ![Repo Boyutu](https://img.shields.io/github/repo-size/keyiflerolsun/KekikSpatula) ![Views](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/keyiflerolsun/KekikSpatula&title=Profile%20Views) [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/keyiflerolsun/KekikSpatula)
+![Repo Boyutu](https://img.shields.io/github/repo-size/keyiflerolsun/KekikSpatula)
+![Görüntülenme](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/keyiflerolsun/KekikSpatula&title=Görüntülenme)
+<a href="https://KekikAkademi.org/Kahve" target="_blank"><img src="https://img.shields.io/badge/☕️-Kahve Ismarla-ffdd00" title="☕️ Kahve Ismarla" style="padding-left:5px;"></a>
+[![Gitpod](https://img.shields.io/badge/Gitpod-Çalıştır-blue?logo=gitpod)](https://gitpod.io/#https://github.com/keyiflerolsun/KekikSpatula)
+[![Repl.it](https://img.shields.io/badge/Replit-Çalıştır-green?logo=replit)](https://repl.it/github/keyiflerolsun/KekikSpatula)
 
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/KekikSpatula)
 ![PyPI - Status](https://img.shields.io/pypi/status/KekikSpatula)
@@ -11,7 +15,7 @@
 
 **Siz uğraşmayın diye** _biz uğraştık.._ **~** `dızz 🐍`
 
-[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+[![ForTheBadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 [![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/keyiflerolsun/)
 
 ## 🚀 Kurulum
@@ -35,31 +39,28 @@ pip install -U KekikSpatula
 - ☁️ **[HavaDurumu](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/HavaDurumu.py)**
 - 🕌 **[Ezan](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Ezan.py)**
 - 📺 **[DiscUdemy](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/DiscUdemy.py)**
-- ![Google](https://www.google.com/images/branding/googleg/1x/googleg_standard_color_16dp.png) **[Google](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Google.py)**
 - ![KekikTube](https://www.youtube.com/s/desktop/19da7d5c/img/favicon.ico) **[KekikTube](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/KekikTube.py)**
 - ![UcuzUcak](https://i.imgur.com/YCcagvA.png) **[UcuzUcak](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/UcuzUcak.py)**
 - ![CocukMasallari](https://i.imgur.com/cmIfRdM.png) **[CocukMasallari](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/CocukMasallari.py)**
-- ![TrendyolUrun](https://www.trendyol.com/frontend/web/assets/images/favicon.ico) **[TrendyolUrun](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/TrendyolUrun.py)**
+- ![TrendyolUrun](https://cdn.dsmcdn.com/web/production/favicon.ico) **[TrendyolUrun](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/TrendyolUrun.py)**
 - ![Sahibinden](https://i.imgur.com/XNI9phn.png) **[Sahibinden](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Sahibinden.py)**
-- ![TrendyolKategori](https://www.trendyol.com/frontend/web/assets/images/favicon.ico) **[TrendyolKategori](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/TrendyolKategori.py)**
-- ![ArasKargo](https://www.araskargo.com.tr/tr/images/favicon.ico) **[ArasKargo](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/ArasKargo.py)**
-- 🦠 **[Covid](https://github.com/KolektifAPI/KekikSpatula/blob/main/Testler/Covid.py)**
-- <img src="https://bin.bnbstatic.com/static/images/common/favicon.ico" alt="drawing" width="16"/> **[Kripto](https://github.com/KolektifAPI/KekikSpatula/blob/main/Testler/Kripto.py)**
-- <img src="https://n11scdn.akamaized.net/static/favicon.ico" alt="drawing" width="16"/> **[N11 Arama](https://github.com/KolektifAPI/KekikSpatula/blob/main/Testler/N11Arama.py)**
-
-## 🌐 Telif Hakkı ve Lisans
-
-- _Copyright (C) 2021 by_ [keyiflerolsun](https://github.com/keyiflerolsun) ❤️️
-- [GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007](https://github.com/keyiflerolsun/KekikSpatula/blob/main/LICENSE) _Koşullarına göre lisanslanmıştır.._
-
-## ♻️ İletişim
-
-_Benimle iletişime geçmek isterseniz, **Telegram**'dan mesaj göndermekten çekinmeyin;_ [@keyiflerolsun](https://t.me/keyiflerolsun)
+- ![TrendyolKategori](https://cdn.dsmcdn.com/web/production/favicon.ico) **[TrendyolKategori](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/TrendyolKategori.py)**
+- 🦠 **[Covid](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Covid.py)**
+- <img src="https://bin.bnbstatic.com/static/images/common/favicon.ico" alt="drawing" width="16"/> **[Kripto](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Kripto.py)**
 
 ## 💸 Bağış Yap
 
-**[☕️ Kahve Ismarla](https://keyiflerolsun.me/Kahve)**
+**[☕️ Kahve Ismarla](https://KekikAkademi.org/Kahve)**
+
+## 🌐 Telif Hakkı ve Lisans
+
+* *Copyright (C) 2022 by* [keyiflerolsun](https://github.com/keyiflerolsun) ❤️️
+* [GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007](https://github.com/keyiflerolsun/KekikSpatula/blob/master/LICENSE) *Koşullarına göre lisanslanmıştır..*
+
+## ♻️ İletişim
+
+*Benimle iletişime geçmek isterseniz, **Telegram**'dan mesaj göndermekten çekinmeyin;* [@keyiflerolsun](https://t.me/KekikKahve)
 
 ##
 
-> **[@KekikAkademi](https://t.me/KekikAkademi)** _için yazılmıştır.._
+> **[@KekikAkademi](https://t.me/KekikAkademi)** *için yazılmıştır..*

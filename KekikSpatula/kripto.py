@@ -1,6 +1,7 @@
 # Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
 
-import requests
+from requests     import get
+from typing       import Literal
 
 from KekikSpatula import KekikSpatula
 
@@ -24,24 +25,18 @@ class Kripto(KekikSpatula):
     def __repr__(self) -> str:
         return f"{__class__.__name__} Sınıfı -- {self.kaynak}'dan Mum(kline/candlestick) verisini döndürmesi için yazılmıştır.."
 
-    def __init__(self, sembol:str, aralik:str):
-        "Mum(klines) verisini api.binance.com'dan alarak düzenli bir format verir."
+    def __init__(self, sembol:str, aralik:Literal["1m", "3m", "5m", "15m", "30m", "1h", "2h", "4h", "6h", "8h", "12h", "1d", "3d", "1w", "1M"]):
+        """Mum(klines) verisini api.binance.com'dan alarak düzenli bir format verir."""
 
         self.kaynak = "api.binance.com"
 
-        if aralik not in ["1m", "3m", "5m", "15m", "30m", "1h", "2h", "4h", "6h", "8h", "12h", "1d", "3d", "1w", "1M"]:
-            self.kekik_json = None
-            return
-
-        sembol_kontrol_url   = f"https://{self.kaynak}/api/v3/ticker/24hr?symbol={sembol.upper()}"
-        sembol_kontrol_istek = requests.get(sembol_kontrol_url)
+        sembol_kontrol_istek = get(f"https://{self.kaynak}/api/v3/ticker/24hr?symbol={sembol.upper()}")
 
         if sembol_kontrol_istek.status_code != 200:
             self.kekik_json = None
             return
 
-        mum_url   = f"https://{self.kaynak}/api/v3/klines?symbol={sembol.upper()}&interval={aralik}"
-        mum_istek = requests.get(mum_url)
+        mum_istek = get(f"https://{self.kaynak}/api/v3/klines?symbol={sembol.upper()}&interval={aralik}")
 
         if mum_istek.status_code != 200:
             veri = {
@@ -67,5 +62,5 @@ class Kripto(KekikSpatula):
                   for veri in mum_istek.json()
             ]
 
-        kekik_json       = {"kaynak": self.kaynak, "veri": veri}
-        self.kekik_json  = kekik_json if kekik_json['veri'] != [] else None
+        kekik_json      = {"kaynak": self.kaynak, "veri": veri}
+        self.kekik_json = kekik_json if kekik_json["veri"] != [] else None

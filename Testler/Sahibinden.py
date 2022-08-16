@@ -1,6 +1,6 @@
 from KekikSpatula import Sahibinden
 
-sahibinden = Sahibinden('https://www.sahibinden.com/ilan/vasita-otomobil-porsche-ozkanogullari...2012-porsche-cayman-2.9-265-hp-otomatik-dogus-896061501/detay')
+sahibinden = Sahibinden("https://www.sahibinden.com/ilan/vasita-otomobil-porsche-ozkanogullari...2012-porsche-cayman-2.9-265-hp-otomatik-dogus-896061501/detay")
 
 print(sahibinden.veri)
 """

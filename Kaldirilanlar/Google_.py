@@ -1,6 +1,6 @@
 from KekikSpatula import Google
 
-google = Google('lorem impsum sit amet')
+google = Google("lorem impsum sit amet")
 
 print(google.veri)
 """

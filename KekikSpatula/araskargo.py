@@ -1,9 +1,9 @@
 # Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
 
-from requests import get
-from json import loads
-from parsel import Selector
-import pandas as pd
+from requests     import get
+from json         import loads
+from parsel       import Selector
+import pandas     as pd
 
 from KekikSpatula import KekikSpatula
 
@@ -32,22 +32,22 @@ class ArasKargo(KekikSpatula):
         return f"{__class__.__name__} Sınıfı -- {self.kaynak}'dan kargo verilerini döndürmesi için yazılmıştır.."
 
     def __init__(self, gelen_no) -> None:
-        "kargo verilerini araskargo.com.tr'den alarak ayrıştırır."
+        """kargo verilerini araskargo.com.tr'den alarak ayrıştırır."""
 
-        takip_numarasi = str(gelen_no).replace(' ', '').strip()
-        kaynak   = "araskargo.com.tr"
-        takip    = loads(get(f"https://social.araskargo.com.tr/Facebook/KargoTakip?trackingNumber={takip_numarasi}").json())
-        # detay    = loads(get(f"https://social.araskargo.com.tr/Facebook/KargoTakipDetay?trackingNumber={takip_numarasi}").json())
+        takip_numarasi = str(gelen_no).replace(" ", "").strip()
+        self.kaynak    = "araskargo.com.tr"
+        takip          = loads(get(f"https://social.{self.kaynak}/Facebook/KargoTakip?trackingNumber={takip_numarasi}").json())
+        # detay    = loads(get(f"https://social.{self.kaynak}/Facebook/KargoTakipDetay?trackingNumber={takip_numarasi}").json())
 
         if takip_numarasi[0].isdigit():
             takip_veri = takip["cargoDetails"]["cargoDetail"][0]
             fatura_no  = takip_veri["waybillId"]
-            fatura = Selector(get(f"https://kargotakip.araskargo.com.tr/yurticigonbil.aspx?Cargo_Code={fatura_no}").text)
+            fatura = Selector(get(f"https://kargotakip.{self.kaynak}/yurticigonbil.aspx?Cargo_Code={fatura_no}").text)
         else:
             seri      = takip_numarasi[:2]
             fat_no    = takip_numarasi[2:]
             fatura_no = f"{seri} {fat_no}"
-            fatura = Selector(get(f"https://kargotakip.araskargo.com.tr/yurticigonbil.aspx?seri={seri}&fat_no={fat_no}&ref_no=&Cargo_Code=").text)
+            fatura    = Selector(get(f"https://kargotakip.{self.kaynak}/yurticigonbil.aspx?seri={seri}&fat_no={fat_no}&ref_no=&Cargo_Code=").text)
 
         json_veri = {
             "takip_no"  : takip_numarasi if takip_numarasi[0].isdigit() else None,
@@ -72,14 +72,13 @@ class ArasKargo(KekikSpatula):
             },
             "hareketler" : loads(pd.read_html(str(fatura.xpath("//table[@id='DataGrid1']").get()))[0].rename(
                 columns={
-                    0 : 'zaman',
-                    1 : 'birim',
-                    2 : 'islem',
+                    0 : "zaman",
+                    1 : "birim",
+                    2 : "islem",
                 }
-            ).reset_index(drop = True).to_json(orient='records'))[1:]
+            ).reset_index(drop=True).to_json(orient="records"))[1:]
         }
 
-        kekik_json = {"kaynak": kaynak, 'veri' : json_veri}
+        kekik_json = {"kaynak": self.kaynak, "veri" : json_veri}
 
-        self.kekik_json  = kekik_json if kekik_json['veri'] != [] else None
-        self.kaynak      = kaynak
+        self.kekik_json = kekik_json if kekik_json["veri"] != [] else None

@@ -1,6 +1,6 @@
 from KekikSpatula import NobetciEczane
 
-eczane = NobetciEczane('Çanakkale', 'Merkez')
+eczane = NobetciEczane("Çanakkale", "Merkez")
 
 print(eczane.veri)
 """

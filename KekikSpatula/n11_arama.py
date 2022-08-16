@@ -1,9 +1,10 @@
 # Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
 
-import requests
-from parsel import Selector
+from requests            import get
+from requests.exceptions import ConnectionError
+from parsel              import Selector
 
-from KekikSpatula import KekikSpatula
+from KekikSpatula        import KekikSpatula
 
 class N11Arama(KekikSpatula):
     """
@@ -26,13 +27,13 @@ class N11Arama(KekikSpatula):
         return f"{__class__.__name__} Sınıfı -- {self.kaynak}'dan arama bilgilerini döndürmesi için yazılmıştır.."
 
     def __init__(self, sorgu:str, sayfa:int = 1):
-        "n11 de arama yapar"
+        """n11 de arama yapar"""
 
         self.kaynak = "n11.com"
 
         try:
-            istek = requests.get(f"https://www.{self.kaynak}/arama?q={sorgu}{f'&pg={sayfa}' if sayfa != 1 else ''}", headers=self.kimlik, allow_redirects=True)
-        except requests.exceptions.ConnectionError:
+            istek = get(f"https://www.{self.kaynak}/arama?q={sorgu}{f'&pg={sayfa}' if sayfa != 1 else ''}", headers=self.kimlik, allow_redirects=True)
+        except ConnectionError:
             self.kekik_json = None
             return
 
@@ -51,12 +52,12 @@ class N11Arama(KekikSpatula):
                 },
                 "urun_yıldız"         : ((int(urun.xpath(".//span[contains(@class, 'rating')]/@class").get().replace("rating r", "") if urun.xpath(".//span[contains(@class, 'rating')]/@class").get() else "0") / 100) * 5),
                 "magaza_ismi"         : urun.xpath(".//span[contains(@class, 'sallerName')]/text()").extract()[0].strip(),
-                "magaza_linki"        : "https://www.n11.com/magaza/" + urun.xpath(".//span[contains(@class, 'sallerName')]/text()").extract()[0].strip().lower().replace(" ", ""),
+                "magaza_linki"        : f"https://www.{self.kaynak}/magaza/" + urun.xpath(".//span[contains(@class, 'sallerName')]/text()").extract()[0].strip().lower().replace(" ", ""),
                 "magaza_puan_yuzdesi" : urun.xpath(".//span[contains(@class, 'point')]/text()").get()
             }
               for urun in urunler
         ]
 
-        kekik_json = {"kaynak": self.kaynak, 'veri': veri}
+        kekik_json = {"kaynak": self.kaynak, "veri": veri}
 
-        self.kekik_json  = kekik_json if kekik_json['veri'] != [] else None
+        self.kekik_json = kekik_json if kekik_json["veri"] != [] else None

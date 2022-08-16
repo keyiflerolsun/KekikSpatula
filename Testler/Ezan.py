@@ -1,6 +1,6 @@
 from KekikSpatula import Ezan
 
-vakit = Ezan('Çanakkale')
+vakit = Ezan("Çanakkale")
 
 print(vakit.veri)
 """

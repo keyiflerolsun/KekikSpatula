@@ -1,0 +1,41 @@
+name: KekikSpatula Fonksiyon Testleri
+
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+    branches:
+      - "main"
+
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: [3.10]
+
+    steps:
+      - name: Depo Kontrolü
+        uses: actions/checkout@v2
+
+      - name: Python ${{ matrix.python-version }} Sürümü Kullanılarak Test
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Python Sürümünü Göster
+        run: python -c "import sys; print(sys.version)"
+
+      - name: Kütüphaneyi Yükle
+        run: pip install .
+
+      - name: Pytest'i Yükle
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest
+
+      - name: Test Dosyalarını Çalıştır
+        run: pytest Testler/*

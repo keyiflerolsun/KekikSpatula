@@ -1,6 +1,6 @@
 from KekikSpatula import KekikTube
 
-yt = KekikTube('https://www.youtube.com/watch?v=Kj26pD3uqn0')
+yt = KekikTube("https://www.youtube.com/watch?v=Kj26pD3uqn0")
 
 print(yt.veri)
 """

@@ -1,6 +1,6 @@
 from KekikSpatula import HavaDurumu
 
-hava = HavaDurumu('Mardin', 'Nusaybin')
+hava = HavaDurumu("Mardin", "Nusaybin")
 
 print(hava.veri)
 """

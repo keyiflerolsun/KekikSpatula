@@ -1,6 +1,6 @@
 from KekikSpatula import DiscUdemy
 
-kurs = DiscUdemy('python')
+kurs = DiscUdemy("python")
 
 print(kurs.veri)
 """

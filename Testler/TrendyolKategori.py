@@ -1,6 +1,6 @@
 from KekikSpatula import TrendyolKategori
 
-trendyol_kategori = TrendyolKategori('https://www.trendyol.com/tasinabilir-disk-x-c108111?pi=4') # Sayfa 4
+trendyol_kategori = TrendyolKategori(kategori_adi="Taşınabilir Disk", sayfa_sayisi=1)
 
 print(trendyol_kategori.veri)
 """
