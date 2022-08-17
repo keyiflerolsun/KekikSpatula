@@ -10,7 +10,7 @@ on:
 
 
 jobs:
-  test:
+  KekikTest:
     runs-on: ubuntu-latest
 
     strategy:
