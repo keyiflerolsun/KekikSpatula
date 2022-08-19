@@ -43,7 +43,7 @@ jobs:
         if: matrix.os == 'windows-latest'
         shell: cmd
         run: |
-          cd cd ${{ github.workspace }}/Testler
+          cd ${{ github.workspace }}/Testler
           FOR %%i in (*.py) DO python -m pytest %%dosya
 
       - name: Test Dosyalarını Posix Ortamda Çalıştır
