@@ -41,7 +41,7 @@ jobs:
 
       - name: Test Dosyalarını Windows Ortamda Çalıştır
         if: matrix.os == 'windows-latest'
-        run: pytest .\Testler\*
+        run: pytest Testler\\*
 
       - name: Test Dosyalarını Posix Ortamda Çalıştır
         if: matrix.os != 'windows-latest'
