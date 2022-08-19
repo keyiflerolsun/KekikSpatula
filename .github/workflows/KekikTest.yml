@@ -40,13 +40,13 @@ jobs:
           pip install pytest
 
       - name: Test Dosyalarını Windows'ta Çalıştır
-        if: matrix.os == "windows-latest"
+        if: matrix.os == windows-latest
         run: pytest Testler
 
       - name: Test Dosyalarını Linux'ta Çalıştır
-        if: matrix.os == "ubuntu-latest"
+        if: matrix.os == ubuntu-latest
         run: pytest Testler/*
 
       - name: Test Dosyalarını Mac'te Çalıştır
-        if: matrix.os == "macos-latest"
+        if: matrix.os == macos-latest
         run: pytest Testler/*
