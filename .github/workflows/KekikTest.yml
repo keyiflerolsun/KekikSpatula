@@ -39,13 +39,16 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest
 
-      - name: Test Dosyalarını Windows Ortamda Çalıştır
-        if: matrix.os == 'windows-latest'
-        shell: cmd
-        run: |
-          cd ${{ github.workspace }}/Testler
-          FOR %%i in (*.py) DO python -m pytest %%i
+      - name: Test Dosyalarını Çalıştır
+        run: pytest
 
-      - name: Test Dosyalarını Posix Ortamda Çalıştır
-        if: matrix.os != 'windows-latest'
-        run: pytest Testler/*
+      # - name: Test Dosyalarını Windows Ortamda Çalıştır
+      #   if: matrix.os == 'windows-latest'
+      #   shell: cmd
+      #   run: |
+      #     cd ${{ github.workspace }}/Testler
+      #     FOR %%i in (*.py) DO python -m pytest %%i
+
+      # - name: Test Dosyalarını Posix Ortamda Çalıştır
+      #   if: matrix.os != 'windows-latest'
+      #   run: pytest Testler/*

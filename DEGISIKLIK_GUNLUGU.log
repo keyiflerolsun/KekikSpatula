@@ -62,3 +62,5 @@ v0.6.0 - N11 Spatulası Eklendi..
 v0.6.1 - fake_useragent bağımlılığı kaldırıldı..
 
 v0.6.2 - Bozuk olan spatulalar (Google, ArasKargo, N11Arama) kaldırıldı..
+
+v0.6.4 - 🕊 PyTest Yenir Mi?
