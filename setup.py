@@ -10,7 +10,7 @@ setup(
     packages     = ["KekikSpatula"],
 
     name         = "KekikSpatula",
-    version      = "0.6.2",
+    version      = "0.6.3",
     url          = "https://github.com/keyiflerolsun/KekikSpatula",
     description  = "Siz uğraşmayın diye biz uğraştık.. ~ dızz 🐍",
     keywords     = ["KekikSpatula", "KekikAkademi", "keyiflerolsun"],
