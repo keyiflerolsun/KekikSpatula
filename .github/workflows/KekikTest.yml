@@ -39,14 +39,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest
 
-      - name: Test Dosyalarını Windows'ta Çalıştır
-        if: matrix.os == windows-latest
+      - name: Test Dosyalarını Windows Ortamda Çalıştır
+        if: matrix.os == 'windows-latest'
         run: pytest Testler
 
-      - name: Test Dosyalarını Linux'ta Çalıştır
-        if: matrix.os == ubuntu-latest
-        run: pytest Testler/*
-
-      - name: Test Dosyalarını Mac'te Çalıştır
-        if: matrix.os == macos-latest
+      - name: Test Dosyalarını Posix Ortamda Çalıştır
+        if: matrix.os != 'windows-latest'
         run: pytest Testler/*
