@@ -41,9 +41,7 @@ jobs:
 
       - name: Test Dosyalarını Windows Ortamda Çalıştır
         if: matrix.os == 'windows-latest'
-        run: |
-          cd ${{ github.workspace }}/Testler
-          pytest *
+        run: pytest ${{ github.workspace }}\Testler
 
       - name: Test Dosyalarını Posix Ortamda Çalıştır
         if: matrix.os != 'windows-latest'
