@@ -8,26 +8,32 @@ from KekikSpatula        import KekikSpatula
 
 class N11Arama(KekikSpatula):
     """
-    N11Arama : n11.com adresinden arama bilgilerini hazır formatlarda elinize verir.
+    N11Arama : `n11.com` adresinden arama bilgilerini hazır formatlarda elinize verir.
 
-    Methodlar
+    Nitelikler
     ----------
-        .veri:
-            json verisi döndürür.
-        .gorsel():
-            oluşan json verisini insanın okuyabileceği formatta döndürür.
-        .tablo():
-            tabulate verisi döndürür.
-        .anahtarlar:
-            kullanılan anahtar listesini döndürür.
-        .nesne:
-            json verisini python nesnesine dönüştürür.
+        >>> .veri -> dict | None:
+        json verisi döndürür.
+
+        >>> .anahtarlar -> list | None:
+        kullanılan anahtar listesini döndürür.
+
+        >>> .nesne -> KekikNesne:
+        json verisini python nesnesine dönüştürür.
+
+    Metodlar
+    ----------
+        >>> .gorsel() -> str | None:
+        oluşan json verisini insanın okuyabileceği formatta döndürür.
+
+        >>> .tablo() -> str | None:
+        tabulate verisi döndürür.
     """
     def __repr__(self) -> str:
         return f"{__class__.__name__} Sınıfı -- {self.kaynak}'dan arama bilgilerini döndürmesi için yazılmıştır.."
 
     def __init__(self, sorgu:str, sayfa:int = 1):
-        """n11 de arama yapar"""
+        """`n11.com` adresinde de arama yapar"""
 
         self.kaynak = "n11.com"
 

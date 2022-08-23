@@ -7,30 +7,32 @@ from KekikSpatula import KekikSpatula
 
 class HavaDurumu(KekikSpatula):
     """
-    HavaDurumu : google.com adresinden hava durumu ve saat verisini hazır formatlarda elinize verir.
+    HavaDurumu : `google.com` adresinden hava durumu ve saat verisini hazır formatlarda elinize verir.
 
-    Methodlar
+    Nitelikler
     ----------
-        .veri:
-            json verisi döndürür.
+        >>> .veri -> dict | None:
+        json verisi döndürür.
 
-        .gorsel():
-            oluşan json verisini insanın okuyabileceği formatta döndürür.
+        >>> .anahtarlar -> list | None:
+        kullanılan anahtar listesini döndürür.
 
-        .tablo():
-            tabulate verisi döndürür.
+        >>> .nesne -> KekikNesne:
+        json verisini python nesnesine dönüştürür.
 
-        .anahtarlar:
-            kullanılan anahtar listesini döndürür.
+    Metodlar
+    ----------
+        >>> .gorsel() -> str | None:
+        oluşan json verisini insanın okuyabileceği formatta döndürür.
 
-        .nesne:
-            json verisini python nesnesine dönüştürür.
+        >>> .tablo() -> str | None:
+        tabulate verisi döndürür.
     """
     def __repr__(self) -> str:
         return f"{__class__.__name__} Sınıfı -- {self.kaynak}'dan hava durumu ve saat verisini döndürmesi için yazılmıştır.."
 
     def __init__(self, il:str, ilce:str):
-        """hava durumu ve saat verisini google.com'dan alarak bs4'ile ayrıştırır."""
+        """hava durumu ve saat verisini `google.com`'dan alarak bs4'ile ayrıştırır."""
 
         self.kaynak = "google.com"
         istek       = get(f"https://www.{self.kaynak}/search?&q={il}+{ilce}+hava+durumu&lr=lang_tr&hl=tr")

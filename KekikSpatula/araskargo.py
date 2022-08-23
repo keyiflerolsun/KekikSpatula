@@ -9,30 +9,32 @@ from KekikSpatula import KekikSpatula
 
 class ArasKargo(KekikSpatula):
     """
-    ArasKargo : araskargo.com.tr adresinden kargo verilerini döndürür.
+    ArasKargo : `araskargo.com.tr` adresinden kargo verilerini döndürür.
 
-    Methodlar
+    Nitelikler
     ----------
-        .veri:
-            json verisi döndürür.
+        >>> .veri -> dict | None:
+        json verisi döndürür.
 
-        .gorsel():
-            oluşan json verisini insanın okuyabileceği formatta döndürür.
+        >>> .anahtarlar -> list | None:
+        kullanılan anahtar listesini döndürür.
 
-        .tablo():
-            tabulate verisi döndürür.
+        >>> .nesne -> KekikNesne:
+        json verisini python nesnesine dönüştürür.
 
-        .anahtarlar:
-            kullanılan anahtar listesini döndürür.
+    Metodlar
+    ----------
+        >>> .gorsel() -> str | None:
+        oluşan json verisini insanın okuyabileceği formatta döndürür.
 
-        .nesne:
-            json verisini python nesnesine dönüştürür.
+        >>> .tablo() -> str | None:
+        tabulate verisi döndürür.
     """
     def __repr__(self) -> str:
         return f"{__class__.__name__} Sınıfı -- {self.kaynak}'dan kargo verilerini döndürmesi için yazılmıştır.."
 
     def __init__(self, gelen_no) -> None:
-        """kargo verilerini araskargo.com.tr'den alarak ayrıştırır."""
+        """kargo verilerini `araskargo.com.tr`'den alarak ayrıştırır."""
 
         takip_numarasi = str(gelen_no).replace(" ", "").strip()
         self.kaynak    = "araskargo.com.tr"

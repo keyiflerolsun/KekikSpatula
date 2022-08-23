@@ -7,26 +7,32 @@ from KekikSpatula import KekikSpatula
 
 class Kripto(KekikSpatula):
     """
-    Kripto : api.binance.com adresinden kline/candlestick verilerini hazır formatlarda elinize verir.
+    Kripto : `api.binance.com` adresinden kline/candlestick verilerini hazır formatlarda elinize verir.
 
-    Methodlar
+    Nitelikler
     ----------
-        .veri:
-            json verisi döndürür.
-        .gorsel():
-            oluşan json verisini insanın okuyabileceği formatta döndürür.
-        .tablo():
-            tabulate verisi döndürür.
-        .anahtarlar:
-            kullanılan anahtar listesini döndürür.
-        .nesne:
-            json verisini python nesnesine dönüştürür.
+        >>> .veri -> dict | None:
+        json verisi döndürür.
+
+        >>> .anahtarlar -> list | None:
+        kullanılan anahtar listesini döndürür.
+
+        >>> .nesne -> KekikNesne:
+        json verisini python nesnesine dönüştürür.
+
+    Metodlar
+    ----------
+        >>> .gorsel() -> str | None:
+        oluşan json verisini insanın okuyabileceği formatta döndürür.
+
+        >>> .tablo() -> str | None:
+        tabulate verisi döndürür.
     """
     def __repr__(self) -> str:
         return f"{__class__.__name__} Sınıfı -- {self.kaynak}'dan Mum(kline/candlestick) verisini döndürmesi için yazılmıştır.."
 
     def __init__(self, sembol:str, aralik:Literal["1m", "3m", "5m", "15m", "30m", "1h", "2h", "4h", "6h", "8h", "12h", "1d", "3d", "1w", "1M"]):
-        """Mum(klines) verisini api.binance.com'dan alarak düzenli bir format verir."""
+        """Mum(klines) verisini `api.binance.com`'dan alarak düzenli bir format verir."""
 
         self.kaynak = "api.binance.com"
 

@@ -7,30 +7,32 @@ from KekikSpatula import KekikSpatula
 
 class DiscUdemy(KekikSpatula):
     """
-    DiscUdemy : discudemy.com adresinden Udemy Kurslarını hazır formatlarda elinize verir.
+    DiscUdemy : `discudemy.com` adresinden Udemy Kurslarını hazır formatlarda elinize verir.
 
-    Methodlar
+    Nitelikler
     ----------
-        .veri:
-            json verisi döndürür.
+        >>> .veri -> dict | None:
+        json verisi döndürür.
 
-        .gorsel():
-            oluşan json verisini insanın okuyabileceği formatta döndürür.
+        >>> .anahtarlar -> list | None:
+        kullanılan anahtar listesini döndürür.
 
-        .tablo():
-            tabulate verisi döndürür.
+        >>> .nesne -> KekikNesne:
+        json verisini python nesnesine dönüştürür.
 
-        .anahtarlar:
-            kullanılan anahtar listesini döndürür.
+    Metodlar
+    ----------
+        >>> .gorsel() -> str | None:
+        oluşan json verisini insanın okuyabileceği formatta döndürür.
 
-        .nesne:
-            json verisini python nesnesine dönüştürür.
+        >>> .tablo() -> str | None:
+        tabulate verisi döndürür.
     """
     def __repr__(self) -> str:
         return f"{__class__.__name__} Sınıfı -- {self.kaynak}'dan Udemy Kurslarını döndürmesi için yazılmıştır.."
 
     def __init__(self, kategori:str):
-        """Kategoriye göre Udemy Kurslarını discudemy.com'dan alarak bs4'ile ayrıştırır."""
+        """Kategoriye göre Udemy Kurslarını `discudemy.com`'dan alarak bs4'ile ayrıştırır."""
 
         self.kaynak = "discudemy.com"
         istek       = get(f"https://www.{self.kaynak}/s-r/{kategori}.jsf", headers=self.kimlik, allow_redirects=True)

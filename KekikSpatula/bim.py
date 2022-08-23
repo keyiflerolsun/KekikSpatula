@@ -7,30 +7,32 @@ from KekikSpatula import KekikSpatula
 
 class BimAktuel(KekikSpatula):
     """
-    BimAktuel : bim.com.tr adresinden aktüel verilerini hazır formatlarda elinize verir.
+    BimAktuel : `bim.com.tr` adresinden aktüel verilerini hazır formatlarda elinize verir.
 
-    Methodlar
+    Nitelikler
     ----------
-        .veri:
-            json verisi döndürür.
+        >>> .veri -> dict | None:
+        json verisi döndürür.
 
-        .gorsel():
-            oluşan json verisini insanın okuyabileceği formatta döndürür.
+        >>> .anahtarlar -> list | None:
+        kullanılan anahtar listesini döndürür.
 
-        .tablo():
-            tabulate verisi döndürür.
+        >>> .nesne -> KekikNesne:
+        json verisini python nesnesine dönüştürür.
 
-        .anahtarlar:
-            kullanılan anahtar listesini döndürür.
+    Metodlar
+    ----------
+        >>> .gorsel() -> str | None:
+        oluşan json verisini insanın okuyabileceği formatta döndürür.
 
-        .nesne:
-            json verisini python nesnesine dönüştürür.
+        >>> .tablo() -> str | None:
+        tabulate verisi döndürür.
     """
     def __repr__(self) -> str:
         return f"{__class__.__name__} Sınıfı -- {self.kaynak}'den aktüel verilerini döndürmesi için yazılmıştır.."
 
     def __init__(self) -> None:
-        """aktüel verilerini bim.com.tr'den alarak bs4'ile ayrıştırır."""
+        """aktüel verilerini `bim.com.tr`'den alarak bs4'ile ayrıştırır."""
 
         self.kaynak = "bim.com.tr"
         istek       = get(f"https://www.{self.kaynak}/", headers=self.kimlik, allow_redirects=True)

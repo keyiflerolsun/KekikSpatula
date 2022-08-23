@@ -10,7 +10,7 @@ setup(
     packages     = ["KekikSpatula"],
 
     name         = "KekikSpatula",
-    version      = "0.6.4",
+    version      = "0.6.5",
     url          = "https://github.com/keyiflerolsun/KekikSpatula",
     description  = "Siz uğraşmayın diye biz uğraştık.. ~ dızz 🐍",
     keywords     = ["KekikSpatula", "KekikAkademi", "keyiflerolsun"],
@@ -26,7 +26,7 @@ setup(
         'Programming Language :: Python :: 3'
     ],
 
-    python_requires     = '>=3.9',
+    python_requires     = '>=3.10',
     install_requires    = [
         "setuptools",
         "wheel",
@@ -39,7 +39,6 @@ setup(
         "lxml",
         "html5lib",
         "pandas",
-        "attrdict2",
         "pytube",
         "pytz",
         "parsel",

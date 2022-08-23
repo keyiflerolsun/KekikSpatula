@@ -6,34 +6,34 @@ from typing       import Dict
 
 class Covid(KekikSpatula):
     """
-    Covid : interaktif.trthaber.com adresinden covid verilerini hazır formatlarda elinize verir.
+    Covid : `interaktif.trthaber.com` adresinden covid verilerini hazır formatlarda elinize verir.
 
     Methodlar
     ----------
-        .veri:
-            json verisi döndürür.
+        >>> .veri:
+        json verisi döndürür.
 
-        .ulke(str):
-            istediğiniz ülkenin covid verisini döndürür
+        >>> .ulke(str):
+        istediğiniz ülkenin covid verisini döndürür
 
-        .gorsel():
-            oluşan json verisini insanın okuyabileceği formatta döndürür.
+        >>> .gorsel():
+        oluşan json verisini insanın okuyabileceği formatta döndürür.
 
-        .tablo():
-            tabulate verisi döndürür.
+        >>> .tablo():
+        tabulate verisi döndürür.
 
-        .anahtarlar:
-            kullanılan anahtar listesini döndürür.
+        >>> .anahtarlar:
+        kullanılan anahtar listesini döndürür.
 
-        .nesne:
-            json verisini python nesnesine dönüştürür.
+        >>> .nesne:
+        json verisini python nesnesine dönüştürür.
     """
 
     def __repr__(self) -> str:
         return f"{__class__.__name__} Sınıfı -- {self.kaynak}'dan covid verilerini döndürmesi için yazılmıştır.."
 
     def __init__(self) -> None:
-        """interaktif.trthaber.com adresinden covid verilerini hazır formatlarda elinize verir."""
+        """`interaktif.trthaber.com` adresinden covid verilerini hazır formatlarda elinize verir."""
 
         self.kaynak = "interaktif.trthaber.com"
         kimlik  = {
