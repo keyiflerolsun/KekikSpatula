@@ -35,7 +35,7 @@ class SonDakika(KekikSpatula):
         """son dakika verilerini `ntv.com.tr`'den alarak bs4'ile ayrıştırır."""
 
         self.kaynak = "ntv.com.tr"
-        istek       = get(f"https://www.{self.kaynak}/son-dakika", headers=self.kimlik)
+        istek       = get(f"http://www.{self.kaynak}/son-dakika", headers=self.kimlik)
 
         corba      = BeautifulSoup(istek.content, "lxml")
 
