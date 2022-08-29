@@ -49,6 +49,7 @@ pip install -U KekikSpatula
 - ![TrendyolKategori](https://cdn.dsmcdn.com/web/production/favicon.ico) **[TrendyolKategori](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/TrendyolKategori.py)**
 - 🦠 **[Covid](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Covid.py)**
 - <img src="https://bin.bnbstatic.com/static/images/common/favicon.ico" alt="drawing" width="16"/> **[Kripto](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Kripto.py)**
+- <img src="https://piizapp.com/src/img/favicon.png" alt="drawing" width="16"/> **[Piiz](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Piiz.py)**
 
 ## 💸 Bağış Yap
 
