@@ -27,7 +27,8 @@ class KekikGoogle:
             headers = self.kimlik,
             params  = {
                 "q"  : sorgu,
-                "lr" : f"lang_{self.dil.lower()}"
+                "lr" : f"lang_{self.dil.lower()}",
+                "hl" : self.dil.lower()
             },
         ) as yanit:
             return await yanit.text()

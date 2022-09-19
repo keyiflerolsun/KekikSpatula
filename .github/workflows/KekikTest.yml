@@ -1,6 +1,6 @@
 # Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
 
-name: Fonksiyon Testleri
+name: Fonksiyon Testleri ve PyPI Yükle
 
 on: [push, pull_request]
 
@@ -47,3 +47,37 @@ jobs:
       # - name: Test Dosyalarını Posix Ortamda Çalıştır
       #   if: matrix.os != 'windows-latest'
       #   run: pytest Testler/*
+
+  PyPIYukleyici:
+    name: KekikAkademi PyPI Yükleyici
+    runs-on: ubuntu-latest
+    needs: KekikTest
+
+    steps:
+      - name: Depo Kontrolü
+        uses: actions/checkout@v2
+
+      - name: Python 3.10.6 Yükle
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.10.6"
+
+      - name: Python Sürümünü Göster
+        run: python -c "import sys; print(sys.version)"
+
+      - name: Gereksinimleri Yükle
+        run: |
+          python -m pip install --upgrade pip
+          pip install setuptools wheel twine
+
+      - name: Kütüphaneyi PyPI'ye Yükle
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+        run: |
+          python setup.py bdist_wheel sdist
+          twine check dist/*
+          python -m twine upload dist/*
+          rm -rf build/
+          rm -rf dist/
+          rm -rf -- *.egg-info/
