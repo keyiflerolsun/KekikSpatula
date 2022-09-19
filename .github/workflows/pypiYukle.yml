@@ -1,14 +1,12 @@
 # Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
 
-name: KekikAkademi PyPI Yükleyici
+name: PyPI Yükle
 
-on:
-  push:
-    branches:
-      - "main"
+on: [push, pull_request]
 
 jobs:
   PyPIYukleyici:
+    name: KekikAkademi PyPI Yükleyici
     runs-on: ubuntu-latest
 
     steps:

@@ -50,6 +50,7 @@ pip install -U KekikSpatula
 - 🦠 **[Covid](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Covid.py)**
 - <img src="https://bin.bnbstatic.com/static/images/common/favicon.ico" alt="drawing" width="16"/> **[Kripto](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Kripto.py)**
 - <img src="https://piizapp.com/src/img/favicon.png" alt="drawing" width="16"/> **[Piiz](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Piiz.py)**
+- ![Google](https://www.google.com/images/branding/googleg/1x/googleg_standard_color_16dp.png) **[Google](https://github.com/keyiflerolsun/KekikSpatula/blob/main/Testler/Google.py)**
 
 ## 💸 Bağış Yap
 

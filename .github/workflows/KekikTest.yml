@@ -1,18 +1,13 @@
 # Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
 
-name: KekikSpatula Fonksiyon Testleri
+name: Fonksiyon Testleri
 
-on:
-  push:
-    branches:
-      - "main"
-
-  pull_request:
-    branches:
-      - "main"
+on: [push, pull_request]
 
 jobs:
   KekikTest:
+    name: KekikSpatula Fonksiyon Testleri
+
     strategy:
       matrix:
         python-version: ["3.10.6"]
