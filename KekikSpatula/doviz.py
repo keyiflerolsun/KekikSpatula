@@ -6,10 +6,12 @@ from bs4          import BeautifulSoup
 
 from KekikSpatula import KekikSpatula
 
-from pandas             import read_html
-from warnings           import simplefilter
-from pandas.core.common import SettingWithCopyWarning
-simplefilter(action="ignore", category=SettingWithCopyWarning)
+from pandas     import read_html
+from warnings   import simplefilter
+from contextlib import suppress
+with suppress(ImportError):
+    from pandas.core.common import SettingWithCopyWarning
+    simplefilter(action="ignore", category=SettingWithCopyWarning)
 
 class Doviz(KekikSpatula):
     """
