@@ -45,7 +45,7 @@ class SonDakika(KekikSpatula):
 
             kekik_json["veri"].append(
                 {
-                    "haber"  : haber.xpath(".//h2/a/text()").get().replace("SON DAKİKA HABERİ:", "").replace(" | Son depremler", "").replace("SON DAKİKA: ", "").strip(),
+                    "haber"  : haber.xpath(".//h2/a/text()").get().replace("SON DAKİKA HABERİ:", "").replace(" | Son depremler", "").replace("SON DAKİKA: ", "").replace("SON DAKİKA:", "").strip(),
                     "gorsel" : haber.xpath(".//source/@data-srcset").get().split("?")[0],
                     "link"   : "https://www.ntv.com.tr" + haber.xpath(".//h2/a/@href").get()
                 }
