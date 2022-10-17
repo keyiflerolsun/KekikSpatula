@@ -13,7 +13,7 @@
 ![PyPI - Wheel](https://img.shields.io/pypi/wheel/KekikSpatula)
 ![PyPI - License](https://img.shields.io/pypi/l/KekikSpatula)
 
-[![KekikTest](https://github.com/keyiflerolsun/KekikSpatula/actions/workflows/KekikTest.yml/badge.svg)](https://github.com/keyiflerolsun/KekikSpatula/actions/workflows/KekikTest.yml)
+[![KekikTest](https://github.com/keyiflerolsun/KekikSpatula/actions/workflows/KekikFlow.yml/badge.svg)](https://github.com/keyiflerolsun/KekikSpatula/actions/workflows/KekikFlow.yml)
 
 **Siz uğraşmayın diye** _biz uğraştık.._ **~** `dızz 🐍`
 
